@@ -1,0 +1,336 @@
+{
+  "grilled_fish": {
+    "name": "grilled_fish",
+    "ingredients": {
+      "item_need": 1,
+      "fish": 1
+    },
+    "time": 0.002,
+    "over_time": 2,
+    "energy": 100,
+    "result": {
+      "hc": "hc_grilled_fish",
+      "fc": "grilled_fish",
+      "oc": "oc_grilled_fish",
+      "ot": {
+        "black_hole_fish": {
+          "chance": 0.2,
+          "quantity": 1
+        }
+      }
+    }
+  },
+  "fish_tomato": {
+    "name": "fish_tomato",
+    "ingredients": {
+      "item_need": 2,
+      "fish": 1,
+      "chilly": 2
+    },
+    "time": 0.002,
+    "over_time": 2,
+    "energy": 150,
+    "result": {
+      "hc": "hc_fish_tomato",
+      "fc": "fish_tomato",
+      "oc": "oc_fish_tomato",
+      "ot": {
+        "black_tomato_fish": {
+          "chance": 0.2,
+          "quantity": 1
+        }
+      }
+    }
+  },
+  "blob": {
+    "name": "blob",
+    "ingredients": {
+      "item_need": 0
+    },
+    "time": 0.002,
+    "over_time": 5,
+    "energy": 50,
+    "result": {
+      "hc": "blob",
+      "fc": "blob",
+      "oc": "blob",
+      "ot": {
+      }
+    }
+  },
+  "steak_n_egg": {
+    "name": "steak_n_egg",
+    "ingredients": {
+      "item_need": 2,
+      "beef": 1,
+      "egg": 1
+    },
+    "time": 0.004,
+    "over_time": 2,
+    "energy": 150,
+    "result": {
+      "hc": "hc_steak_n_egg",
+      "fc": "steak_n_egg",
+      "oc": "oc_steak_n_egg",
+      "ot": {
+      }
+    }
+  },
+  "green_tea": {
+    "name": "green_tea",
+    "ingredients": {
+      "item_need": 1,
+      "tea_leaf": 1
+    },
+    "time": 0.002,
+    "over_time": 2,
+    "energy": 30,
+    "result": {
+      "hc": "hc_green_tea",
+      "fc": "green_tea",
+      "oc": "oc_green_tea",
+      "ot": {
+      }
+    }
+  },
+  "daisy_tea": {
+    "name": "daisy_tea",
+    "ingredients": {
+      "item_need": 1,
+      "daisy": 1
+    },
+    "time": 0.002,
+    "over_time": 2,
+    "energy": 30,
+    "result": {
+      "hc": "hc_daisy_tea",
+      "fc": "daisy_tea",
+      "oc": "oc_daisy_tea",
+      "ot": {
+      }
+    }
+  },
+  "fried_fish": {
+    "name": "fried_fish",
+    "ingredients": {
+      "item_need": 2,
+      "fish": 1,
+      "lettuce": 1
+    },
+    "time": 0.002,
+    "over_time": 1.5,
+    "energy": 100,
+    "result": {
+      "hc": "hc_fried_fish",
+      "fc": "fried_fish",
+      "oc": "oc_fried_fish",
+      "ot": {
+      }
+    }
+  },
+  "cake": {
+    "name": "cake",
+    "ingredients": {
+      "item_need": 5,
+      "rice": 1,
+      "egg": 1,
+      "butter": 1,
+      "flour": 1,
+      "milk": 1
+    },
+    "time": 0.004,
+    "over_time": 2,
+    "energy": 70,
+    "result": {
+      "hc": "hc_cake",
+      "fc": "cake",
+      "oc": "oc_cake",
+      "ot": {
+      }
+    }
+  },
+  "egg_fried_rice": {
+    "name": "egg_fried_rice",
+    "ingredients": {
+      "item_need": 2,
+      "rice": 1,
+      "egg": 1
+    },
+    "time": 0.002,
+    "over_time": 4,
+    "energy": 50,
+    "result": {
+      "hc": "hc_egg_fried_rice",
+      "fc": "egg_fried_rice",
+      "oc": "oc_egg_fried_rice",
+      "ot": {
+      }
+    }
+  },
+  "choco_cake": {
+    "name": "choco_cake",
+    "ingredients": {
+      "item_need": 2,
+      "cake": 1,
+      "chocolate": 1
+    },
+    "time": 0.002,
+    "over_time": 10,
+    "energy": 0,
+    "result": {
+      "hc": "choco_cake",
+      "fc": "choco_cake",
+      "oc": "choco_cake",
+      "ot": {
+        "blob": {
+          "chance": 1,
+          "quantity": 1
+        }
+      }
+    }
+  },
+  "tomato_soup": {
+    "name": "tomato_soup",
+    "ingredients": {
+      "item_need": 1,
+      "chilly": 1
+    },
+    "time": 0.002,
+    "over_time": 2,
+    "energy": 60,
+    "result": {
+      "hc": "hc_tomato_soup",
+      "fc": "tomato_soup",
+      "oc": "oc_tomato_soup",
+      "ot": {
+      }
+    }
+  },
+  "cheese": {
+    "name": "cheese",
+    "ingredients": {
+      "item_need": 1,
+      "milk": 1
+    },
+    "time": 0.007,
+    "over_time": 2,
+    "energy": 0,
+    "result": {
+      "hc": "curdled_milk",
+      "fc": "cheese",
+      "oc": "old_cheese",
+      "ot": {
+        "blue_cheese": {
+          "chance": 0.7,
+          "quantity": 1
+        },
+        "blob": {
+          "chance": 1,
+          "quantity": 1
+        }
+      }
+    }
+  },
+  "cookies": {
+    "name": "cookies",
+    "ingredients": {
+      "item_need": 4,
+      "rice": 1,
+      "egg": 1,
+      "butter": 1,
+      "flour": 1
+    },
+    "time": 0.002,
+    "over_time": 2,
+    "energy": 80,
+    "result": {
+      "hc": "hc_cookies",
+      "fc": "cookies",
+      "oc": "oc_cookies",
+      "ot": {
+      }
+    }
+  },
+  "fried_egg": {
+    "name": "fried_egg",
+    "ingredients": {
+      "item_need": 1,
+      "egg": 1
+    },
+    "time": 0.002,
+    "over_time": 3,
+    "energy": 50,
+    "result": {
+      "hc": "hc_fried_egg",
+      "fc": "fried_egg",
+      "oc": "oc_fried_egg",
+      "ot": {
+      }
+    }
+  },
+  "bread": {
+    "name": "bread",
+    "ingredients": {
+      "item_need": 1,
+      "flour": 1
+    },
+    "time": 0.002,
+    "over_time": 2,
+    "energy": 50,
+    "result": {
+      "hc": "bread",
+      "fc": "bread",
+      "oc": "bread",
+      "ot": {
+      }
+    }
+  },
+  "banh_mi": {
+    "name": "banh_mi",
+    "ingredients": {
+      "item_need": 4,
+      "bread": 1,
+      "beef": 1,
+      "lettuce": 1,
+      "chilly": 1
+    },
+    "time": 0.002,
+    "over_time": 10,
+    "energy": 0,
+    "result": {
+      "hc": "banh_mi",
+      "fc": "banh_mi",
+      "oc": "banh_mi",
+      "ot": {
+        "blob": {
+          "chance": 1,
+          "quantity": 1
+        }
+      }
+    }
+  },
+  "salad": {
+    "name": "salad",
+    "ingredients": {
+      "item_need": 4,
+      "vinegar": 1,
+      "egg": 1,
+      "lettuce": 1,
+      "chilly": 1
+    },
+    "time": 0.002,
+    "over_time": 10,
+    "energy": 0,
+    "result": {
+      "hc": "salad",
+      "fc": "salad",
+      "oc": "salad",
+      "ot": {
+        "blob": {
+          "chance": 1,
+          "quantity": 1
+        }
+      }
+    }
+  }
+}

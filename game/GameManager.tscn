@@ -1,0 +1,23 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://game/game_manager.gd" type="Script" id=1]
+[ext_resource path="res://common/state_machine.gd" type="Script" id=2]
+[ext_resource path="res://game/states/splash.gd" type="Script" id=3]
+[ext_resource path="res://game/states/login.gd" type="Script" id=4]
+
+[node name="GameManager" type="Node2D"]
+script = ExtResource( 1 )
+free_equipment = true
+show_cast_ray = false
+show_grid_build = true
+json_beautify = false
+
+[node name="States" type="Node" parent="."]
+script = ExtResource( 2 )
+initial_state = NodePath("splash")
+
+[node name="splash" type="Node" parent="States"]
+script = ExtResource( 3 )
+
+[node name="login" type="Node" parent="States"]
+script = ExtResource( 4 )

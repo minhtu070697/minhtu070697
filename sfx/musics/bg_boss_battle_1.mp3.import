@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bg_boss_battle_1.mp3-88c01a32913e8778de7f469ce8b128f5.mp3str"
+
+[deps]
+
+source_file="res://sfx/musics/bg_boss_battle_1.mp3"
+dest_files=[ "res://.import/bg_boss_battle_1.mp3-88c01a32913e8778de7f469ce8b128f5.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

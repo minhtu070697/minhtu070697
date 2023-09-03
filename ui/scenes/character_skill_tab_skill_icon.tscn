@@ -1,0 +1,224 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://ui/scenes/character_skill_tab_skill_icon.gd" type="Script" id=1]
+[ext_resource path="res://skills/skill_icon/skill_icon_fire_ball.png" type="Texture" id=2]
+[ext_resource path="res://ui/skill_button/skill_number_button.png" type="Texture" id=3]
+[ext_resource path="res://fonts/m5x7.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://ui/textures/tab_button_default_background.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://fonts/m5x7.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 3 )
+
+[sub_resource type="StyleBoxFlat" id=5]
+bg_color = Color( 0.117647, 0.117647, 0.117647, 0.972549 )
+expand_margin_left = 10.0
+expand_margin_right = 10.0
+expand_margin_top = 10.0
+expand_margin_bottom = 10.0
+
+[sub_resource type="DynamicFont" id=6]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[node name="SkillIcon" type="TextureButton"]
+margin_right = 27.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 28, 28 )
+size_flags_horizontal = 3
+texture_normal = ExtResource( 2 )
+expand = true
+stretch_mode = 4
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SkillLevel" type="TextureRect" parent="."]
+anchor_left = 0.178571
+anchor_top = 0.285714
+anchor_right = 0.178571
+anchor_bottom = 0.285714
+margin_left = 6.0
+margin_top = 10.0
+margin_right = 75.0
+margin_bottom = 79.0
+rect_scale = Vector2( 0.2, 0.2 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": true
+}
+
+[node name="SkillLevel" type="Label" parent="SkillLevel"]
+margin_left = 20.0
+margin_top = 5.0
+margin_right = 28.0
+margin_bottom = 18.0
+rect_scale = Vector2( 4, 4 )
+custom_fonts/font = SubResource( 4 )
+text = "0"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tooltip" type="PanelContainer" parent="."]
+visible = false
+margin_left = 25.0
+margin_top = -152.0
+margin_right = 126.0
+margin_bottom = -142.0
+custom_styles/panel = SubResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tooltip"]
+margin_right = 101.0
+margin_bottom = 136.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Tooltip/VBoxContainer"]
+margin_right = 101.0
+margin_bottom = 47.0
+
+[node name="SkillName" type="Label" parent="Tooltip/VBoxContainer/VBoxContainer"]
+margin_right = 101.0
+margin_bottom = 13.0
+size_flags_vertical = 1
+custom_colors/font_color = Color( 1, 0.968627, 0.803922, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Skill name "
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SkillDesc" type="Label" parent="Tooltip/VBoxContainer/VBoxContainer"]
+margin_top = 17.0
+margin_right = 101.0
+margin_bottom = 30.0
+size_flags_vertical = 1
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "This is a skill"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SkillLvl" type="Label" parent="Tooltip/VBoxContainer/VBoxContainer"]
+margin_top = 34.0
+margin_right = 101.0
+margin_bottom = 47.0
+size_flags_vertical = 1
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Level: 10"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SkillStatsBox" type="VBoxContainer" parent="Tooltip/VBoxContainer"]
+margin_top = 51.0
+margin_right = 101.0
+margin_bottom = 51.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Tooltip/VBoxContainer"]
+margin_top = 55.0
+margin_right = 101.0
+margin_bottom = 136.0
+
+[node name="SkillRange" type="Label" parent="Tooltip/VBoxContainer/VBoxContainer2"]
+margin_right = 101.0
+margin_bottom = 13.0
+size_flags_vertical = 1
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Mana cost: 20"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SkillManaCostText" type="Label" parent="Tooltip/VBoxContainer/VBoxContainer2"]
+margin_top = 17.0
+margin_right = 101.0
+margin_bottom = 30.0
+size_flags_vertical = 1
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Mana cost: 20"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SkillCooldown" type="Label" parent="Tooltip/VBoxContainer/VBoxContainer2"]
+margin_top = 34.0
+margin_right = 101.0
+margin_bottom = 47.0
+size_flags_vertical = 1
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Cooldown: 3s"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SkillPrerequisite" type="Label" parent="Tooltip/VBoxContainer/VBoxContainer2"]
+margin_top = 51.0
+margin_right = 101.0
+margin_bottom = 64.0
+size_flags_vertical = 1
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Prerequisite: a skill"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SkillLvlRequire" type="Label" parent="Tooltip/VBoxContainer/VBoxContainer2"]
+margin_top = 68.0
+margin_right = 101.0
+margin_bottom = 81.0
+size_flags_vertical = 1
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+custom_fonts/font = SubResource( 6 )
+text = "Lvl Require: 12"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SkillLvlUpButton" type="TextureButton" parent="."]
+visible = false
+margin_left = 5.0
+margin_top = 35.0
+margin_right = 25.0
+margin_bottom = 48.0
+rect_min_size = Vector2( 20, 0 )
+texture_normal = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="+" type="Label" parent="SkillLvlUpButton"]
+margin_left = 6.0
+margin_top = -1.0
+margin_right = 14.0
+margin_bottom = 12.0
+custom_fonts/font = SubResource( 4 )
+text = "+"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

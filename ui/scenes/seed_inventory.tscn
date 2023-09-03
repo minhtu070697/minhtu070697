@@ -1,0 +1,171 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://ui/textures/panels/talking_panel.png" type="Texture" id=1]
+[ext_resource path="res://ui/textures/item_slot_default_background.png" type="Texture" id=2]
+[ext_resource path="res://ui/scenes/slot.gd" type="Script" id=3]
+[ext_resource path="res://ui/scenes/seed_inventory.gd" type="Script" id=4]
+[ext_resource path="res://ui/themes/scrollbar_hide.tres" type="Theme" id=5]
+[ext_resource path="res://ui/textures/background/gregory-ligman-brick-03.jpg" type="Texture" id=7]
+[ext_resource path="res://fonts/m5x7.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://efx/resources/spotlight_1.png" type="Texture" id=11]
+
+[sub_resource type="CanvasItemMaterial" id=4]
+blend_mode = 1
+
+[sub_resource type="DynamicFont" id=1]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxTexture" id=3]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 18, 18 )
+
+[sub_resource type="DynamicFont" id=8]
+font_data = ExtResource( 8 )
+
+[node name="SeedInventory" type="Node2D"]
+script = ExtResource( 4 )
+
+[node name="Shadow" type="TextureRect" parent="."]
+modulate = Color( 0.243137, 0.243137, 0.243137, 0.352941 )
+margin_left = -24.0
+margin_top = -91.0
+margin_right = 15.0
+margin_bottom = 21.0
+rect_scale = Vector2( 1.225, 1.225 )
+texture = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="TextureRect" parent="."]
+modulate = Color( 0.745098, 0.745098, 0.745098, 1 )
+margin_left = -23.0
+margin_top = -90.0
+margin_right = 27.0
+margin_bottom = 50.0
+rect_scale = Vector2( 1.2, 1.2 )
+texture = ExtResource( 7 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Light" type="Control" parent="."]
+margin_left = -12.0
+margin_top = -35.0
+margin_right = 28.0
+margin_bottom = 5.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Flare2" type="Sprite" parent="Light"]
+modulate = Color( 0.0313726, 0.415686, 0.752941, 0.627451 )
+material = SubResource( 4 )
+position = Vector2( 19, -16 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="Flare3" type="Sprite" parent="Light"]
+modulate = Color( 0.0313726, 0.415686, 0.752941, 0.627451 )
+material = SubResource( 4 )
+position = Vector2( 19, 5 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="Flare4" type="Sprite" parent="Light"]
+modulate = Color( 0.0313726, 0.415686, 0.752941, 0.627451 )
+material = SubResource( 4 )
+position = Vector2( 19, 27 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="Flare5" type="Sprite" parent="Light"]
+modulate = Color( 0.0313726, 0.415686, 0.752941, 0.627451 )
+material = SubResource( 4 )
+position = Vector2( 19, 49 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="Flare6" type="Sprite" parent="Light"]
+modulate = Color( 0.0313726, 0.415686, 0.752941, 0.627451 )
+material = SubResource( 4 )
+position = Vector2( 19, 64 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="Flare7" type="Sprite" parent="Light"]
+modulate = Color( 0.0313726, 0.415686, 0.752941, 0.627451 )
+material = SubResource( 4 )
+position = Vector2( 19, 86 )
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 11 )
+
+[node name="TitleLabel" type="Label" parent="."]
+margin_left = -10.0
+margin_top = -74.0
+margin_right = 20.0
+margin_bottom = -61.0
+rect_scale = Vector2( 1.2, 1.2 )
+custom_fonts/font = SubResource( 1 )
+text = "Seeds"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+margin_left = -2.0
+margin_top = -50.0
+margin_right = 28.0
+margin_bottom = 70.0
+rect_pivot_offset = Vector2( 39, 22 )
+theme = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ScrollContainer"]
+margin_right = 18.0
+margin_bottom = 18.0
+custom_constants/separation = 12
+
+[node name="Slot1" type="Panel" parent="ScrollContainer/VBoxContainer"]
+margin_right = 18.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 18, 18 )
+custom_styles/panel = SubResource( 3 )
+script = ExtResource( 3 )
+
+[node name="TutorialPanel" type="TextureRect" parent="."]
+modulate = Color( 0.988235, 0.988235, 0.988235, 0.862745 )
+margin_left = 19.0
+margin_top = -93.0
+margin_right = 114.0
+margin_bottom = -38.0
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="DescriptionLabel" type="Label" parent="TutorialPanel"]
+modulate = Color( 0, 0, 0, 1 )
+margin_left = 4.0
+margin_top = 4.0
+margin_right = 141.0
+margin_bottom = 49.0
+rect_scale = Vector2( 0.65, 0.65 )
+custom_fonts/font = SubResource( 8 )
+text = "Tap to choose!"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="."]

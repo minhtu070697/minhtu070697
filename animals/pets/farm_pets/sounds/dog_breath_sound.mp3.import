@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/dog_breath_sound.mp3-cfb9d0c4cf8e038a4242bb928628660a.mp3str"
+
+[deps]
+
+source_file="res://animals/pets/farm_pets/sounds/dog_breath_sound.mp3"
+dest_files=[ "res://.import/dog_breath_sound.mp3-cfb9d0c4cf8e038a4242bb928628660a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

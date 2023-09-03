@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/fishing_rod_hit_water_sound.mp3-314fe426b3536d0b32879bd4259a422a.mp3str"
+
+[deps]
+
+source_file="res://sfx/sounds/fishing_rod_hit_water_sound.mp3"
+dest_files=[ "res://.import/fishing_rod_hit_water_sound.mp3-314fe426b3536d0b32879bd4259a422a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

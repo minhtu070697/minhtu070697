@@ -1,0 +1,1510 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://ui/textures/default_inventory_background.png" type="Texture" id=1]
+[ext_resource path="res://ui/textures/character_stat_tab/fire-icon.png" type="Texture" id=2]
+[ext_resource path="res://ui/scenes/fighter_stats_tab.gd" type="Script" id=3]
+[ext_resource path="res://ui/textures/tab_button_default_background.png" type="Texture" id=4]
+[ext_resource path="res://ui/textures/star-icon-black.png" type="Texture" id=5]
+[ext_resource path="res://ui/textures/character_stat_tab/cold-icon.png" type="Texture" id=6]
+[ext_resource path="res://ui/textures/character_stat_tab/lightning-icon.png" type="Texture" id=7]
+[ext_resource path="res://fonts/m5x7.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://ui/textures/character_stat_tab/poison-icon.png" type="Texture" id=9]
+[ext_resource path="res://ui/textures/icons/cancel_icon.png" type="Texture" id=10]
+
+[sub_resource type="DynamicFont" id=3]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxLine" id=4]
+content_margin_bottom = 11.0
+color = Color( 1, 1, 1, 0 )
+
+[sub_resource type="StyleBoxLine" id=5]
+color = Color( 0, 0, 0, 0 )
+
+[sub_resource type="DynamicFont" id=6]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 8 )
+
+[sub_resource type="StyleBoxLine" id=7]
+color = Color( 0, 0, 0, 0 )
+
+[node name="CharacterStatsTab" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Shadow" type="TextureRect" parent="."]
+modulate = Color( 0.243137, 0.243137, 0.243137, 0.352941 )
+margin_left = -63.0
+margin_top = -59.0
+margin_right = 113.0
+margin_bottom = 53.0
+rect_scale = Vector2( 0.72, 1.42 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color( 0.309804, 0.243137, 0.372549, 1 )
+margin_left = -61.0
+margin_top = -58.0
+margin_right = 115.0
+margin_bottom = 54.0
+rect_scale = Vector2( 0.7, 1.4 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TitleLabel" type="Label" parent="."]
+margin_left = -60.0
+margin_top = -58.0
+margin_right = 62.0
+margin_bottom = -42.0
+custom_fonts/font = SubResource( 3 )
+text = "Character Stats"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_left = -26.0
+margin_top = -42.0
+margin_right = 25.0
+margin_bottom = -35.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="RarityStar1" type="TextureRect" parent="HBoxContainer"]
+margin_right = 7.0
+margin_bottom = 7.0
+rect_min_size = Vector2( 7, 7 )
+texture = ExtResource( 5 )
+expand = true
+
+[node name="RarityStar2" type="TextureRect" parent="HBoxContainer"]
+margin_left = 11.0
+margin_right = 18.0
+margin_bottom = 7.0
+rect_min_size = Vector2( 7, 7 )
+texture = ExtResource( 5 )
+expand = true
+
+[node name="RarityStar3" type="TextureRect" parent="HBoxContainer"]
+margin_left = 22.0
+margin_right = 29.0
+margin_bottom = 7.0
+rect_min_size = Vector2( 7, 7 )
+texture = ExtResource( 5 )
+expand = true
+
+[node name="RarityStar4" type="TextureRect" parent="HBoxContainer"]
+margin_left = 33.0
+margin_right = 40.0
+margin_bottom = 7.0
+rect_min_size = Vector2( 7, 7 )
+texture = ExtResource( 5 )
+expand = true
+
+[node name="RarityStar5" type="TextureRect" parent="HBoxContainer"]
+margin_left = 44.0
+margin_right = 51.0
+margin_bottom = 7.0
+rect_min_size = Vector2( 7, 7 )
+texture = ExtResource( 5 )
+expand = true
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="InfoContainer" type="VBoxContainer" parent="."]
+margin_left = -54.0
+margin_top = -32.0
+margin_right = 163.0
+margin_bottom = 108.0
+rect_scale = Vector2( 0.5, 0.5 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameLevelContainer" type="VBoxContainer" parent="InfoContainer"]
+margin_right = 217.0
+margin_bottom = 38.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameAndPotential" type="HBoxContainer" parent="InfoContainer/NameLevelContainer"]
+margin_right = 217.0
+margin_bottom = 13.0
+
+[node name="Name" type="HBoxContainer" parent="InfoContainer/NameLevelContainer/NameAndPotential"]
+margin_right = 64.0
+margin_bottom = 13.0
+
+[node name="NameText" type="Label" parent="InfoContainer/NameLevelContainer/NameAndPotential/Name"]
+margin_right = 28.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Name:"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="NameValue" type="Label" parent="InfoContainer/NameLevelContainer/NameAndPotential/Name"]
+margin_left = 32.0
+margin_right = 64.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Player"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Potential" type="HBoxContainer" parent="InfoContainer/NameLevelContainer/NameAndPotential"]
+margin_left = 68.0
+margin_right = 217.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="PotentialText" type="Label" parent="InfoContainer/NameLevelContainer/NameAndPotential/Potential"]
+margin_left = 65.0
+margin_right = 113.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Potential:"
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PotentialValue" type="Label" parent="InfoContainer/NameLevelContainer/NameAndPotential/Potential"]
+margin_left = 117.0
+margin_right = 149.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Player"
+align = 2
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LevelAndStatPoints" type="HBoxContainer" parent="InfoContainer/NameLevelContainer"]
+margin_top = 17.0
+margin_right = 217.0
+margin_bottom = 30.0
+
+[node name="Level" type="HBoxContainer" parent="InfoContainer/NameLevelContainer/LevelAndStatPoints"]
+margin_right = 45.0
+margin_bottom = 13.0
+
+[node name="LvlText" type="Label" parent="InfoContainer/NameLevelContainer/LevelAndStatPoints/Level"]
+margin_right = 29.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Level:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LvlValue" type="Label" parent="InfoContainer/NameLevelContainer/LevelAndStatPoints/Level"]
+margin_left = 33.0
+margin_right = 45.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "00"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AvailableStatPoint" type="HBoxContainer" parent="InfoContainer/NameLevelContainer/LevelAndStatPoints"]
+margin_left = 49.0
+margin_right = 217.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+alignment = 2
+
+[node name="AvailableStatPointText" type="Label" parent="InfoContainer/NameLevelContainer/LevelAndStatPoints/AvailableStatPoint"]
+margin_left = 41.0
+margin_right = 152.0
+margin_bottom = 13.0
+custom_colors/font_color = Color( 1, 0.968627, 0.803922, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "Available stat points:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AvailableStatPointValue" type="Label" parent="InfoContainer/NameLevelContainer/LevelAndStatPoints/AvailableStatPoint"]
+margin_left = 156.0
+margin_right = 168.0
+margin_bottom = 13.0
+custom_colors/font_color = Color( 1, 0.968627, 0.803922, 1 )
+custom_fonts/font = SubResource( 3 )
+text = "00"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSeparator" type="HSeparator" parent="InfoContainer/NameLevelContainer"]
+margin_top = 34.0
+margin_right = 217.0
+margin_bottom = 38.0
+custom_styles/separator = SubResource( 4 )
+
+[node name="StatTab1Container" type="VBoxContainer" parent="InfoContainer"]
+margin_top = 42.0
+margin_right = 217.0
+margin_bottom = 228.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Stats" type="HBoxContainer" parent="InfoContainer/StatTab1Container"]
+margin_right = 217.0
+margin_bottom = 64.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PrimaryStats" type="VBoxContainer" parent="InfoContainer/StatTab1Container/Stats"]
+margin_right = 115.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.3
+
+[node name="Strength" type="HBoxContainer" parent="InfoContainer/StatTab1Container/Stats/PrimaryStats"]
+margin_right = 115.0
+margin_bottom = 13.0
+
+[node name="StrengthButton" type="TextureButton" parent="InfoContainer/StatTab1Container/Stats/PrimaryStats/Strength"]
+margin_right = 20.0
+margin_bottom = 13.0
+rect_min_size = Vector2( 20, 0 )
+texture_normal = ExtResource( 4 )
+expand = true
+
+[node name="Label" type="Label" parent="InfoContainer/StatTab1Container/Stats/PrimaryStats/Strength/StrengthButton"]
+margin_right = 20.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 20, 0 )
+text = "+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StrengthText" type="Label" parent="InfoContainer/StatTab1Container/Stats/PrimaryStats/Strength"]
+margin_left = 24.0
+margin_right = 71.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Strength:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StrengthValue" type="Label" parent="InfoContainer/StatTab1Container/Stats/PrimaryStats/Strength"]
+margin_left = 75.0
+margin_right = 115.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "00"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Agility" type="HBoxContainer" parent="InfoContainer/StatTab1Container/Stats/PrimaryStats"]
+margin_top = 17.0
+margin_right = 115.0
+margin_bottom = 30.0
+
+[node name="AgilityButton" type="TextureButton" parent="InfoContainer/StatTab1Container/Stats/PrimaryStats/Agility"]
+margin_right = 20.0
+margin_bottom = 13.0
+rect_min_size = Vector2( 20, 0 )
+texture_normal = ExtResource( 4 )
+expand = true
+
+[node name="Label" type="Label" parent="InfoContainer/StatTab1Container/Stats/PrimaryStats/Agility/AgilityButton"]
+margin_right = 20.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 20, 0 )
+text = "+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AgilityText" type="Label" parent="InfoContainer/StatTab1Container/Stats/PrimaryStats/Agility"]
+margin_left = 24.0
+margin_right = 58.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Agility:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AgilityValue" type="Label" parent="InfoContainer/StatTab1Container/Stats/PrimaryStats/Agility"]
+margin_left = 62.0
+margin_right = 115.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "00"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Intelligence" type="HBoxContainer" parent="InfoContainer/StatTab1Container/Stats/PrimaryStats"]
+margin_top = 34.0
+margin_right = 115.0
+margin_bottom = 47.0
+
+[node name="IntelligenceButton" type="TextureButton" parent="InfoContainer/StatTab1Container/Stats/PrimaryStats/Intelligence"]
+margin_right = 20.0
+margin_bottom = 13.0
+rect_min_size = Vector2( 20, 0 )
+texture_normal = ExtResource( 4 )
+expand = true
+
+[node name="Label" type="Label" parent="InfoContainer/StatTab1Container/Stats/PrimaryStats/Intelligence/IntelligenceButton"]
+margin_right = 20.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 20, 0 )
+text = "+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IntelligenceText" type="Label" parent="InfoContainer/StatTab1Container/Stats/PrimaryStats/Intelligence"]
+margin_left = 24.0
+margin_right = 87.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Intelligence:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IntelligenceValue" type="Label" parent="InfoContainer/StatTab1Container/Stats/PrimaryStats/Intelligence"]
+margin_left = 91.0
+margin_right = 115.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "00"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Vitality" type="HBoxContainer" parent="InfoContainer/StatTab1Container/Stats/PrimaryStats"]
+margin_top = 51.0
+margin_right = 115.0
+margin_bottom = 64.0
+
+[node name="VitalityButton" type="TextureButton" parent="InfoContainer/StatTab1Container/Stats/PrimaryStats/Vitality"]
+margin_right = 20.0
+margin_bottom = 13.0
+rect_min_size = Vector2( 20, 0 )
+texture_normal = ExtResource( 4 )
+expand = true
+
+[node name="Label" type="Label" parent="InfoContainer/StatTab1Container/Stats/PrimaryStats/Vitality/VitalityButton"]
+margin_right = 20.0
+margin_bottom = 14.0
+rect_min_size = Vector2( 20, 0 )
+text = "+"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VitalityText" type="Label" parent="InfoContainer/StatTab1Container/Stats/PrimaryStats/Vitality"]
+margin_left = 24.0
+margin_right = 61.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Vitality"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VitalityValue" type="Label" parent="InfoContainer/StatTab1Container/Stats/PrimaryStats/Vitality"]
+margin_left = 65.0
+margin_right = 115.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "00"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSeparator" type="VSeparator" parent="InfoContainer/StatTab1Container/Stats"]
+margin_left = 119.0
+margin_right = 123.0
+margin_bottom = 64.0
+custom_styles/separator = SubResource( 5 )
+
+[node name="DerivedStats" type="VBoxContainer" parent="InfoContainer/StatTab1Container/Stats"]
+margin_left = 127.0
+margin_right = 217.0
+margin_bottom = 64.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PArmor" type="HBoxContainer" parent="InfoContainer/StatTab1Container/Stats/DerivedStats"]
+margin_right = 90.0
+margin_bottom = 13.0
+
+[node name="PArmorText" type="Label" parent="InfoContainer/StatTab1Container/Stats/DerivedStats/PArmor"]
+margin_right = 45.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "P. Armor:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PArmorValue" type="Label" parent="InfoContainer/StatTab1Container/Stats/DerivedStats/PArmor"]
+margin_left = 49.0
+margin_right = 90.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "00"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Accuracy" type="HBoxContainer" parent="InfoContainer/StatTab1Container/Stats/DerivedStats"]
+margin_top = 17.0
+margin_right = 90.0
+margin_bottom = 30.0
+
+[node name="AccuracyText" type="Label" parent="InfoContainer/StatTab1Container/Stats/DerivedStats/Accuracy"]
+margin_right = 46.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Accuracy:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AccuracyValue" type="Label" parent="InfoContainer/StatTab1Container/Stats/DerivedStats/Accuracy"]
+margin_left = 50.0
+margin_right = 90.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "00"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MArmor" type="HBoxContainer" parent="InfoContainer/StatTab1Container/Stats/DerivedStats"]
+margin_top = 34.0
+margin_right = 90.0
+margin_bottom = 47.0
+
+[node name="MArmorText" type="Label" parent="InfoContainer/StatTab1Container/Stats/DerivedStats/MArmor"]
+margin_right = 47.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "M. Armor:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MArmorValue" type="Label" parent="InfoContainer/StatTab1Container/Stats/DerivedStats/MArmor"]
+margin_left = 51.0
+margin_right = 90.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "00"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Evasion" type="HBoxContainer" parent="InfoContainer/StatTab1Container/Stats/DerivedStats"]
+margin_top = 51.0
+margin_right = 90.0
+margin_bottom = 64.0
+
+[node name="EvasionText" type="Label" parent="InfoContainer/StatTab1Container/Stats/DerivedStats/Evasion"]
+margin_right = 41.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Evasion:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EvasionValue" type="Label" parent="InfoContainer/StatTab1Container/Stats/DerivedStats/Evasion"]
+margin_left = 45.0
+margin_right = 90.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "00"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSeparator2" type="HSeparator" parent="InfoContainer/StatTab1Container"]
+margin_top = 68.0
+margin_right = 217.0
+margin_bottom = 72.0
+custom_styles/separator = SubResource( 4 )
+
+[node name="DerivedStats2" type="HBoxContainer" parent="InfoContainer/StatTab1Container"]
+margin_top = 76.0
+margin_right = 217.0
+margin_bottom = 174.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CombatStats" type="VBoxContainer" parent="InfoContainer/StatTab1Container/DerivedStats2"]
+margin_right = 170.0
+margin_bottom = 98.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 4.0
+
+[node name="PDmg" type="HBoxContainer" parent="InfoContainer/StatTab1Container/DerivedStats2/CombatStats"]
+margin_right = 170.0
+margin_bottom = 13.0
+
+[node name="PDmgText" type="Label" parent="InfoContainer/StatTab1Container/DerivedStats2/CombatStats/PDmg"]
+margin_right = 35.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "P. Dmg:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PDmgValue" type="Label" parent="InfoContainer/StatTab1Container/DerivedStats2/CombatStats/PDmg"]
+margin_left = 39.0
+margin_right = 170.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "00"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MDmg" type="HBoxContainer" parent="InfoContainer/StatTab1Container/DerivedStats2/CombatStats"]
+margin_top = 17.0
+margin_right = 170.0
+margin_bottom = 30.0
+
+[node name="MDmgText" type="Label" parent="InfoContainer/StatTab1Container/DerivedStats2/CombatStats/MDmg"]
+margin_right = 37.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "M. Dmg:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="MDmgValue" type="Label" parent="InfoContainer/StatTab1Container/DerivedStats2/CombatStats/MDmg"]
+margin_left = 41.0
+margin_right = 170.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "00"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CritRate" type="HBoxContainer" parent="InfoContainer/StatTab1Container/DerivedStats2/CombatStats"]
+margin_top = 34.0
+margin_right = 170.0
+margin_bottom = 47.0
+
+[node name="CritRateText" type="Label" parent="InfoContainer/StatTab1Container/DerivedStats2/CombatStats/CritRate"]
+margin_right = 49.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Crit Rate:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CritRateValue" type="Label" parent="InfoContainer/StatTab1Container/DerivedStats2/CombatStats/CritRate"]
+margin_left = 53.0
+margin_right = 170.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "00"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CritDmg" type="HBoxContainer" parent="InfoContainer/StatTab1Container/DerivedStats2/CombatStats"]
+margin_top = 51.0
+margin_right = 170.0
+margin_bottom = 64.0
+
+[node name="CritDmgText" type="Label" parent="InfoContainer/StatTab1Container/DerivedStats2/CombatStats/CritDmg"]
+margin_right = 46.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Crit Dmg:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CritDmgValue" type="Label" parent="InfoContainer/StatTab1Container/DerivedStats2/CombatStats/CritDmg"]
+margin_left = 50.0
+margin_right = 170.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "00"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AttackSpeed" type="HBoxContainer" parent="InfoContainer/StatTab1Container/DerivedStats2/CombatStats"]
+margin_top = 68.0
+margin_right = 170.0
+margin_bottom = 81.0
+
+[node name="AtkSpeedText" type="Label" parent="InfoContainer/StatTab1Container/DerivedStats2/CombatStats/AttackSpeed"]
+margin_right = 67.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Attack Speed"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AtkSpeedValue" type="Label" parent="InfoContainer/StatTab1Container/DerivedStats2/CombatStats/AttackSpeed"]
+margin_left = 71.0
+margin_right = 170.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "00"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WalkSpeed" type="HBoxContainer" parent="InfoContainer/StatTab1Container/DerivedStats2/CombatStats"]
+margin_top = 85.0
+margin_right = 170.0
+margin_bottom = 98.0
+
+[node name="WalkSpeedText" type="Label" parent="InfoContainer/StatTab1Container/DerivedStats2/CombatStats/WalkSpeed"]
+margin_right = 57.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Walk Speed"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WalkSpeedValue" type="Label" parent="InfoContainer/StatTab1Container/DerivedStats2/CombatStats/WalkSpeed"]
+margin_left = 61.0
+margin_right = 170.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "00"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSeparator" type="VSeparator" parent="InfoContainer/StatTab1Container/DerivedStats2"]
+visible = false
+margin_left = 168.0
+margin_right = 172.0
+margin_bottom = 64.0
+custom_styles/separator = SubResource( 5 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InfoContainer/StatTab1Container/DerivedStats2"]
+margin_left = 174.0
+margin_right = 217.0
+margin_bottom = 98.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="HSeparator3" type="HSeparator" parent="InfoContainer/StatTab1Container"]
+margin_top = 178.0
+margin_right = 217.0
+margin_bottom = 182.0
+custom_styles/separator = SubResource( 4 )
+
+[node name="Buttons" type="HBoxContainer" parent="InfoContainer/StatTab1Container"]
+margin_top = 186.0
+margin_right = 217.0
+margin_bottom = 186.0
+size_flags_vertical = 3
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Cancel" type="HBoxContainer" parent="InfoContainer/StatTab1Container/Buttons"]
+
+[node name="CancelButton" type="TextureButton" parent="InfoContainer/StatTab1Container/Buttons/Cancel"]
+visible = false
+margin_right = 60.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 60, 20 )
+texture_normal = ExtResource( 4 )
+expand = true
+
+[node name="Label2" type="Label" parent="InfoContainer/StatTab1Container/Buttons/Cancel/CancelButton"]
+margin_left = 14.0
+margin_top = 2.0
+margin_right = 81.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 3 )
+text = "Cancel"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="OKButton" type="TextureButton" parent="InfoContainer/StatTab1Container/Buttons/Cancel"]
+visible = false
+margin_right = 60.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 60, 20 )
+texture_normal = ExtResource( 4 )
+expand = true
+
+[node name="Label2" type="Label" parent="InfoContainer/StatTab1Container/Buttons/Cancel/OKButton"]
+margin_left = 24.0
+margin_top = 2.0
+margin_right = 91.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 3 )
+text = "OK"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSeparator" type="VSeparator" parent="InfoContainer/StatTab1Container/Buttons"]
+visible = false
+margin_left = 168.0
+margin_right = 172.0
+margin_bottom = 64.0
+custom_styles/separator = SubResource( 5 )
+
+[node name="VBoxContainer" type="VBoxContainer" parent="InfoContainer/StatTab1Container/Buttons"]
+margin_left = 4.0
+margin_right = 217.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="StatTab2Container" type="ScrollContainer" parent="InfoContainer"]
+visible = false
+margin_top = 232.0
+margin_right = 217.0
+margin_bottom = 418.0
+rect_min_size = Vector2( 0, 186 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatTab2Container" type="HBoxContainer" parent="InfoContainer/StatTab2Container"]
+margin_right = 217.0
+margin_bottom = 248.0
+size_flags_horizontal = 3
+
+[node name="StatTab2Container" type="VBoxContainer" parent="InfoContainer/StatTab2Container/StatTab2Container"]
+margin_right = 200.0
+margin_bottom = 248.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ElementalDmgs" type="VBoxContainer" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container"]
+margin_right = 200.0
+margin_bottom = 204.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.1
+
+[node name="FireDmg" type="VBoxContainer" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs"]
+margin_right = 200.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.8
+
+[node name="FireDmg" type="HBoxContainer" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/FireDmg"]
+margin_right = 200.0
+margin_bottom = 13.0
+
+[node name="FireDmgText" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/FireDmg/FireDmg"]
+margin_right = 65.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Fire Damage:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FireDmgValue" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/FireDmg/FireDmg"]
+margin_left = 69.0
+margin_right = 200.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "150 - 750"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FireDmgMod" type="HBoxContainer" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/FireDmg"]
+margin_top = 17.0
+margin_right = 200.0
+margin_bottom = 30.0
+
+[node name="FireDmgModText" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/FireDmg/FireDmgMod"]
+margin_right = 94.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Fire Dmg Modifier:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FireDmgModValue" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/FireDmg/FireDmgMod"]
+margin_left = 98.0
+margin_right = 200.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "00"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSeparator" type="VSeparator" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs"]
+margin_top = 34.0
+margin_right = 200.0
+margin_bottom = 37.0
+custom_styles/separator = SubResource( 5 )
+
+[node name="ColdDmg" type="VBoxContainer" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs"]
+margin_top = 41.0
+margin_right = 200.0
+margin_bottom = 105.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.8
+
+[node name="ColdDmg" type="HBoxContainer" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/ColdDmg"]
+margin_right = 200.0
+margin_bottom = 13.0
+
+[node name="ColdDmgText" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/ColdDmg/ColdDmg"]
+margin_right = 66.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Cold Damage:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColdDmgValue" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/ColdDmg/ColdDmg"]
+margin_left = 70.0
+margin_right = 200.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "00"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColdDmgMod" type="HBoxContainer" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/ColdDmg"]
+margin_top = 17.0
+margin_right = 200.0
+margin_bottom = 30.0
+
+[node name="ColdDmgModText" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/ColdDmg/ColdDmgMod"]
+margin_right = 113.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Cold Damage Modifier:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColdDmgModValue" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/ColdDmg/ColdDmgMod"]
+margin_left = 117.0
+margin_right = 200.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "00"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FreezeStrength" type="HBoxContainer" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/ColdDmg"]
+margin_top = 34.0
+margin_right = 200.0
+margin_bottom = 47.0
+
+[node name="FreezeStrengthText" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/ColdDmg/FreezeStrength"]
+margin_right = 87.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Freeze Strength:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FreezeStrengthValue" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/ColdDmg/FreezeStrength"]
+margin_left = 91.0
+margin_right = 200.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "00"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FreezeLength" type="HBoxContainer" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/ColdDmg"]
+margin_top = 51.0
+margin_right = 200.0
+margin_bottom = 64.0
+
+[node name="FreezeLengthText" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/ColdDmg/FreezeLength"]
+margin_right = 77.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Freeze Length:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FreezeLengthValue" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/ColdDmg/FreezeLength"]
+margin_left = 81.0
+margin_right = 200.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "00"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSeparator2" type="VSeparator" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs"]
+margin_top = 109.0
+margin_right = 200.0
+margin_bottom = 112.0
+custom_styles/separator = SubResource( 5 )
+
+[node name="LightningDmg" type="VBoxContainer" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs"]
+margin_top = 116.0
+margin_right = 200.0
+margin_bottom = 146.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.8
+
+[node name="LightningDmg" type="HBoxContainer" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/LightningDmg"]
+margin_right = 200.0
+margin_bottom = 13.0
+
+[node name="LightningDmgText" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/LightningDmg/LightningDmg"]
+margin_right = 92.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Lightning Damage:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LightningDmgValue" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/LightningDmg/LightningDmg"]
+margin_left = 96.0
+margin_right = 200.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "880 - 880"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LightningDmgMod" type="HBoxContainer" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/LightningDmg"]
+margin_top = 17.0
+margin_right = 200.0
+margin_bottom = 30.0
+
+[node name="LightningDmgModText" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/LightningDmg/LightningDmgMod"]
+margin_right = 139.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Lightning Damage Modifier:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LightningDmgModValue" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/LightningDmg/LightningDmgMod"]
+margin_left = 143.0
+margin_right = 200.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "00"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSeparator3" type="VSeparator" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs"]
+margin_top = 150.0
+margin_right = 200.0
+margin_bottom = 153.0
+custom_styles/separator = SubResource( 5 )
+
+[node name="PoisonDmg" type="VBoxContainer" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs"]
+margin_top = 157.0
+margin_right = 200.0
+margin_bottom = 204.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PoisonDmg" type="HBoxContainer" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/PoisonDmg"]
+margin_right = 200.0
+margin_bottom = 13.0
+
+[node name="PoisonDmgText" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/PoisonDmg/PoisonDmg"]
+margin_right = 78.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Poison Damage:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PoisonDmgValue" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/PoisonDmg/PoisonDmg"]
+margin_left = 82.0
+margin_right = 200.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "00"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PoisonDmgMod" type="HBoxContainer" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/PoisonDmg"]
+margin_top = 17.0
+margin_right = 200.0
+margin_bottom = 30.0
+
+[node name="PoisonDmgModText" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/PoisonDmg/PoisonDmgMod"]
+margin_right = 125.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Poison Damage Modifier:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PoisonDmgModValue" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/PoisonDmg/PoisonDmgMod"]
+margin_left = 129.0
+margin_right = 200.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "00"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PoisonDmgLength" type="HBoxContainer" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/PoisonDmg"]
+margin_top = 34.0
+margin_right = 200.0
+margin_bottom = 47.0
+
+[node name="PoisonDmgLengthText" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/PoisonDmg/PoisonDmgLength"]
+margin_right = 75.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Poison Length:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PoisonDmgLengthValue" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/ElementalDmgs/PoisonDmg/PoisonDmgLength"]
+margin_left = 79.0
+margin_right = 200.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "00"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSeparator2" type="HSeparator" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container"]
+margin_top = 208.0
+margin_right = 200.0
+margin_bottom = 212.0
+custom_styles/separator = SubResource( 4 )
+
+[node name="Resistance" type="VBoxContainer" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container"]
+margin_top = 216.0
+margin_right = 200.0
+margin_bottom = 248.0
+
+[node name="ResistanceTitle" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/Resistance"]
+margin_right = 200.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 3 )
+text = "Resistance"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ResistanceContainer" type="GridContainer" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/Resistance"]
+margin_top = 17.0
+margin_right = 200.0
+margin_bottom = 32.0
+columns = 4
+
+[node name="FireResistance" type="HBoxContainer" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/Resistance/ResistanceContainer"]
+margin_right = 47.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="FireResistanceIcon" type="TextureRect" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/Resistance/ResistanceContainer/FireResistance"]
+margin_right = 15.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 15, 15 )
+texture = ExtResource( 2 )
+expand = true
+
+[node name="FireResistanceValue" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/Resistance/ResistanceContainer/FireResistance"]
+margin_left = 19.0
+margin_top = 1.0
+margin_right = 37.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 3 )
+text = "75%"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ColdResistance" type="HBoxContainer" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/Resistance/ResistanceContainer"]
+margin_left = 51.0
+margin_right = 98.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="ColdResistanceIcon" type="TextureRect" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/Resistance/ResistanceContainer/ColdResistance"]
+margin_right = 15.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 15, 15 )
+texture = ExtResource( 6 )
+expand = true
+
+[node name="ColdResistanceValue" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/Resistance/ResistanceContainer/ColdResistance"]
+margin_left = 19.0
+margin_top = 1.0
+margin_right = 37.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 3 )
+text = "75%"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LightningResistance" type="HBoxContainer" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/Resistance/ResistanceContainer"]
+margin_left = 102.0
+margin_right = 149.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="LightningResistanceIcon" type="TextureRect" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/Resistance/ResistanceContainer/LightningResistance"]
+margin_right = 15.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 15, 15 )
+texture = ExtResource( 7 )
+expand = true
+
+[node name="LightningResistanceValue" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/Resistance/ResistanceContainer/LightningResistance"]
+margin_left = 19.0
+margin_top = 1.0
+margin_right = 37.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 3 )
+text = "75%"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PoisonResistance" type="HBoxContainer" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/Resistance/ResistanceContainer"]
+margin_left = 153.0
+margin_right = 200.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="PoisonResistanceIcon" type="TextureRect" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/Resistance/ResistanceContainer/PoisonResistance"]
+margin_right = 15.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 15, 15 )
+texture = ExtResource( 9 )
+expand = true
+
+[node name="PoisonResistanceValue" type="Label" parent="InfoContainer/StatTab2Container/StatTab2Container/StatTab2Container/Resistance/ResistanceContainer/PoisonResistance"]
+margin_left = 19.0
+margin_top = 1.0
+margin_right = 37.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 3 )
+text = "75%"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GapSpace" type="VBoxContainer" parent="InfoContainer/StatTab2Container/StatTab2Container"]
+margin_left = 204.0
+margin_right = 205.0
+margin_bottom = 248.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatTab3Container" type="ScrollContainer" parent="InfoContainer"]
+visible = false
+margin_top = 232.0
+margin_right = 217.0
+margin_bottom = 418.0
+rect_min_size = Vector2( 0, 186 )
+size_flags_horizontal = 3
+size_flags_vertical = 3
+scroll_horizontal_enabled = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatTab3Container" type="HBoxContainer" parent="InfoContainer/StatTab3Container"]
+margin_right = 217.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+
+[node name="StatTab3Container" type="VBoxContainer" parent="InfoContainer/StatTab3Container/StatTab3Container"]
+margin_right = 211.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 20.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ElementalDmgs" type="VBoxContainer" parent="InfoContainer/StatTab3Container/StatTab3Container/StatTab3Container"]
+margin_right = 211.0
+margin_bottom = 20.0
+size_flags_vertical = 3
+size_flags_stretch_ratio = 1.1
+
+[node name="CraftRating" type="VBoxContainer" parent="InfoContainer/StatTab3Container/StatTab3Container/StatTab3Container/ElementalDmgs"]
+margin_right = 211.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.8
+
+[node name="CraftRating" type="HBoxContainer" parent="InfoContainer/StatTab3Container/StatTab3Container/StatTab3Container/ElementalDmgs/CraftRating"]
+margin_right = 211.0
+margin_bottom = 13.0
+
+[node name="CraftRatingText" type="Label" parent="InfoContainer/StatTab3Container/StatTab3Container/StatTab3Container/ElementalDmgs/CraftRating/CraftRating"]
+margin_right = 66.0
+margin_bottom = 13.0
+custom_fonts/font = SubResource( 6 )
+text = "Craft Rating:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CraftRatingValue" type="Label" parent="InfoContainer/StatTab3Container/StatTab3Container/StatTab3Container/ElementalDmgs/CraftRating/CraftRating"]
+margin_left = 70.0
+margin_right = 211.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 6 )
+text = "150 - 750"
+align = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VSeparator" type="VSeparator" parent="InfoContainer/StatTab3Container/StatTab3Container/StatTab3Container/ElementalDmgs"]
+margin_top = 17.0
+margin_right = 211.0
+margin_bottom = 20.0
+custom_styles/separator = SubResource( 7 )
+
+[node name="GapSpace" type="VBoxContainer" parent="InfoContainer/StatTab3Container/StatTab3Container"]
+margin_left = 215.0
+margin_right = 217.0
+margin_bottom = 20.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+size_flags_stretch_ratio = 0.1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabButtonsContainer" type="HBoxContainer" parent="."]
+margin_left = -45.0
+margin_top = 99.0
+margin_right = 143.0
+margin_bottom = 119.0
+rect_scale = Vector2( 0.5, 0.5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabButton1" type="TextureButton" parent="TabButtonsContainer"]
+self_modulate = Color( 0.300781, 0.300781, 0.300781, 1 )
+margin_right = 60.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 60, 20 )
+texture_normal = ExtResource( 1 )
+expand = true
+
+[node name="Label2" type="Label" parent="TabButtonsContainer/TabButton1"]
+margin_left = 26.0
+margin_top = 2.0
+margin_right = 93.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 3 )
+text = "1"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabButton2" type="TextureButton" parent="TabButtonsContainer"]
+self_modulate = Color( 0.129412, 0.129412, 0.129412, 1 )
+margin_left = 64.0
+margin_right = 124.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 60, 20 )
+texture_normal = ExtResource( 1 )
+expand = true
+
+[node name="Label2" type="Label" parent="TabButtonsContainer/TabButton2"]
+margin_left = 26.0
+margin_top = 2.0
+margin_right = 93.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 3 )
+text = "2"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TabButton3" type="TextureButton" parent="TabButtonsContainer"]
+self_modulate = Color( 0.129412, 0.129412, 0.129412, 1 )
+margin_left = 128.0
+margin_right = 188.0
+margin_bottom = 20.0
+rect_min_size = Vector2( 60, 20 )
+texture_normal = ExtResource( 1 )
+expand = true
+
+[node name="Label2" type="Label" parent="TabButtonsContainer/TabButton3"]
+margin_left = 26.0
+margin_top = 2.0
+margin_right = 93.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 3 )
+text = "3"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonClose" type="TextureButton" parent="."]
+margin_left = 46.0
+margin_top = -57.0
+margin_right = 62.0
+margin_bottom = -41.0
+rect_scale = Vector2( 0.85, 0.85 )
+texture_normal = ExtResource( 10 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

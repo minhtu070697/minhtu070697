@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/hen_scare_sound.mp3-355a4bf3ecb70a576a22dd08da0fa806.mp3str"
+
+[deps]
+
+source_file="res://animals/livestocks/sounds/hen_scare_sound.mp3"
+dest_files=[ "res://.import/hen_scare_sound.mp3-355a4bf3ecb70a576a22dd08da0fa806.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

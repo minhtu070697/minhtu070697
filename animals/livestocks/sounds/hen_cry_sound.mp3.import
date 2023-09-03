@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/hen_cry_sound.mp3-f829e50e94a1b3aca31d46f8231fb037.mp3str"
+
+[deps]
+
+source_file="res://animals/livestocks/sounds/hen_cry_sound.mp3"
+dest_files=[ "res://.import/hen_cry_sound.mp3-f829e50e94a1b3aca31d46f8231fb037.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,693 @@
+{
+  "basic_hair": {
+    "ItemCategory": "Hair",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 1,
+    "ItemInfo": "leather_hat"
+  },
+  "basic_coat": {
+    "ItemCategory": "Shirt",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 1,
+    "ItemInfo": "leather_coat"
+  },
+  "basic_pants": {
+    "ItemCategory": "Pants",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 1,
+    "ItemInfo": "leather_pants"
+  },
+  "elf_hair": {
+    "ItemCategory": "Hair",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 1,
+    "ItemInfo": "leather_hat"
+  },
+  "elf_coat": {
+    "ItemCategory": "Shirt",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 1,
+    "ItemInfo": "leather_coat"
+  },
+  "elf_pants": {
+    "ItemCategory": "Pants",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 1,
+    "ItemInfo": "leather_pants"
+  },
+  "beastman_coat": {
+    "ItemCategory": "Shirt",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 1,
+    "ItemInfo": "leather_coat"
+  },
+  "beastman_pants": {
+    "ItemCategory": "Pants",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 1,
+    "ItemInfo": "leather_pants"
+  },
+  "iron_sword": {
+    "ItemCategory": "Weapon",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 1,
+    "ItemInfo": "iron_sword"
+  },
+  "bow": {
+    "ItemCategory": "Weapon",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 1,
+    "ItemInfo": "bow"
+  },
+  "fishing_rod": {
+    "ItemCategory": "Fishing_Rod",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 1,
+    "ItemInfo": "fishing_rod"
+  },
+  "axe": {
+    "ItemCategory": "Axe",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 1,
+    "ItemInfo": "axe"
+  },
+  "pick": {
+    "ItemCategory": "Pick",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 1,
+    "ItemInfo": "pick"
+  },
+  "hoe": {
+    "ItemCategory": "Hoe",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 1,
+    "ItemInfo": "hoe"
+  },
+  "wood": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "Main",
+    "Rarity": "",
+    "StackSize": 99,
+    "CookingEnergy": 50,
+    "ItemInfo": "basic_wood_piece"
+  },
+  "stone": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "Main",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "basic_rock"
+  },
+  "gold": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "Main",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "gold_piece"
+  },
+  "diamond": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "Main",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "diamond"
+  },
+  "emerald": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "Main",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "emerald"
+  },
+  "ruby": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "Main",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "ruby"
+  },
+  "amber": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "Main",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "amber"
+  },
+  "amethyst": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "Main",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "amethyst"
+  },
+  "quartz": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "Main",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "quartz"
+  },
+  "sapphire": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "Main",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "sapphire"
+  },
+  "rope": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "Main",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "basic_rope"
+  },
+    "fish": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Cook": true,
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "basic_fish"
+  },
+  "hc_grilled_fish": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "hc_grilled_fish"
+  },
+  "grilled_fish": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "grilled_fish"
+  },
+  "oc_grilled_fish": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "oc_grilled_fish"
+  },
+  "black_hole_fish": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "black_hole_fish"
+  },
+  "hc_fish_tomato": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "hc_fish_tomato"
+  },
+  "fish_tomato": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "fish_tomato"
+  },
+  "oc_fish_tomato": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "oc_fish_tomato"
+  },
+  "black_tomato_fish": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "black_tomato_fish"
+  },
+  "blob": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "blob"
+  },
+  "gas": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 1,
+    "CookingEnergy": 1,
+    "ItemInfo": "gas"
+  },
+  "potion": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "Sub",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "basic_hp_potion"
+  },
+  
+  "carrot_seed": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "carrot_seed"
+  },
+  "chilly_seed": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "chilly_seed"
+  },
+  "peach_seed": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "peach_seed"
+  },
+  "beef": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Cook": true,
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "beef"
+  },
+  "carrot": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Cook": true,
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "carrot"
+  },
+  "chilly": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Cook": true,
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "chilly"
+  },
+  "peach": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "peach"
+  },
+  "lettuce": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Cook": true,
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "lettuce"
+  },
+  "daisy": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Cook": true,
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "daisy"
+  },
+  "rice": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Cook": true,
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "rice"
+  },
+  "cooked_rice": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Cook": true,
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "cooked_rice"
+  },
+  "tea_leaf": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Cook": true,
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "tea_leaf"
+  },
+  "salad": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "salad"
+  },
+  "coffee_bean": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Cook": true,
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "coffee_bean"
+  },
+  "steak_n_egg": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "steak_n_egg"
+  },
+  "hc_steak_n_egg": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "hc_steak_n_egg"
+  },
+  "oc_steak_n_egg": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "oc_steak_n_egg"
+  },
+  "green_tea": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "green_tea"
+  },
+  "hc_green_tea": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "hc_green_tea"
+  },
+  "oc_green_tea": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "oc_green_tea"
+  },
+  "daisy_tea": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "daisy_tea"
+  },
+  "hc_daisy_tea": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "hc_daisy_tea"
+  },
+  "oc_daisy_tea": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "oc_daisy_tea"
+  },
+  "fried_fish": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "fried_fish"
+  },
+  "hc_fried_fish": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "hc_fried_fish"
+  },
+  "oc_fried_fish": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "oc_fried_fish"
+  },
+  "cake": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Cook": true,
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "cake"
+  },
+  "hc_cake": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "hc_cake"
+  },
+  "oc_cake": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "oc_cake"
+  },
+  "egg_fried_rice": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "egg_fried_rice"
+  },
+  "hc_egg_fried_rice": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "hc_egg_fried_rice"
+  },
+  "oc_egg_fried_rice": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "oc_egg_fried_rice"
+  },
+  "choco_cake": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "choco_cake"
+  },
+  "tomato_soup": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "tomato_soup"
+  },
+  "hc_tomato_soup": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "hc_tomato_soup"
+  },
+  "oc_tomato_soup": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "oc_tomato_soup"
+  },
+  "cheese": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "cheese"
+  },
+  "curdled_milk": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "curdled_milk"
+  },
+  "old_cheese": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "old_cheese"
+  },
+  "blue_cheese": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "blue_cheese"
+  },
+  "hc_cookies": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "hc_cookies"
+  },
+  "oc_cookies": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "oc_cookies"
+  },
+  "cookies": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "cookies"
+  },
+  "chocolate": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Cook": true,
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "chocolate"
+  },
+  "vinegar": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Cook": true,
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "vinegar"
+  },
+  "sugar": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Cook": true,
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "sugar"
+  },
+  "salt": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Cook": true,
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "salt"
+  },
+  "fried_egg": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Cook": true,
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "fried_egg"
+  },
+  "hc_fried_egg": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Cook": true,
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "hc_fried_egg"
+  },
+  "oc_fried_egg": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Cook": true,
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "oc_fried_egg"
+  },
+  "milk": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Cook": true,
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "milk"
+  },
+  "coffee": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "coffee"
+  },
+  "butter": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Cook": true,
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "butter"
+  },
+  "bread": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Cook": true,
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "bread"
+  },
+  "banh_mi": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "banh_mi"
+  },
+  "egg": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Cook": true,
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "egg"
+  },
+  "flour": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Cook": true,
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "flour"
+  },
+  "burnt_food": {
+    "ItemCategory": "Resource",
+    "CraftingCategory": "",
+    "Rarity": "",
+    "StackSize": 99,
+    "ItemInfo": "burnt_food"
+  }
+}

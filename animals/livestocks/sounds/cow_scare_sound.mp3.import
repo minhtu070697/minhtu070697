@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cow_scare_sound.mp3-5dd0ba72b27c125407262227b833ea87.mp3str"
+
+[deps]
+
+source_file="res://animals/livestocks/sounds/cow_scare_sound.mp3"
+dest_files=[ "res://.import/cow_scare_sound.mp3-5dd0ba72b27c125407262227b833ea87.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

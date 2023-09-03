@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/duck_cry_sound.mp3-5333af530f4d87780796cf622a264d92.mp3str"
+
+[deps]
+
+source_file="res://animals/livestocks/sounds/duck_cry_sound.mp3"
+dest_files=[ "res://.import/duck_cry_sound.mp3-5333af530f4d87780796cf622a264d92.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

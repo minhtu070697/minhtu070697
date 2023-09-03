@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/meteor_skill.mp3-eb1907d238e61ec52faf1bd90e681e96.mp3str"
+
+[deps]
+
+source_file="res://sfx/sounds/meteor_skill.mp3"
+dest_files=[ "res://.import/meteor_skill.mp3-eb1907d238e61ec52faf1bd90e681e96.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

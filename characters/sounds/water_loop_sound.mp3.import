@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/water_loop_sound.mp3-c2249d778ccb37aa4fa5adb951649570.mp3str"
+
+[deps]
+
+source_file="res://characters/sounds/water_loop_sound.mp3"
+dest_files=[ "res://.import/water_loop_sound.mp3-c2249d778ccb37aa4fa5adb951649570.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

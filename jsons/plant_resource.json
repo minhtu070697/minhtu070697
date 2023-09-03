@@ -1,0 +1,77 @@
+{
+  "carrot": {
+    "plant_name" : "carrot",
+    "harvest_time" : 3.0,
+    "sprite_name" : "carrot",
+    "sprite_position": {
+      "x": 0,
+      "y": -33
+    },
+    "plant_type" : "tree",
+    "harvest_wait_time" : 5,
+    "harvest_yield" : {
+      "normal" : {
+        "carrot" : {
+          "quantity" : 3,
+          "chance" : 1
+        }
+      },
+      "perfect" :{
+        "carrot_seed" : {
+          "quantity" : 1,
+          "chance" : 0.2
+        }
+      }
+    }
+  },
+  "chilly": {
+    "plant_name" : "chilly",
+    "harvest_time" : 2.0,
+    "sprite_name" : "chilly",
+    "sprite_position": {
+      "x": 0,
+      "y": -7
+    },
+    "plant_type" : "plant",
+    "harvest_wait_time" : 6,
+    "harvest_yield" : {
+      "normal" : {
+        "chilly" : {
+          "quantity" : 3,
+          "chance" : 1
+        }
+      },
+      "perfect" :{
+        "chilly_seed" : {
+          "quantity" : 1,
+          "chance" : 0.2
+        }
+      }
+    }
+  },
+  "peach": {
+    "plant_name" : "peach",
+    "harvest_time" : 1.0,
+    "sprite_name" : "peach",
+    "sprite_position": {
+      "x": 0,
+      "y": -2
+    },
+    "plant_type" : "root",
+    "harvest_wait_time" : 0,
+    "harvest_yield" : {
+      "normal" : {
+        "peach" : {
+          "quantity" : 3,
+          "chance" : 1
+        }
+      },
+      "perfect" :{
+        "peach_seed" : {
+          "quantity" : 1,
+          "chance" : 0.2
+        }
+      }
+    }
+  }
+}

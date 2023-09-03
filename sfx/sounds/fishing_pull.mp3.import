@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/fishing_pull.mp3-aabf9ac0b272488f01ac00f17cfa7806.mp3str"
+
+[deps]
+
+source_file="res://sfx/sounds/fishing_pull.mp3"
+dest_files=[ "res://.import/fishing_pull.mp3-aabf9ac0b272488f01ac00f17cfa7806.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

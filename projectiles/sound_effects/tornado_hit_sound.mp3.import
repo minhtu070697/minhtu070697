@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/tornado_hit_sound.mp3-442d649d6066c8d32426d11a0685374e.mp3str"
+
+[deps]
+
+source_file="res://projectiles/sound_effects/tornado_hit_sound.mp3"
+dest_files=[ "res://.import/tornado_hit_sound.mp3-442d649d6066c8d32426d11a0685374e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

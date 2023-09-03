@@ -1,0 +1,27 @@
+[gd_resource type="ShaderMaterial" load_steps=8 format=2]
+
+[ext_resource path="res://efx/resources/wave_1_2.png" type="Texture" id=1]
+[ext_resource path="res://efx/resources/wave2_2.png" type="Texture" id=2]
+[ext_resource path="res://efx/resources/Ground.png" type="Texture" id=3]
+[ext_resource path="res://efx/resources/tile_surface.png" type="Texture" id=4]
+[ext_resource path="res://efx/shader/scripts/water_wave_shader.tres" type="Shader" id=5]
+
+[sub_resource type="OpenSimplexNoise" id=28]
+
+[sub_resource type="NoiseTexture" id=29]
+noise = SubResource( 28 )
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource( 5 )
+shader_param/alpha = 0.55
+shader_param/zoom = 12.0
+shader_param/wave_1_speed = 0.213
+shader_param/wave_2_speed = 0.267
+shader_param/seed_1 = 4.435
+shader_param/pause = false
+shader_param/testing = ExtResource( 4 )
+shader_param/bg = ExtResource( 3 )
+shader_param/wave1 = ExtResource( 1 )
+shader_param/wave2 = ExtResource( 2 )
+shader_param/noise = SubResource( 29 )

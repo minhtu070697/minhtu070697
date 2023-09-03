@@ -1,0 +1,68 @@
+{
+  "carrot": {
+    "young_plant_name" : "carrot",
+    "growth_phase" : 3.0,
+    "sprite_name" : "carrot",
+    "sprite_position": {
+      "x": 0,
+      "y": -4
+    },
+    "phase_time" : {
+      "1" : 0.006,
+      "2" : 0.006,
+      "3" : 0.006
+    },
+    "water_meter_max" : 100,
+    "water_drop_speed" : 3,
+    "fertilizer_meter_max" : 100,
+    "fertilizer_drop_speed" : 5,
+    "health_meter_max" : 100,
+    "health_drop_speed" : 9,
+    "decease" : [],
+    "growth_plant_name": "carrot"
+  },
+  "chilly": {
+    "young_plant_name" : "chilly",
+    "growth_phase" : 3.0,
+    "sprite_name" : "chilly",
+    "sprite_position": {
+      "x": 0,
+      "y": -7
+    },
+    "phase_time" : {
+      "1" : 0.0007,
+      "2" : 0.0007,
+      "3" : 0.0007
+    },
+    "water_meter_max" : 100,
+    "water_drop_speed" : 10,
+    "fertilizer_meter_max" : 100,
+    "fertilizer_drop_speed" : 1,
+    "health_meter_max" : 100,
+    "health_drop_speed" : 30,
+    "decease" : [],
+    "growth_plant_name": "chilly"
+  },
+  "peach": {
+    "young_plant_name" : "peach",
+    "growth_phase" : 3.0,
+    "sprite_name" : "peach",
+    "sprite_position": {
+      "x": 0,
+      "y": -2
+    },
+    "phase_time" : {
+      "1" : 0.0007,
+      "2" : 0.0007,
+      "3" : 0.0007
+    },
+    "water_meter_max" : 100,
+    "water_drop_speed" : 10,
+    "fertilizer_meter_max" : 100,
+    "fertilizer_drop_speed" : 1,
+    "health_meter_max" : 100,
+    "health_drop_speed" : 30,
+    "decease" : [],
+    "growth_plant_name": "peach"
+  }
+}

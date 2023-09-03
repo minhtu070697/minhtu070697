@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/fishing_rod_cast_sound.mp3-26638970d0fa556ace5e79d02fc933c1.mp3str"
+
+[deps]
+
+source_file="res://sfx/sounds/fishing_rod_cast_sound.mp3"
+dest_files=[ "res://.import/fishing_rod_cast_sound.mp3-26638970d0fa556ace5e79d02fc933c1.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

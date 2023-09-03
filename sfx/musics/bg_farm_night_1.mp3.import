@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bg_farm_night_1.mp3-f111effa02496f8ed84263b490f2f923.mp3str"
+
+[deps]
+
+source_file="res://sfx/musics/bg_farm_night_1.mp3"
+dest_files=[ "res://.import/bg_farm_night_1.mp3-f111effa02496f8ed84263b490f2f923.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

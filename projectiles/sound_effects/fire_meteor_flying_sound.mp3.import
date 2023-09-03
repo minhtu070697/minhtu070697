@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/fire_meteor_flying_sound.mp3-497f7253876056b30fa645245e2afacd.mp3str"
+
+[deps]
+
+source_file="res://projectiles/sound_effects/fire_meteor_flying_sound.mp3"
+dest_files=[ "res://.import/fire_meteor_flying_sound.mp3-497f7253876056b30fa645245e2afacd.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

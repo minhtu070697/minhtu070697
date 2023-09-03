@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://map/textures/objects/long_grass/battle_long_grass_1.png" type="Texture" id=1]
+[ext_resource path="res://map/scenes/decorations/battlefield_grass.gd" type="Script" id=2]
+
+[node name="BattlefieldGrass" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -3 )
+texture = ExtResource( 1 )

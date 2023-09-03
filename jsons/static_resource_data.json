@@ -1,0 +1,138 @@
+{
+  "tree": {
+    "item_yield": {
+      "wood": {
+        "quantity" : 3,
+        "chance" : 1
+      }
+    }
+  },
+  "gold": {
+    "item_yield": {
+      "gold": {
+        "quantity" : 3,
+        "chance" : 1
+      },
+      "stone": {
+        "quantity" : 3,
+        "chance" : 0.7
+      }
+    }
+  },
+  "stone": {
+    "item_yield": {
+      "stone": {
+        "quantity" : 3,
+        "chance" : 1
+      }
+    }
+  },
+  "barrel": {
+    "item_yield": {
+      "wood": {
+        "quantity" : 3,
+        "chance" : 1
+      },
+      "rope": {
+        "quantity" : 3,
+        "chance" : 0.5
+      }
+    }
+  },
+  "chest": {
+    "item_yield": {
+      "wood": {
+        "quantity" : 3,
+        "chance" : 1
+      },
+      "potion": {
+        "quantity" : 3,
+        "chance" : 0.5
+      }
+    }
+  },
+  "diamond": {
+    "item_yield": {
+      "diamond": {
+        "quantity" : 3,
+        "chance" : 1
+      },
+      "stone": {
+        "quantity" : 3,
+        "chance" : 0.2
+      }
+    }
+  },
+  "sapphire": {
+    "item_yield": {
+      "sapphire": {
+        "quantity" : 3,
+        "chance" : 1
+      },
+      "stone": {
+        "quantity" : 3,
+        "chance" : 0.2
+      }
+    }
+  },
+  "quartz": {
+    "item_yield": {
+      "quartz": {
+        "quantity" : 3,
+        "chance" : 1
+      },
+      "stone": {
+        "quantity" : 3,
+        "chance" : 0.2
+      }
+    }
+  },
+  "emerald": {
+    "item_yield": {
+      "emerald": {
+        "quantity" : 3,
+        "chance" : 1
+      },
+      "stone": {
+        "quantity" : 3,
+        "chance" : 0.2
+      }
+    }
+  },
+  "ruby": {
+    "item_yield": {
+      "ruby": {
+        "quantity" : 3,
+        "chance" : 1
+      },
+      "stone": {
+        "quantity" : 3,
+        "chance" : 0.2
+      }
+    }
+  },
+  "amber": {
+    "item_yield": {
+      "amber": {
+        "quantity" : 3,
+        "chance" : 1
+      },
+      "stone": {
+        "quantity" : 3,
+        "chance" : 0.2
+      }
+    }
+  },
+  "amethyst": {
+    "item_yield": {
+      "amethyst": {
+        "quantity" : 3,
+        "chance" : 1
+      },
+      "stone": {
+        "quantity" : 3,
+        "chance" : 0.2
+      }
+    }
+  }
+}

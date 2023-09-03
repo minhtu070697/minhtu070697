@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/fishing_biting.mp3-b443e40df7b3078d732ad1f47a0199e2.mp3str"
+
+[deps]
+
+source_file="res://sfx/sounds/fishing_biting.mp3"
+dest_files=[ "res://.import/fishing_biting.mp3-b443e40df7b3078d732ad1f47a0199e2.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

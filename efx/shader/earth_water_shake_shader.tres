@@ -1,0 +1,19 @@
+[gd_resource type="ShaderMaterial" load_steps=5 format=2]
+
+[ext_resource path="res://efx/shader/scripts/earth_water_shake.tres" type="Shader" id=1]
+[ext_resource path="res://efx/resources/earth_water_water.png" type="Texture" id=2]
+
+[sub_resource type="OpenSimplexNoise" id=1]
+period = 40.0
+
+[sub_resource type="NoiseTexture" id=2]
+seamless = true
+noise = SubResource( 1 )
+
+[resource]
+resource_local_to_scene = true
+shader = ExtResource( 1 )
+shader_param/distord_amount = 0.02
+shader_param/pause = false
+shader_param/shader_mask = ExtResource( 2 )
+shader_param/noise_map = SubResource( 2 )

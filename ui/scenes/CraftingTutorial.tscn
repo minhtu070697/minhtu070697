@@ -1,0 +1,585 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://ui/textures/default_inventory_background.png" type="Texture" id=1]
+[ext_resource path="res://ui/textures/items/wood.png" type="Texture" id=2]
+[ext_resource path="res://ui/textures/items/axe.png" type="Texture" id=3]
+[ext_resource path="res://ui/textures/items/rope.png" type="Texture" id=4]
+[ext_resource path="res://ui/textures/items/pick.png" type="Texture" id=5]
+[ext_resource path="res://ui/textures/items/fishing_rod.png" type="Texture" id=7]
+[ext_resource path="res://fonts/m5x7.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://ui/textures/items/hoe.png" type="Texture" id=9]
+[ext_resource path="res://efx/resources/spotlight_1.png" type="Texture" id=11]
+[ext_resource path="res://ui/textures/items/iron_sword.png" type="Texture" id=12]
+[ext_resource path="res://map/textures/objects/items/stone.png" type="Texture" id=13]
+[ext_resource path="res://map/textures/objects/items/gold.png" type="Texture" id=14]
+
+[sub_resource type="DynamicFont" id=3]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 8 )
+
+[sub_resource type="CanvasItemMaterial" id=5]
+blend_mode = 1
+
+[sub_resource type="DynamicFont" id=4]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 8 )
+
+[node name="CraftingTutorial" type="Node2D"]
+
+[node name="Shadow" type="TextureRect" parent="."]
+modulate = Color( 0.243137, 0.243137, 0.243137, 0.352941 )
+margin_left = -57.0
+margin_top = -59.0
+margin_right = 119.0
+margin_bottom = 53.0
+rect_scale = Vector2( 0.62, 1.02 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="TextureRect" parent="."]
+modulate = Color( 0.309804, 0.243137, 0.372549, 1 )
+margin_left = -55.0
+margin_top = -58.0
+margin_right = 121.0
+margin_bottom = 54.0
+rect_scale = Vector2( 0.6, 1.15 )
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TitleLabel" type="Label" parent="."]
+margin_left = -55.0
+margin_top = -58.0
+margin_right = 50.0
+margin_bottom = -42.0
+custom_fonts/font = SubResource( 3 )
+text = "Basic Tools"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Light" type="Control" parent="."]
+margin_left = 17.0
+margin_top = -14.0
+margin_right = 57.0
+margin_bottom = 26.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Flare2" type="Sprite" parent="Light"]
+modulate = Color( 0.290196, 1, 0, 0.627451 )
+material = SubResource( 5 )
+position = Vector2( 19, -16 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 11 )
+
+[node name="Flare3" type="Sprite" parent="Light"]
+modulate = Color( 0.290196, 1, 0, 0.627451 )
+material = SubResource( 5 )
+position = Vector2( 19, 5 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 11 )
+
+[node name="Flare4" type="Sprite" parent="Light"]
+modulate = Color( 0.290196, 1, 0, 0.627451 )
+material = SubResource( 5 )
+position = Vector2( 19, 27 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 11 )
+
+[node name="Flare5" type="Sprite" parent="Light"]
+modulate = Color( 0.290196, 1, 0, 0.627451 )
+material = SubResource( 5 )
+position = Vector2( 19, 49 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 11 )
+
+[node name="Flare6" type="Sprite" parent="Light"]
+modulate = Color( 0.290196, 1, 0, 0.627451 )
+material = SubResource( 5 )
+position = Vector2( 19, 71 )
+scale = Vector2( 0.2, 0.2 )
+texture = ExtResource( 11 )
+
+[node name="Axe" type="Control" parent="."]
+margin_left = -52.0
+margin_top = -37.0
+margin_right = 48.0
+margin_bottom = -17.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Recipe_1" type="TextureRect" parent="Axe"]
+margin_left = 8.0
+margin_top = 2.0
+margin_right = 24.0
+margin_bottom = 18.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Axe/Recipe_1"]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 18.0
+margin_bottom = 18.0
+rect_scale = Vector2( 0.75, 0.75 )
+custom_fonts/font = SubResource( 4 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="Axe"]
+margin_left = 30.0
+margin_top = 2.0
+margin_right = 36.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 4 )
+text = "+"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Recipe_2" type="TextureRect" parent="Axe"]
+margin_left = 42.0
+margin_top = 2.0
+margin_right = 58.0
+margin_bottom = 18.0
+texture = ExtResource( 13 )
+expand = true
+
+[node name="Label" type="Label" parent="Axe/Recipe_2"]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 18.0
+margin_bottom = 18.0
+rect_scale = Vector2( 0.75, 0.75 )
+custom_fonts/font = SubResource( 4 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="Axe"]
+margin_left = 64.0
+margin_top = 2.0
+margin_right = 70.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 4 )
+text = "="
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Item" type="TextureRect" parent="Axe"]
+margin_left = 79.0
+margin_top = 2.0
+margin_right = 95.0
+margin_bottom = 18.0
+texture = ExtResource( 3 )
+
+[node name="Rod" type="Control" parent="."]
+margin_left = -52.0
+margin_top = -16.0
+margin_right = 48.0
+margin_bottom = 4.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Recipe_1" type="TextureRect" parent="Rod"]
+margin_left = 8.0
+margin_top = 2.0
+margin_right = 24.0
+margin_bottom = 18.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Rod/Recipe_1"]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 18.0
+margin_bottom = 18.0
+rect_scale = Vector2( 0.75, 0.75 )
+custom_fonts/font = SubResource( 4 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="Rod"]
+margin_left = 30.0
+margin_top = 2.0
+margin_right = 36.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 4 )
+text = "+"
+align = 1
+valign = 1
+
+[node name="Recipe_2" type="TextureRect" parent="Rod"]
+margin_left = 42.0
+margin_top = 2.0
+margin_right = 58.0
+margin_bottom = 18.0
+texture = ExtResource( 4 )
+expand = true
+
+[node name="Label" type="Label" parent="Rod/Recipe_2"]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 18.0
+margin_bottom = 18.0
+rect_scale = Vector2( 0.75, 0.75 )
+custom_fonts/font = SubResource( 4 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="Rod"]
+margin_left = 64.0
+margin_top = 2.0
+margin_right = 70.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 4 )
+text = "="
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Item" type="TextureRect" parent="Rod"]
+margin_left = 79.0
+margin_top = 2.0
+margin_right = 95.0
+margin_bottom = 18.0
+texture = ExtResource( 7 )
+
+[node name="Hoe" type="Control" parent="."]
+margin_left = -52.0
+margin_top = 5.0
+margin_right = 48.0
+margin_bottom = 25.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Recipe_1" type="TextureRect" parent="Hoe"]
+margin_left = 8.0
+margin_top = 2.0
+margin_right = 24.0
+margin_bottom = 18.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Hoe/Recipe_1"]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 18.0
+margin_bottom = 18.0
+rect_scale = Vector2( 0.75, 0.75 )
+custom_fonts/font = SubResource( 4 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="Hoe"]
+margin_left = 30.0
+margin_top = 2.0
+margin_right = 36.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 4 )
+text = "+"
+align = 1
+valign = 1
+
+[node name="Recipe_2" type="TextureRect" parent="Hoe"]
+margin_left = 42.0
+margin_top = 2.0
+margin_right = 58.0
+margin_bottom = 18.0
+texture = ExtResource( 14 )
+expand = true
+
+[node name="Label" type="Label" parent="Hoe/Recipe_2"]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 18.0
+margin_bottom = 18.0
+rect_scale = Vector2( 0.75, 0.75 )
+custom_fonts/font = SubResource( 4 )
+text = "3"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="Hoe"]
+margin_left = 64.0
+margin_top = 2.0
+margin_right = 70.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 4 )
+text = "="
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Item" type="TextureRect" parent="Hoe"]
+margin_left = 79.0
+margin_top = 2.0
+margin_right = 95.0
+margin_bottom = 18.0
+texture = ExtResource( 9 )
+
+[node name="Pick" type="Control" parent="."]
+margin_left = -52.0
+margin_top = 26.0
+margin_right = 48.0
+margin_bottom = 46.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Recipe_1" type="TextureRect" parent="Pick"]
+margin_left = 1.0
+margin_top = 2.0
+margin_right = 17.0
+margin_bottom = 18.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Pick/Recipe_1"]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 18.0
+margin_bottom = 18.0
+rect_scale = Vector2( 0.75, 0.75 )
+custom_fonts/font = SubResource( 4 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="Pick"]
+margin_left = 21.0
+margin_top = 2.0
+margin_right = 27.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 4 )
+text = "+"
+align = 1
+valign = 1
+
+[node name="Recipe_2" type="TextureRect" parent="Pick"]
+margin_left = 28.0
+margin_top = 2.0
+margin_right = 44.0
+margin_bottom = 18.0
+texture = ExtResource( 13 )
+expand = true
+
+[node name="Label" type="Label" parent="Pick/Recipe_2"]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 18.0
+margin_bottom = 18.0
+rect_scale = Vector2( 0.75, 0.75 )
+custom_fonts/font = SubResource( 4 )
+text = "2"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="Pick"]
+margin_left = 47.0
+margin_top = 2.0
+margin_right = 53.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 4 )
+text = "+"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Recipe_3" type="TextureRect" parent="Pick"]
+margin_left = 53.0
+margin_top = 2.0
+margin_right = 69.0
+margin_bottom = 18.0
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Pick/Recipe_3"]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 18.0
+margin_bottom = 18.0
+rect_scale = Vector2( 0.75, 0.75 )
+custom_fonts/font = SubResource( 4 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Label3" type="Label" parent="Pick"]
+margin_left = 73.0
+margin_top = 2.0
+margin_right = 79.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 4 )
+text = "="
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Item" type="TextureRect" parent="Pick"]
+margin_left = 79.0
+margin_top = 2.0
+margin_right = 95.0
+margin_bottom = 18.0
+texture = ExtResource( 5 )
+
+[node name="Sword" type="Control" parent="."]
+margin_left = -52.0
+margin_top = 47.0
+margin_right = 48.0
+margin_bottom = 67.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Recipe_1" type="TextureRect" parent="Sword"]
+margin_left = 1.0
+margin_top = 2.0
+margin_right = 17.0
+margin_bottom = 18.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Sword/Recipe_1"]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 18.0
+margin_bottom = 18.0
+rect_scale = Vector2( 0.75, 0.75 )
+custom_fonts/font = SubResource( 4 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Label" type="Label" parent="Sword"]
+margin_left = 21.0
+margin_top = 2.0
+margin_right = 27.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 4 )
+text = "+"
+align = 1
+valign = 1
+
+[node name="Recipe_2" type="TextureRect" parent="Sword"]
+margin_left = 28.0
+margin_top = 2.0
+margin_right = 44.0
+margin_bottom = 18.0
+texture = ExtResource( 13 )
+expand = true
+
+[node name="Label" type="Label" parent="Sword/Recipe_2"]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 18.0
+margin_bottom = 18.0
+rect_scale = Vector2( 0.75, 0.75 )
+custom_fonts/font = SubResource( 4 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Label2" type="Label" parent="Sword"]
+margin_left = 47.0
+margin_top = 2.0
+margin_right = 53.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 4 )
+text = "+"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Recipe_3" type="TextureRect" parent="Sword"]
+margin_left = 53.0
+margin_top = 2.0
+margin_right = 69.0
+margin_bottom = 18.0
+texture = ExtResource( 14 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Sword/Recipe_3"]
+margin_left = 12.0
+margin_top = 5.0
+margin_right = 18.0
+margin_bottom = 18.0
+rect_scale = Vector2( 0.75, 0.75 )
+custom_fonts/font = SubResource( 4 )
+text = "1"
+align = 1
+valign = 1
+
+[node name="Label3" type="Label" parent="Sword"]
+margin_left = 73.0
+margin_top = 2.0
+margin_right = 79.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 4 )
+text = "="
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Item" type="TextureRect" parent="Sword"]
+margin_left = 79.0
+margin_top = 2.0
+margin_right = 95.0
+margin_bottom = 18.0
+texture = ExtResource( 12 )
+
+[node name="Tween" type="Tween" parent="."]

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/flash_skill.mp3-5724c1657ca8b5bacbccc5839a449559.mp3str"
+
+[deps]
+
+source_file="res://sfx/sounds/flash_skill.mp3"
+dest_files=[ "res://.import/flash_skill.mp3-5724c1657ca8b5bacbccc5839a449559.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

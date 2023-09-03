@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ice_skill.mp3-e628a29f8723e63917091b288c857a11.mp3str"
+
+[deps]
+
+source_file="res://sfx/sounds/ice_skill.mp3"
+dest_files=[ "res://.import/ice_skill.mp3-e628a29f8723e63917091b288c857a11.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

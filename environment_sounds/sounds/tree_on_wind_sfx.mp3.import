@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/tree_on_wind_sfx.mp3-e316ae032808b51c68c4729f21189b9e.mp3str"
+
+[deps]
+
+source_file="res://environment_sounds/sounds/tree_on_wind_sfx.mp3"
+dest_files=[ "res://.import/tree_on_wind_sfx.mp3-e316ae032808b51c68c4729f21189b9e.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

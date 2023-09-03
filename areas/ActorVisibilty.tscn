@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://areas/actor_visibility.gd" type="Script" id=1]
+
+[node name="ActorVisibilty" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="RayCast2D" type="RayCast2D" parent="."]
+enabled = true
+cast_to = Vector2( 100, 0 )
+collision_mask = 512
+
+[node name="Line2D" type="Line2D" parent="."]
+points = PoolVector2Array( 0, 0, 100, 0 )
+width = 2.0

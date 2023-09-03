@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/mining.mp3-7ce916b9dde34ea8eba55e0bdfb8dfa5.mp3str"
+
+[deps]
+
+source_file="res://sfx/sounds/mining.mp3"
+dest_files=[ "res://.import/mining.mp3-7ce916b9dde34ea8eba55e0bdfb8dfa5.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,13 @@
+{
+  "cow_barn": {
+    "barn_name" : "cow_barn",
+    "sprite_name" : "cow_barn",
+    "sprite_position": {"x": 10, "y": -91},
+    "size" : {"x": 6, "y": 5},
+    "barn_door_position": {"x": 0, "y": 4},
+    "barn_door_width": {"x": 2, "y": 0},
+    "livestock_inside": ["cow", "chicken", "duck_1", "duck_2"],
+    "max_food_meter": 100,
+    "barn_navigator_type": "land"
+  }
+}

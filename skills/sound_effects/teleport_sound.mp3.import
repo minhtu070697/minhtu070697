@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/teleport_sound.mp3-dbc183126049cf65437ae2940d44cc65.mp3str"
+
+[deps]
+
+source_file="res://skills/sound_effects/teleport_sound.mp3"
+dest_files=[ "res://.import/teleport_sound.mp3-dbc183126049cf65437ae2940d44cc65.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

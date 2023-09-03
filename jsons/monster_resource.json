@@ -1,0 +1,145 @@
+{
+  "boss_wolf": {
+    "monster_name" : "boss_wolf",
+    "sprite_name" : "boss_wolf",
+    "size" : {"x": 1, "y": 1},
+    "type" : 2,
+    "max_number_in_map" : 1,
+    "is_aggressive" : true,
+    "moving_distance" : 20,
+    "class_list" : ["boss_wolf"],
+    "num_in_group" : 1,
+    "idle" : 27,
+    "run" : 27,
+    "basic_melee_attack" : 27,
+    "casting" : 1,
+    "jump_attack" : 27,
+    "die" : 5,
+    "cry_sound" : "boss_wolf",
+    "cry_sound_amplify" : 7,
+    "experience" : 300,
+    "faction" : 5,
+    "item_yield": {
+      "diamond": {
+        "quantity" : 3,
+        "chance" : 1
+      },
+      "beef": {
+        "quantity" : 3,
+        "chance" : 1
+      },
+      "gold": {
+        "quantity" : 3,
+        "chance" : 0.2
+      },
+      "potion": {
+        "quantity" : 3,
+        "chance" : 0.3
+      }
+    }
+  },
+  "goblin": {
+    "monster_name" : "goblin",
+    "sprite_name" : "goblin",
+    "size" : {"x": 1, "y": 1},
+    "type" : 0,
+    "max_number_in_map" : 0,
+    "is_aggressive" : true,
+    "moving_distance" : 10,
+    "class_list" : ["goblin"],
+    "num_in_group" : 4,
+    "idle" : 10,
+    "run" : 10,
+    "basic_melee_attack" : 20,
+    "casting" : 20,
+    "jump_attack" : 1,
+    "die" : 5,
+    "cry_sound" : "goblin",
+    "cry_sound_amplify" : 5,
+    "faction" : 3
+  },
+  "goblin_ice": {
+    "monster_name" : "goblin_ice",
+    "sprite_name" : "goblin",
+    "size" : {"x": 1, "y": 1},
+    "type" : 0,
+    "max_number_in_map" : 0,
+    "is_aggressive" : true,
+    "moving_distance" : 14,
+    "class_list" : ["goblin_ice"],
+    "num_in_group" : 3,
+    "idle" : 10,
+    "run" : 10,
+    "basic_melee_attack" : 20,
+    "casting" : 20,
+    "jump_attack" : 1,
+    "die" : 5,
+    "cry_sound" : "goblin",
+    "cry_sound_amplify" : 5,
+    "faction" : 3
+  },
+  "slime": {
+    "monster_name" : "slime",
+    "sprite_name" : "slime",
+    "size" : {"x": 1, "y": 1},
+    "type" : 0,
+    "max_number_in_map" : 22,
+    "is_aggressive" : true,
+    "moving_distance" : 10,
+    "class_list" : ["slime"],
+    "num_in_group" : 3,
+    "idle" : 8,
+    "run" : 9,
+    "basic_melee_attack" : 14,
+    "casting" : 1,
+    "jump_attack" : 1,
+    "die" : 5,
+    "cry_sound" : "slime",
+    "cry_sound_amplify" : 3,
+    "faction" : 5,
+    "item_yield": {
+      "wood": {
+        "quantity" : 3,
+        "chance" : 0.2
+      },
+      "potion": {
+        "quantity" : 3,
+        "chance" : 0.2
+      },
+      "gold": {
+        "quantity" : 3,
+        "chance" : 0.2
+      }
+    }
+  },
+  "slime_child": {
+    "monster_name" : "slime_child",
+    "sprite_name" : "slime",
+    "size" : {"x": 1, "y": 1},
+    "type" : 0,
+    "max_number_in_map" : 0,
+    "is_aggressive" : true,
+    "moving_distance" : 10,
+    "class_list" : ["slime"],
+    "num_in_group" : 2,
+    "idle" : 8,
+    "run" : 9,
+    "basic_melee_attack" : 14,
+    "casting" : 1,
+    "jump_attack" : 1,
+    "die" : 5,
+    "cry_sound" : "slime",
+    "cry_sound_amplify" : 3,
+    "faction" : 5,
+    "item_yield": {
+      "potion": {
+        "quantity" : 3,
+        "chance" : 0.1
+      },
+      "gold": {
+        "quantity" : 3,
+        "chance" : 0.1
+      }
+    }
+  }
+}

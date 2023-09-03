@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/fire_skill.mp3-fd6545f2a09286308c54d3c35d444c4a.mp3str"
+
+[deps]
+
+source_file="res://sfx/sounds/fire_skill.mp3"
+dest_files=[ "res://.import/fire_skill.mp3-fd6545f2a09286308c54d3c35d444c4a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

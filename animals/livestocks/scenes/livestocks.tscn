@@ -1,0 +1,511 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://animals/livestocks/scripts/livestocks.gd" type="Script" id=1]
+[ext_resource path="res://ui/floating_text_manager.tscn" type="PackedScene" id=2]
+[ext_resource path="res://characters/textures/shadow.png" type="Texture" id=3]
+[ext_resource path="res://areas/stuck_detector.tscn" type="PackedScene" id=4]
+[ext_resource path="res://animals/livestocks/textures/cow/cow_growth_idle.png" type="Texture" id=5]
+[ext_resource path="res://animals/livestocks/scenes/LivestockTimers.tscn" type="PackedScene" id=6]
+[ext_resource path="res://animals/livestocks/scenes/LivestockStates.tscn" type="PackedScene" id=7]
+[ext_resource path="res://areas/detect_range.tscn" type="PackedScene" id=8]
+[ext_resource path="res://animals/livestocks/textures/cow/cow_growth_sleep.png" type="Texture" id=9]
+[ext_resource path="res://animals/livestocks/textures/cow/cow_food.png" type="Texture" id=10]
+[ext_resource path="res://animals/scenes/AnimalTimers.tscn" type="PackedScene" id=11]
+
+[sub_resource type="Animation" id=37]
+length = 0.001
+
+[sub_resource type="Animation" id=38]
+resource_name = "die"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.756863 ), Color( 1, 1, 1, 0.486275 ), Color( 1, 1, 1, 0.278431 ), Color( 1, 1, 1, 0.0470588 ) ]
+}
+
+[sub_resource type="Animation" id=39]
+resource_name = "eat"
+length = 0.85
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("BodyParts/Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BodyParts/Body:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BodyParts/Body:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 9.07444e-05 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("BodyParts/Body/Food:texture")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 10 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("BodyParts/Body/Food:hframes")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("BodyParts/Body/Food:frame")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("BodyParts/Body/Food:position")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( 21.4144, 24.6459 ), Vector2( 20.739, 22.5143 ), Vector2( 20.739, 22.5143 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("BodyParts/Body/Food:rotation_degrees")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.3, 0.6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ 0.0, -4.0, 3.0 ]
+}
+
+[sub_resource type="Animation" id=40]
+resource_name = "flee"
+length = 0.25
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("BodyParts/Body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BodyParts/Body:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BodyParts/Body:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("BodyParts/Body:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 0.307786, 0.329877 ),
+"update": 0,
+"values": [ -12.0, 12.0 ]
+}
+
+[sub_resource type="Animation" id=41]
+resource_name = "idle"
+length = 0.1
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("BodyParts/Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BodyParts/Body:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BodyParts/Body:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 9.07444e-05 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+
+[sub_resource type="Animation" id=42]
+resource_name = "lie_down"
+length = 1.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("BodyParts/Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 9 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BodyParts/Body:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 5 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BodyParts/Body:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 9.07444e-05, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
+
+[sub_resource type="Animation" id=43]
+resource_name = "run"
+length = 0.25
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("BodyParts/Body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BodyParts/Body:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BodyParts/Body:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("BodyParts/Body:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.1 ),
+"transitions": PoolRealArray( 0.307786, 0.329877 ),
+"update": 0,
+"values": [ -12.0, 12.0 ]
+}
+
+[sub_resource type="Animation" id=44]
+resource_name = "sleep"
+length = 1.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("BodyParts/Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 9 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BodyParts/Body:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 5 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BodyParts/Body:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 9.07444e-05, 0.6, 0.8, 1, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4 ]
+}
+
+[sub_resource type="Animation" id=45]
+resource_name = "walk"
+length = 0.55
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("BodyParts/Body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 0 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BodyParts/Body:texture")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BodyParts/Body:hframes")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("BodyParts/Body:rotation_degrees")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3 ),
+"transitions": PoolRealArray( 0.31864, 0.329877 ),
+"update": 0,
+"values": [ -9.0, 9.0 ]
+}
+
+[sub_resource type="CircleShape2D" id=30]
+radius = 12.0
+
+[sub_resource type="CircleShape2D" id=36]
+radius = 102.489
+
+[sub_resource type="CapsuleShape2D" id=34]
+radius = 6.0412
+height = 8.01925
+
+[node name="Livestocks" type="KinematicBody2D"]
+modulate = Color( 1, 1, 1, 0.486275 )
+script = ExtResource( 1 )
+
+[node name="BodyParts" type="Node2D" parent="."]
+
+[node name="Shadow" type="Sprite" parent="BodyParts"]
+visible = false
+texture = ExtResource( 3 )
+
+[node name="Body" type="Sprite" parent="BodyParts"]
+position = Vector2( 0, -15 )
+rotation = -0.20944
+texture = ExtResource( 5 )
+
+[node name="Food" type="Sprite" parent="BodyParts/Body"]
+visible = false
+show_behind_parent = true
+position = Vector2( 20.739, 22.5143 )
+rotation = -0.0465735
+
+[node name="Water" type="Sprite" parent="BodyParts"]
+visible = false
+show_behind_parent = true
+position = Vector2( 24.9668, 2.71041 )
+rotation = -0.256013
+
+[node name="BaseAnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 37 )
+anims/die = SubResource( 38 )
+anims/eat = SubResource( 39 )
+anims/flee = SubResource( 40 )
+anims/idle = SubResource( 41 )
+anims/lie_down = SubResource( 42 )
+anims/run = SubResource( 43 )
+anims/sleep = SubResource( 44 )
+anims/walk = SubResource( 45 )
+
+[node name="StateLabel" type="Label" parent="."]
+visible = false
+margin_left = -20.0
+margin_top = 4.0
+margin_right = 20.0
+margin_bottom = 18.0
+text = "idle"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="States" parent="." instance=ExtResource( 7 )]
+
+[node name="StuckDetector" parent="." instance=ExtResource( 4 )]
+visible = false
+
+[node name="CollisionShape2D" parent="StuckDetector" index="0"]
+shape = SubResource( 30 )
+
+[node name="Timer" parent="StuckDetector" index="1"]
+wait_time = 0.1
+
+[node name="FloatingTextManager" parent="." instance=ExtResource( 2 )]
+position = Vector2( 1, -53 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+attenuation = 12.0
+
+[node name="DetectRange" parent="." instance=ExtResource( 8 )]
+
+[node name="CollisionShape2D" parent="DetectRange" index="0"]
+scale = Vector2( 1, 0.7 )
+shape = SubResource( 36 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.56041
+shape = SubResource( 34 )
+
+[node name="LivestockTimers" parent="." instance=ExtResource( 6 )]
+
+[node name="AnimalTimers" parent="." instance=ExtResource( 11 )]
+
+[editable path="StuckDetector"]
+[editable path="DetectRange"]

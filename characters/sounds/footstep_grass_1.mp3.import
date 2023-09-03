@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/footstep_grass_1.mp3-fcbd2a0dde71ff5e12c6793981438c7f.mp3str"
+
+[deps]
+
+source_file="res://characters/sounds/footstep_grass_1.mp3"
+dest_files=[ "res://.import/footstep_grass_1.mp3-fcbd2a0dde71ff5e12c6793981438c7f.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

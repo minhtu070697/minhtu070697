@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ice_nova_init_sound.mp3-ed11fd754669142b9327e8a740b32d5a.mp3str"
+
+[deps]
+
+source_file="res://projectiles/sound_effects/ice_nova_init_sound.mp3"
+dest_files=[ "res://.import/ice_nova_init_sound.mp3-ed11fd754669142b9327e8a740b32d5a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

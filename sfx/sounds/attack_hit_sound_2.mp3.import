@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/attack_hit_sound_2.mp3-1f148260eac428f92aa906c95d590583.mp3str"
+
+[deps]
+
+source_file="res://sfx/sounds/attack_hit_sound_2.mp3"
+dest_files=[ "res://.import/attack_hit_sound_2.mp3-1f148260eac428f92aa906c95d590583.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

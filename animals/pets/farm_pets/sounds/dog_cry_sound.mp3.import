@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/dog_cry_sound.mp3-7967a7d2b6dca1deccdeb374e0462f15.mp3str"
+
+[deps]
+
+source_file="res://animals/pets/farm_pets/sounds/dog_cry_sound.mp3"
+dest_files=[ "res://.import/dog_cry_sound.mp3-7967a7d2b6dca1deccdeb374e0462f15.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

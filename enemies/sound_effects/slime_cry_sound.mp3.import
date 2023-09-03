@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/slime_cry_sound.mp3-c6dd0c698030a34b9339af9924d68aea.mp3str"
+
+[deps]
+
+source_file="res://enemies/sound_effects/slime_cry_sound.mp3"
+dest_files=[ "res://.import/slime_cry_sound.mp3-c6dd0c698030a34b9339af9924d68aea.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

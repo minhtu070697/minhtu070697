@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/charge_skill.mp3-993a33312e074a110d1e881cec44f791.mp3str"
+
+[deps]
+
+source_file="res://sfx/sounds/charge_skill.mp3"
+dest_files=[ "res://.import/charge_skill.mp3-993a33312e074a110d1e881cec44f791.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

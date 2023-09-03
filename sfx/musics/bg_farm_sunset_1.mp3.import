@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/bg_farm_sunset_1.mp3-69350e8ee4901a27f0441d13cd994412.mp3str"
+
+[deps]
+
+source_file="res://sfx/musics/bg_farm_sunset_1.mp3"
+dest_files=[ "res://.import/bg_farm_sunset_1.mp3-69350e8ee4901a27f0441d13cd994412.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

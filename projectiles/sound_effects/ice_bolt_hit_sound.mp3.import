@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/ice_bolt_hit_sound.mp3-3808e39882738ed0855387df1c0c0726.mp3str"
+
+[deps]
+
+source_file="res://projectiles/sound_effects/ice_bolt_hit_sound.mp3"
+dest_files=[ "res://.import/ice_bolt_hit_sound.mp3-3808e39882738ed0855387df1c0c0726.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

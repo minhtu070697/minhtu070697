@@ -1,0 +1,125 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://map/tres/farm/floor_1.tres" type="TileSet" id=1]
+[ext_resource path="res://map/tres/farm/wall_4.tres" type="TileSet" id=2]
+[ext_resource path="res://map/scenes/nogias_ysort.gd" type="Script" id=3]
+[ext_resource path="res://ui/textures/build_ui/grid_6x6.png" type="Texture" id=4]
+[ext_resource path="res://map/tres/farm/earth.tres" type="TileSet" id=5]
+[ext_resource path="res://ui/textures/item_slot_guide.jpg" type="Texture" id=7]
+[ext_resource path="res://map/tres/farm/water.tres" type="TileSet" id=8]
+[ext_resource path="res://map/scenes/base/base_manager.gd" type="Script" id=9]
+[ext_resource path="res://map/textures/tiles/highlight.png" type="Texture" id=11]
+
+[node name="MapManager" type="Navigation2D"]
+script = ExtResource( 9 )
+
+[node name="Background" type="Sprite" parent="."]
+modulate = Color( 0.0509804, 0.0588235, 0.133333, 1 )
+scale = Vector2( 500, 500 )
+z_index = -3
+texture = ExtResource( 7 )
+
+[node name="WaterTileMap" type="TileMap" parent="."]
+z_index = -2
+mode = 1
+tile_set = ExtResource( 8 )
+cell_size = Vector2( 46, 24 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+
+[node name="EarthTileMap" type="TileMap" parent="."]
+z_index = -2
+mode = 1
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 46, 24 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+
+[node name="Floor" type="Node2D" parent="."]
+
+[node name="FloorTileMap" type="TileMap" parent="Floor"]
+z_index = -2
+mode = 1
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 46, 24 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+
+[node name="WallTileMap" type="TileMap" parent="Floor"]
+position = Vector2( 0, -72 )
+z_index = -2
+mode = 1
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 46, 24 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+
+[node name="Floor_1" type="Node2D" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+
+[node name="Floor_1_TileMap" type="TileMap" parent="Floor_1"]
+z_index = -2
+mode = 1
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 46, 24 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+
+[node name="Wall_1_TileMap" type="TileMap" parent="Floor_1"]
+position = Vector2( 0, -72 )
+z_index = -2
+mode = 1
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 46, 24 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+
+[node name="Floor_2" type="Node2D" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0 )
+
+[node name="Floor_2_TileMap" type="TileMap" parent="Floor_2"]
+z_index = -2
+mode = 1
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 46, 24 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+
+[node name="Wall_2_TileMap" type="TileMap" parent="Floor_2"]
+position = Vector2( 0, -72 )
+z_index = -2
+mode = 1
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 46, 24 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+
+[node name="TileHightlight" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 11 )
+
+[node name="GridBuild" type="Sprite" parent="."]
+visible = false
+modulate = Color( 1, 1, 1, 0.588235 )
+position = Vector2( 0, 72 )
+texture = ExtResource( 4 )
+
+[node name="YSort" type="YSort" parent="."]
+sort_enabled = false
+script = ExtResource( 3 )
+
+[node name="FloorTween" type="Tween" parent="."]
+
+[node name="Tween" type="Tween" parent="."]
+repeat = true
+playback/repeat = true

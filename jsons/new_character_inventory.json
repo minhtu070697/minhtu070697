@@ -1,0 +1,207 @@
+{
+	"human": {
+		"equipments": {
+			"0": [
+				"basic_hair",
+				1,
+				{}
+			],
+			"1": [
+				"basic_coat",
+				1,
+				{}
+			],
+			"2": [
+				"basic_pants",
+				1,
+				{}
+			],
+			"3": [
+				"iron_sword",
+				1,
+				{}
+			],
+			"4": [
+				"fishing_rod",
+				1,
+				{}
+			],
+			"5": [
+				"axe",
+				1,
+				{}
+			],
+			"6": [
+				"pick",
+				1,
+				{}
+			],
+			"7": [
+				"hoe",
+				1,
+				{}
+			]
+		},
+		"inventory": {
+			"0": [
+				"stone",
+				30,
+				{}
+			],
+			"1": [
+				"wood",
+				30,
+				{}
+			],
+			"2": [
+				"gold",
+				30,
+				{}
+			],
+			"3": [
+				"rope",
+				30,
+				{}
+			],
+			"4": [
+				"carrot_seed",
+				20,
+				{}
+			],
+			"5": [
+				"chilly_seed",
+				20,
+				{}
+			],
+			"6": [
+				"peach_seed",
+				20,
+				{}
+			]
+		}
+	},
+	"elf": {
+		"equipments": {
+			"1": [
+				"basic_coat",
+				1
+			],
+			"2": [
+				"basic_pants",
+				1
+			],
+			"3": [
+				"iron_sword",
+				1
+			],
+			"4": [
+				"fishing_rod",
+				1
+			],
+			"5": [
+				"axe",
+				1
+			],
+			"6": [
+				"pick",
+				1
+			],
+			"7": [
+				"hoe",
+				1
+			]
+		},
+		"inventory": {
+			"0": [
+				"wood",
+				10
+			],
+			"1": [
+				"stone",
+				10
+			],
+			"11": [
+				"peach_seed",
+				10
+			],
+			"2": [
+				"rope",
+				10
+			],
+			"3": [
+				"gold",
+				10
+			],
+			"4": [
+				"fish",
+				10
+			],
+			"5": [
+				"potion",
+				10
+			],
+			"7": [
+				"carrot_seed",
+				10
+			],
+			"8": [
+				"chilly_seed",
+				10
+			]
+		}
+	},
+	"beast_man": {
+		"equipments": {
+			"1": [
+				"beastman_coat",
+				1
+			],
+			"2": [
+				"beastman_pants",
+				1
+			],
+			"3": [
+				"iron_sword",
+				1
+			]
+		},
+		"inventory": {
+			"0": [
+				"wood",
+				20
+			],
+			"1": [
+				"stone",
+				20
+			],
+			"6": [
+				"potion",
+				99
+			],
+			"2": [
+				"rope",
+				20
+			],
+			"3": [
+				"gold",
+				20
+			],
+			"4": [
+				"potion",
+				99
+			],
+			"5": [
+				"potion",
+				99
+			],
+			"7": [
+				"potion",
+				10
+			],
+			"8": [
+				"potion",
+				99
+			]
+		}
+	}
+}

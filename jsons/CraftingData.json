@@ -1,0 +1,24 @@
+{
+  "iron_sword": {
+    "wood": 1,
+    "stone": 1,
+    "gold": 1
+  }, 
+  "fishing_rod": {
+    "wood": 1,
+    "rope": 1
+  },
+  "axe": {
+    "wood": 1,
+    "stone": 1
+  },
+  "pick": {
+    "wood": 1,
+    "stone": 2,
+    "rope": 1
+  },
+  "hoe": {
+    "wood": 1,
+    "gold": 3
+  }
+}

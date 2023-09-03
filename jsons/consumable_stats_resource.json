@@ -1,0 +1,13 @@
+{
+  "basic_hp_potion": {
+    "hp_recover" : 0.3,
+    "hp_min_recover": 100,
+    "hp_max_recover": 500,
+    "mana_recover" : 0.3,
+    "mana_min_recover": 100,
+    "mana_max_recover" : 500,
+    "antidote" : false,
+    "unfreeze" : false,
+    "clean_all_negative" : false
+  }
+}

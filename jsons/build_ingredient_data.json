@@ -1,0 +1,214 @@
+{
+  "house": {
+    "wood": 20,
+    "stone": 20
+  }, 
+  "farm_house": {
+    "wood": 30,
+    "stone": 30
+  },
+  "medium_house": {
+    "wood": 80,
+    "stone": 80
+  },
+  "windmill_house": {
+    "wood": 70,
+    "stone": 70
+  },
+  "green_house": {
+    "wood": 50,
+    "stone": 50
+  },
+  "storage_house": {
+    "wood": 40,
+    "stone": 40
+  },
+  "dock_house": {
+    "wood": 60,
+    "stone": 60
+  },
+  "mining_cave": {
+    "wood": 120,
+    "stone": 120
+  },
+
+  "scarecrow": {
+    "wood": 1
+  },
+  "watering_can": {
+    "wood": 1
+  },
+  "well": {
+    "wood": 1,
+    "stone": 1
+  },
+  "pet_house": {
+    "wood": 1
+  },
+  "torch": {
+    "wood": 3
+  },
+  "torch_1": {
+    "wood": 4
+  },
+  "torch_2": {
+    "wood": 5
+  },
+  "torch_3": {
+    "wood": 6
+  },
+  "torch_4": {
+    "wood": 7
+  },
+  "grass": {
+    "wood": 1
+  },
+  "flower": {
+    "wood": 1
+  },
+  "wheat": {
+    "wood": 1
+  },
+  "teleport": {
+    "stone": 3
+  },
+
+  "edge": {
+    "wood": 1
+  },
+  "edge_1": {
+    "stone": 1
+  },
+  "corner": {
+    "wood": 1
+  },
+  "corner_1": {
+    "stone": 1
+  },
+
+  "bridge": {
+    "wood": 5
+  },
+  "bridge_1": {
+    "wood": 5
+  },
+  "bridge_2": {
+    "wood": 5
+  },
+
+  "stairs": {
+    "wood": 1
+  },
+
+  "table": {
+    "wood": 3
+  },
+  "table_1": {
+    "wood": 5
+  },
+   "table_2": {
+    "wood": 5
+  },
+
+  "chair": {
+    "wood": 2
+  },
+  "sofa": {
+    "wood": 3
+  },
+   "sofa_1": {
+    "wood": 5
+  },
+
+  "bed": {
+    "wood": 5
+  },
+   "bed_1": {
+    "wood": 7
+  },
+
+  "book_case": {
+    "wood": 5
+  },
+  "book_case_1": {
+    "wood": 4
+  },
+   "book_case_2": {
+    "wood": 5
+  },
+
+  "wall": {
+    "wood": 3
+  },
+  "wall_1": {
+    "wood": 3
+  },
+   "wall_2": {
+    "wood": 3
+  },
+  "wall_3": {
+    "stone": 3
+  },
+  "wall_4": {
+    "stone": 3
+  },
+  "wall_5": {
+    "stone": 3
+  },
+  "wall_6": {
+    "stone": 3
+  },
+  "wall_7": {
+    "stone": 5
+  },
+  "door": {
+    "stone": 5
+  },
+
+  "house_plants": {
+    "wood": 1
+  },
+
+  "book": {
+    "wood": 1
+  },
+  "book_1": {
+    "wood": 1
+  },
+  "book_2": {
+    "wood": 1
+  },
+ 
+  "food": {
+    "wood": 1
+  },
+  "food_1": {
+    "wood": 1
+  },
+  "food_2": {
+    "wood": 1
+  },
+
+  "chess": {
+    "wood": 1
+  },
+  "table_billiards": {
+    "wood": 5
+  },
+
+  "picture": {
+    "wood": 1
+  },
+  "tv": {
+    "wood": 1
+  },
+  
+  "empty_plot": {
+    "wood": 2
+  },
+  "livestock_barn": {
+    "wood": 50,
+    "stone": 50
+  }
+  
+}

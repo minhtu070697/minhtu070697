@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/sand_skill.mp3-a94b2b95812d4db89075ee6f004103a6.mp3str"
+
+[deps]
+
+source_file="res://sfx/sounds/sand_skill.mp3"
+dest_files=[ "res://.import/sand_skill.mp3-a94b2b95812d4db89075ee6f004103a6.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

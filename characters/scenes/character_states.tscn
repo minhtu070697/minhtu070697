@@ -1,0 +1,118 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://characters/states/die.gd" type="Script" id=1]
+[ext_resource path="res://characters/states/basic_melee_attack.gd" type="Script" id=2]
+[ext_resource path="res://characters/states/basic_action.gd" type="Script" id=3]
+[ext_resource path="res://characters/states/casting.gd" type="Script" id=4]
+[ext_resource path="res://characters/states/idle.gd" type="Script" id=5]
+[ext_resource path="res://characters/states/fishing.gd" type="Script" id=6]
+[ext_resource path="res://characters/states/livestock_barn_interact.gd" type="Script" id=7]
+[ext_resource path="res://characters/states/plant_interact.gd" type="Script" id=8]
+[ext_resource path="res://characters/states/seeding.gd" type="Script" id=9]
+[ext_resource path="res://characters/states/seek.gd" type="Script" id=10]
+[ext_resource path="res://common/state_machine.gd" type="Script" id=11]
+[ext_resource path="res://characters/states/throw.gd" type="Script" id=12]
+[ext_resource path="res://characters/states/waiting.gd" type="Script" id=13]
+[ext_resource path="res://characters/states/young_plant_interact.gd" type="Script" id=14]
+[ext_resource path="res://characters/states/biting.gd" type="Script" id=15]
+[ext_resource path="res://characters/states/pull.gd" type="Script" id=16]
+[ext_resource path="res://characters/states/catch.gd" type="Script" id=17]
+[ext_resource path="res://characters/states/jump.gd" type="Script" id=18]
+[ext_resource path="res://characters/states/attack_target_seek.gd" type="Script" id=19]
+
+[sub_resource type="GDScript" id=43]
+script/source = "extends CharacterState
+
+
+func physics_process(delta: float) -> void:
+	.physics_process(delta)
+	var input_direction: Vector2 = character.get_input_direction()
+	if input_direction != Vector2.ZERO and (not GameManager.is_inside_house() or not GameManager.map_manager.is_changing_floor):
+		character.moving(delta, input_direction)
+		if GameManager.is_inside_house():
+			character.map_manager.show_go_up_down_ui()
+	elif input_direction == Vector2.ZERO:
+		state_machine.transition_to(\"idle\")
+
+
+func unhandled_input(event):
+	if (event is InputEventKey and GameManager.is_outside_map() 
+		and not GameManager.build_manager.holding_object 
+		and not character.ui_manager.is_group_build_farming_visible()
+		and not GameManager.save_load_manager.remove_object_mode):
+		if Input.is_action_just_released(\"basic_attack\"):
+			state_machine.transition_to(\"basic_melee_attack\")
+
+
+func enter(_msg := {}) -> void:
+	character.play_animation(\"run\")
+	character.set_state_label(\"run\")
+
+
+func exit() -> void:
+	pass
+"
+
+[node name="States" type="Node"]
+script = ExtResource( 11 )
+initial_state = NodePath("idle")
+
+[node name="idle" type="Node" parent="."]
+script = ExtResource( 5 )
+
+[node name="casting" type="Node" parent="."]
+script = ExtResource( 4 )
+
+[node name="walk" type="Node" parent="."]
+script = SubResource( 43 )
+
+[node name="die" type="Node" parent="."]
+script = ExtResource( 1 )
+
+[node name="seek" type="Node" parent="."]
+script = ExtResource( 10 )
+
+[node name="basic_action" type="Node" parent="."]
+script = ExtResource( 3 )
+
+[node name="seeding" type="Node" parent="basic_action"]
+script = ExtResource( 9 )
+
+[node name="young_plant_interact" type="Node" parent="basic_action"]
+script = ExtResource( 14 )
+
+[node name="plant_interact" type="Node" parent="basic_action"]
+script = ExtResource( 8 )
+
+[node name="livestock_barn_interact" type="Node" parent="basic_action"]
+script = ExtResource( 7 )
+
+[node name="animal_dead_body_interact" type="Node" parent="basic_action"]
+script = ExtResource( 8 )
+
+[node name="basic_melee_attack" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="attack_target_seek" type="Node" parent="."]
+script = ExtResource( 19 )
+
+[node name="fishing" type="Node" parent="."]
+script = ExtResource( 6 )
+
+[node name="throw" type="Node" parent="fishing"]
+script = ExtResource( 12 )
+
+[node name="waiting" type="Node" parent="fishing"]
+script = ExtResource( 13 )
+
+[node name="biting" type="Node" parent="fishing"]
+script = ExtResource( 15 )
+
+[node name="pull" type="Node" parent="fishing"]
+script = ExtResource( 16 )
+
+[node name="catch" type="Node" parent="fishing"]
+script = ExtResource( 17 )
+
+[node name="jump" type="Node" parent="fishing"]
+script = ExtResource( 18 )

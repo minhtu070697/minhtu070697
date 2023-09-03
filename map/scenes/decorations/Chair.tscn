@@ -1,0 +1,122 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://map/scenes/decorations/chair.gd" type="Script" id=2]
+[ext_resource path="res://map/textures/objects/decors/chair.png" type="Texture" id=3]
+[ext_resource path="res://fonts/m5x7.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://ui/textures/buttons/btn_no.png" type="Texture" id=5]
+[ext_resource path="res://areas/detect_right_click_area.gd" type="Script" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+
+[sub_resource type="Animation" id=3]
+resource_name = "button_fade"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.498039 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Chair" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -25 )
+texture = ExtResource( 3 )
+
+[node name="Area2D_Chair" type="Area2D" parent="Sprite"]
+collision_mask = 3
+script = ExtResource( 6 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite/Area2D_Chair"]
+polygon = PoolVector2Array( -14, -12, -14, 11, -1, 18, 13, 11, 13, -16, 1, -18 )
+
+[node name="Area2D_Sofa" type="Area2D" parent="Sprite"]
+position = Vector2( 10, 32 )
+collision_mask = 3
+script = ExtResource( 6 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite/Area2D_Sofa"]
+polygon = PoolVector2Array( -49, -53, -48, -19, 1, 4, 30, -12, 30, -43, -21, -67 )
+
+[node name="Area2D_Sofa_R" type="Area2D" parent="Sprite"]
+collision_mask = 3
+script = ExtResource( 6 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite/Area2D_Sofa_R"]
+polygon = PoolVector2Array( -38, -10, -38, 21, -6, 39, 41, 14, 41, -20, 12, -35 )
+
+[node name="Area2D_Sofa_1" type="Area2D" parent="Sprite"]
+position = Vector2( 0, 25 )
+collision_mask = 3
+script = ExtResource( 6 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite/Area2D_Sofa_1"]
+polygon = PoolVector2Array( -50, -53, -51, -20, 24, 17, 51, 2, 51, -31, -20, -66 )
+
+[node name="Area2D_Sofa_1_R" type="Area2D" parent="Sprite"]
+collision_mask = 3
+script = ExtResource( 6 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite/Area2D_Sofa_1_R"]
+polygon = PoolVector2Array( -50, -5, -50, 27, -23, 40, 49, 4, 49, -25, 21, -39 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="GroupButtonRemove" type="Node2D" parent="."]
+position = Vector2( 0, -50 )
+z_index = 10
+
+[node name="ButtonRemove" type="TextureButton" parent="GroupButtonRemove"]
+visible = false
+margin_left = -28.0
+margin_top = -17.0
+margin_right = 36.0
+margin_bottom = 15.0
+rect_scale = Vector2( 0.85, 0.85 )
+texture_normal = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="GroupButtonRemove/ButtonRemove"]
+margin_right = 64.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 1 )
+text = "Remove"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GroupButtonRemove/ButtonRemove"]
+autoplay = "button_fade"
+anims/RESET = SubResource( 2 )
+anims/button_fade = SubResource( 3 )
+
+[connection signal="body_entered" from="Sprite/Area2D_Chair" to="." method="_on_Area2D_Chair_body_entered"]
+[connection signal="body_exited" from="Sprite/Area2D_Chair" to="." method="_on_Area2D_Chair_body_exited"]
+[connection signal="body_entered" from="Sprite/Area2D_Sofa" to="." method="_on_Area2D_Sofa_body_entered"]
+[connection signal="body_exited" from="Sprite/Area2D_Sofa" to="." method="_on_Area2D_Sofa_body_exited"]
+[connection signal="body_entered" from="Sprite/Area2D_Sofa_R" to="." method="_on_Area2D_Sofa_R_body_entered"]
+[connection signal="body_exited" from="Sprite/Area2D_Sofa_R" to="." method="_on_Area2D_Sofa_R_body_exited"]
+[connection signal="body_entered" from="Sprite/Area2D_Sofa_1" to="." method="_on_Area2D_Sofa_1_body_entered"]
+[connection signal="body_exited" from="Sprite/Area2D_Sofa_1" to="." method="_on_Area2D_Sofa_1_body_exited"]
+[connection signal="body_entered" from="Sprite/Area2D_Sofa_1_R" to="." method="_on_Area2D_Sofa_1_R_body_entered"]
+[connection signal="body_exited" from="Sprite/Area2D_Sofa_1_R" to="." method="_on_Area2D_Sofa_1_R_body_exited"]

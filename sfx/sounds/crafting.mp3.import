@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/crafting.mp3-95e1c5860c2f0c740e78b42ba312f56c.mp3str"
+
+[deps]
+
+source_file="res://sfx/sounds/crafting.mp3"
+dest_files=[ "res://.import/crafting.mp3-95e1c5860c2f0c740e78b42ba312f56c.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

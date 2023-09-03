@@ -1,0 +1,1001 @@
+[gd_scene load_steps=58 format=2]
+
+[ext_resource path="res://ui/textures/default_inventory_background.png" type="Texture" id=1]
+[ext_resource path="res://ui/textures/item_slot_default_background.png" type="Texture" id=2]
+[ext_resource path="res://ui/scenes/slot.gd" type="Script" id=3]
+[ext_resource path="res://ui/scenes/cooking_tab.gd" type="Script" id=4]
+[ext_resource path="res://ui/textures/cooking_pot.png" type="Texture" id=5]
+[ext_resource path="res://map/textures/objects/items/fish.png" type="Texture" id=6]
+[ext_resource path="res://ui/textures/buttons/button_1.png" type="Texture" id=7]
+[ext_resource path="res://fonts/m5x7.ttf" type="DynamicFontData" id=8]
+[ext_resource path="res://efx/shader/outline_object.tres" type="Material" id=9]
+[ext_resource path="res://efx/resources/spotlight_7.png" type="Texture" id=10]
+[ext_resource path="res://efx/wiggle_scale.gd" type="Script" id=11]
+[ext_resource path="res://ui/textures/loading/loading_bar.png" type="Texture" id=12]
+[ext_resource path="res://efx/rotate_continuous.gd" type="Script" id=13]
+[ext_resource path="res://efx/resources/effect_4.png" type="Texture" id=14]
+[ext_resource path="res://ui/textures/loading/loading_fill.png" type="Texture" id=15]
+[ext_resource path="res://ui/textures/input_amount.png" type="Texture" id=16]
+[ext_resource path="res://ui/textures/buttons/btn_max.png" type="Texture" id=17]
+[ext_resource path="res://ui/textures/item_slot_guide.jpg" type="Texture" id=18]
+[ext_resource path="res://ui/textures/icons/cancel_icon.png" type="Texture" id=19]
+[ext_resource path="res://ui/textures/buttons/btn_min.png" type="Texture" id=20]
+[ext_resource path="res://ui/textures/buttons/btn_no.png" type="Texture" id=21]
+[ext_resource path="res://ui/textures/icons/plus_icon.png" type="Texture" id=22]
+[ext_resource path="res://ui/textures/icons/minus_icon.png" type="Texture" id=23]
+[ext_resource path="res://ui/textures/buttons/btn_yes.png" type="Texture" id=24]
+[ext_resource path="res://ui/textures/stat_bar_fill.png" type="Texture" id=25]
+[ext_resource path="res://ui/textures/stat_bar.png" type="Texture" id=26]
+[ext_resource path="res://ui/textures/animated_texture/cooking_fire/cooking_fire_04.png" type="Texture" id=27]
+[ext_resource path="res://ui/textures/animated_texture/cooking_fire/cooking_fire_03.png" type="Texture" id=28]
+[ext_resource path="res://ui/textures/animated_texture/cooking_fire/cooking_fire_02.png" type="Texture" id=29]
+[ext_resource path="res://ui/textures/animated_texture/cooking_fire/cooking_fire_01.png" type="Texture" id=30]
+[ext_resource path="res://ui/textures/animated_texture/cooking_fire/cooking_fire_05.png" type="Texture" id=31]
+
+[sub_resource type="CanvasItemMaterial" id=7]
+blend_mode = 1
+
+[sub_resource type="CanvasItemMaterial" id=9]
+blend_mode = 1
+
+[sub_resource type="AnimatedTexture" id=56]
+frames = 5
+fps = 8.0
+frame_0/texture = ExtResource( 30 )
+frame_1/texture = ExtResource( 29 )
+frame_1/delay_sec = 0.0
+frame_2/texture = ExtResource( 28 )
+frame_2/delay_sec = 0.0
+frame_3/texture = ExtResource( 27 )
+frame_3/delay_sec = 0.0
+frame_4/texture = ExtResource( 31 )
+frame_4/delay_sec = 0.0
+
+[sub_resource type="StyleBoxTexture" id=28]
+texture = ExtResource( 18 )
+region_rect = Rect2( 0, 0, 18, 18 )
+
+[sub_resource type="Animation" id=12]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.937255, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=13]
+resource_name = "fade"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0.984314, 0, 0 ), Color( 1, 0.937255, 0, 1 ), Color( 0.968627, 1, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=30]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.937255, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=31]
+resource_name = "fade"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0.984314, 0, 0 ), Color( 1, 0.937255, 0, 1 ), Color( 0.968627, 1, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=32]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.937255, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=33]
+resource_name = "fade"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0.984314, 0, 0 ), Color( 1, 0.937255, 0, 1 ), Color( 0.968627, 1, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=34]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.937255, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=35]
+resource_name = "fade"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0.984314, 0, 0 ), Color( 1, 0.937255, 0, 1 ), Color( 0.968627, 1, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=47]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.937255, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=48]
+resource_name = "fade"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0.984314, 0, 0 ), Color( 1, 0.937255, 0, 1 ), Color( 0.968627, 1, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=49]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.937255, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=50]
+resource_name = "fade"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0.984314, 0, 0 ), Color( 1, 0.937255, 0, 1 ), Color( 0.968627, 1, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=51]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.937255, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=52]
+resource_name = "fade"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0.984314, 0, 0 ), Color( 1, 0.937255, 0, 1 ), Color( 0.968627, 1, 0, 0 ) ]
+}
+
+[sub_resource type="Animation" id=53]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 1, 0.937255, 0, 1 ) ]
+}
+
+[sub_resource type="Animation" id=54]
+resource_name = "fade"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.5, 1 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 0.984314, 0, 0 ), Color( 1, 0.937255, 0, 1 ), Color( 0.968627, 1, 0, 0 ) ]
+}
+
+[sub_resource type="StyleBoxTexture" id=1]
+texture = ExtResource( 2 )
+region_rect = Rect2( 0, 0, 18, 18 )
+
+[sub_resource type="DynamicFont" id=45]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=46]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=3]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=44]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 8 )
+
+[sub_resource type="DynamicFont" id=55]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 8 )
+
+[node name="CookingTab" type="Node2D"]
+position = Vector2( -7, 0 )
+script = ExtResource( 4 )
+
+[node name="Shadow" type="TextureRect" parent="."]
+modulate = Color( 0.243137, 0.243137, 0.243137, 0.352941 )
+margin_left = -63.0
+margin_top = -59.0
+margin_right = 131.0
+margin_bottom = 53.0
+rect_scale = Vector2( 0.72, 1.02 )
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Panel" type="TextureRect" parent="."]
+modulate = Color( 0.309804, 0.243137, 0.372549, 1 )
+margin_left = -61.0
+margin_top = -58.0
+margin_right = 132.0
+margin_bottom = 54.0
+rect_scale = Vector2( 0.7, 1 )
+texture = ExtResource( 1 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Light" type="Control" parent="."]
+modulate = Color( 1, 1, 1, 0.584314 )
+margin_left = -7.0
+margin_top = -8.0
+margin_right = 20.0
+margin_bottom = 19.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Flare" type="Sprite" parent="Light"]
+modulate = Color( 1, 0, 0, 1 )
+material = SubResource( 7 )
+position = Vector2( 14, 14 )
+rotation = 1.5708
+scale = Vector2( 0.5, 0.5 )
+texture = ExtResource( 14 )
+script = ExtResource( 13 )
+
+[node name="Flare2" type="Sprite" parent="Light"]
+modulate = Color( 1, 0, 0, 1 )
+material = SubResource( 9 )
+position = Vector2( 15, 14 )
+scale = Vector2( 0.75, 0.75 )
+texture = ExtResource( 10 )
+script = ExtResource( 11 )
+power = 0.25
+speed = 2.0
+
+[node name="PotIcon" type="TextureRect" parent="."]
+self_modulate = Color( 1, 1, 1, 0.745098 )
+margin_left = -36.0
+margin_top = -38.0
+margin_right = 28.0
+margin_bottom = 26.0
+rect_scale = Vector2( 1.3, 1.3 )
+texture = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CookingFire" type="TextureRect" parent="."]
+visible = false
+self_modulate = Color( 1, 1, 1, 0.745098 )
+margin_left = -36.0
+margin_top = -38.0
+margin_right = 28.0
+margin_bottom = 26.0
+rect_scale = Vector2( 1.3, 1.3 )
+texture = SubResource( 56 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SlotsHolder" type="Control" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="IngredientSlotsGuide" type="Control" parent="SlotsHolder"]
+visible = false
+margin_left = -53.0
+margin_top = -34.0
+margin_right = -53.0
+margin_bottom = -34.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot1" type="Panel" parent="SlotsHolder/IngredientSlotsGuide"]
+modulate = Color( 1, 0.937255, 0, 1 )
+material = ExtResource( 9 )
+margin_top = -2.0
+margin_right = 18.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 18, 18 )
+rect_scale = Vector2( 1.2, 1.2 )
+custom_styles/panel = SubResource( 28 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SlotsHolder/IngredientSlotsGuide/Slot1"]
+anims/RESET = SubResource( 12 )
+anims/fade = SubResource( 13 )
+
+[node name="Slot2" type="Panel" parent="SlotsHolder/IngredientSlotsGuide"]
+modulate = Color( 1, 0.937255, 0, 1 )
+material = ExtResource( 9 )
+margin_left = 25.0
+margin_top = -2.0
+margin_right = 43.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 18, 18 )
+rect_scale = Vector2( 1.2, 1.2 )
+custom_styles/panel = SubResource( 28 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SlotsHolder/IngredientSlotsGuide/Slot2"]
+anims/RESET = SubResource( 30 )
+anims/fade = SubResource( 31 )
+
+[node name="Slot3" type="Panel" parent="SlotsHolder/IngredientSlotsGuide"]
+modulate = Color( 1, 0.937255, 0, 1 )
+material = ExtResource( 9 )
+margin_left = 49.0
+margin_top = -2.0
+margin_right = 67.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 18, 18 )
+rect_scale = Vector2( 1.2, 1.2 )
+custom_styles/panel = SubResource( 28 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SlotsHolder/IngredientSlotsGuide/Slot3"]
+anims/RESET = SubResource( 32 )
+anims/fade = SubResource( 33 )
+
+[node name="Slot4" type="Panel" parent="SlotsHolder/IngredientSlotsGuide"]
+modulate = Color( 1, 0.937255, 0, 1 )
+material = ExtResource( 9 )
+margin_left = 73.0
+margin_top = -2.0
+margin_right = 91.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 18, 18 )
+rect_scale = Vector2( 1.2, 1.2 )
+custom_styles/panel = SubResource( 28 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SlotsHolder/IngredientSlotsGuide/Slot4"]
+anims/RESET = SubResource( 34 )
+anims/fade = SubResource( 35 )
+
+[node name="Slot5" type="Panel" parent="SlotsHolder/IngredientSlotsGuide"]
+modulate = Color( 1, 0.937255, 0, 1 )
+material = ExtResource( 9 )
+margin_left = 97.0
+margin_top = -2.0
+margin_right = 115.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 18, 18 )
+rect_scale = Vector2( 1.2, 1.2 )
+custom_styles/panel = SubResource( 28 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SlotsHolder/IngredientSlotsGuide/Slot5"]
+anims/RESET = SubResource( 47 )
+anims/fade = SubResource( 48 )
+
+[node name="EnergySlotsGuide" type="Control" parent="SlotsHolder"]
+visible = false
+margin_left = -53.0
+margin_top = 26.0
+margin_right = -53.0
+margin_bottom = 26.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot2" type="Panel" parent="SlotsHolder/EnergySlotsGuide"]
+modulate = Color( 1, 0.937255, 0, 1 )
+material = ExtResource( 9 )
+margin_left = 25.0
+margin_top = -2.0
+margin_right = 43.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 18, 18 )
+rect_scale = Vector2( 1.2, 1.2 )
+custom_styles/panel = SubResource( 28 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SlotsHolder/EnergySlotsGuide/Slot2"]
+anims/RESET = SubResource( 49 )
+anims/fade = SubResource( 50 )
+
+[node name="Slot3" type="Panel" parent="SlotsHolder/EnergySlotsGuide"]
+modulate = Color( 1, 0.937255, 0, 1 )
+material = ExtResource( 9 )
+margin_left = 49.0
+margin_top = -2.0
+margin_right = 67.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 18, 18 )
+rect_scale = Vector2( 1.2, 1.2 )
+custom_styles/panel = SubResource( 28 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SlotsHolder/EnergySlotsGuide/Slot3"]
+anims/RESET = SubResource( 51 )
+anims/fade = SubResource( 52 )
+
+[node name="Slot4" type="Panel" parent="SlotsHolder/EnergySlotsGuide"]
+modulate = Color( 1, 0.937255, 0, 1 )
+material = ExtResource( 9 )
+margin_left = 73.0
+margin_top = -2.0
+margin_right = 91.0
+margin_bottom = 16.0
+rect_min_size = Vector2( 18, 18 )
+rect_scale = Vector2( 1.2, 1.2 )
+custom_styles/panel = SubResource( 28 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="SlotsHolder/EnergySlotsGuide/Slot4"]
+anims/RESET = SubResource( 53 )
+anims/fade = SubResource( 54 )
+
+[node name="IngredientSlots" type="Control" parent="SlotsHolder"]
+margin_left = -53.0
+margin_top = -34.0
+margin_right = -53.0
+margin_bottom = -34.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot1" type="Panel" parent="SlotsHolder/IngredientSlots"]
+material = ExtResource( 9 )
+margin_left = 2.0
+margin_right = 20.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 18, 18 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot2" type="Panel" parent="SlotsHolder/IngredientSlots"]
+material = ExtResource( 9 )
+margin_left = 27.0
+margin_right = 45.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 18, 18 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot3" type="Panel" parent="SlotsHolder/IngredientSlots"]
+material = ExtResource( 9 )
+margin_left = 51.0
+margin_right = 69.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 18, 18 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 3 )
+
+[node name="Slot4" type="Panel" parent="SlotsHolder/IngredientSlots"]
+material = ExtResource( 9 )
+margin_left = 75.0
+margin_right = 93.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 18, 18 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot5" type="Panel" parent="SlotsHolder/IngredientSlots"]
+material = ExtResource( 9 )
+margin_left = 99.0
+margin_right = 117.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 18, 18 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="EnergySlots" type="Control" parent="SlotsHolder"]
+margin_left = -53.0
+margin_top = 26.0
+margin_right = -53.0
+margin_bottom = 26.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot2" type="Panel" parent="SlotsHolder/EnergySlots"]
+material = ExtResource( 9 )
+margin_left = 27.0
+margin_right = 45.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 18, 18 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Slot3" type="Panel" parent="SlotsHolder/EnergySlots"]
+material = ExtResource( 9 )
+margin_left = 51.0
+margin_right = 69.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 18, 18 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 3 )
+
+[node name="Slot4" type="Panel" parent="SlotsHolder/EnergySlots"]
+material = ExtResource( 9 )
+margin_left = 75.0
+margin_right = 93.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 18, 18 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FinalItemSlot" type="Control" parent="SlotsHolder"]
+margin_left = -7.0
+margin_top = -8.0
+margin_right = 20.0
+margin_bottom = 19.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ItemSlot" type="Panel" parent="SlotsHolder/FinalItemSlot"]
+margin_right = 18.0
+margin_bottom = 18.0
+rect_min_size = Vector2( 18, 18 )
+rect_scale = Vector2( 1.5, 1.5 )
+custom_styles/panel = SubResource( 1 )
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="InputAmount" type="TextureRect" parent="."]
+visible = false
+self_modulate = Color( 0.223529, 0.223529, 0.223529, 0.698039 )
+margin_left = -26.0
+margin_top = -103.0
+margin_right = 52.0
+margin_bottom = -81.0
+rect_scale = Vector2( 0.85, 0.85 )
+texture = ExtResource( 16 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TitleLabel" type="Label" parent="InputAmount"]
+margin_left = 21.0
+margin_top = -9.41177
+margin_right = 58.0
+margin_bottom = 3.58823
+custom_fonts/font = SubResource( 45 )
+text = "Amount"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AmountLabel" type="Label" parent="InputAmount"]
+margin_left = 32.9412
+margin_top = 5.0
+margin_right = 44.9412
+margin_bottom = 18.0
+custom_fonts/font = SubResource( 45 )
+text = "1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonMin" type="TextureButton" parent="InputAmount"]
+margin_left = -52.9412
+margin_top = 1.17647
+margin_right = -18.9412
+margin_bottom = 21.1765
+texture_normal = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="InputAmount/ButtonMin"]
+
+[node name="Label" type="Label" parent="InputAmount/ButtonMin"]
+margin_left = 9.41179
+margin_top = 3.52941
+margin_right = 29.4118
+margin_bottom = 16.5294
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 46 )
+text = "Min"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonMax" type="TextureButton" parent="InputAmount"]
+margin_left = 96.4706
+margin_top = 1.17647
+margin_right = 135.471
+margin_bottom = 21.1765
+texture_normal = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="InputAmount/ButtonMax"]
+
+[node name="Label" type="Label" parent="InputAmount/ButtonMax"]
+margin_left = 11.7647
+margin_top = 3.52941
+margin_right = 31.7647
+margin_bottom = 16.5294
+rect_scale = Vector2( 0.8, 0.8 )
+custom_fonts/font = SubResource( 46 )
+text = "Max"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonPlus" type="TextureButton" parent="InputAmount"]
+margin_left = 65.8824
+margin_top = -2.35294
+margin_right = 92.8824
+margin_bottom = 23.6471
+texture_normal = ExtResource( 22 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="InputAmount/ButtonPlus"]
+
+[node name="ButtonMinus" type="TextureButton" parent="InputAmount"]
+margin_left = -15.2941
+margin_top = -2.353
+margin_right = 12.7059
+margin_bottom = 23.647
+texture_normal = ExtResource( 23 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="InputAmount/ButtonMinus"]
+
+[node name="ButtonYes" type="TextureButton" parent="InputAmount"]
+margin_left = 41.1765
+margin_top = 25.8824
+margin_right = 93.1765
+margin_bottom = 51.8824
+rect_scale = Vector2( 0.8, 0.8 )
+texture_normal = ExtResource( 24 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="InputAmount/ButtonYes"]
+
+[node name="Label" type="Label" parent="InputAmount/ButtonYes"]
+margin_left = 16.1765
+margin_top = 4.41177
+margin_right = 34.1765
+margin_bottom = 17.4118
+rect_scale = Vector2( 1.2, 1.2 )
+custom_fonts/font = SubResource( 46 )
+text = "Yes"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonNo" type="TextureButton" parent="InputAmount"]
+margin_left = -4.70588
+margin_top = 25.8824
+margin_right = 47.2941
+margin_bottom = 51.8824
+rect_scale = Vector2( 0.8, 0.8 )
+texture_normal = ExtResource( 21 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="InputAmount/ButtonNo"]
+
+[node name="Label" type="Label" parent="InputAmount/ButtonNo"]
+margin_left = 19.1176
+margin_top = 2.94118
+margin_right = 31.1176
+margin_bottom = 15.9412
+rect_scale = Vector2( 1.2, 1.2 )
+custom_fonts/font = SubResource( 46 )
+text = "No"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="LoadingBar" type="TextureProgress" parent="."]
+visible = false
+margin_left = -8.0
+margin_top = -16.0
+margin_right = 714.0
+margin_bottom = 223.0
+rect_scale = Vector2( 0.04, 0.04 )
+texture_under = ExtResource( 12 )
+texture_progress = ExtResource( 15 )
+texture_progress_offset = Vector2( 77, 80 )
+tint_progress = Color( 1, 0.607843, 0, 1 )
+radial_fill_degrees = 180.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="LoadingBar"]
+
+[node name="CraftingTitleIcon" type="TextureRect" parent="."]
+margin_left = -29.0
+margin_top = -56.0
+margin_right = -13.0
+margin_bottom = -40.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TitleLabel" type="Label" parent="."]
+margin_left = -54.0
+margin_top = -58.0
+margin_right = 68.0
+margin_bottom = -42.0
+custom_fonts/font = SubResource( 3 )
+text = "Cooking"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ButtonClose" type="TextureButton" parent="."]
+margin_left = 57.0
+margin_top = -56.0
+margin_right = 73.0
+margin_bottom = -40.0
+rect_scale = Vector2( 0.85, 0.85 )
+texture_normal = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CookingButton" type="TextureButton" parent="."]
+margin_left = -19.0
+margin_top = 58.0
+margin_right = 45.0
+margin_bottom = 90.0
+rect_scale = Vector2( 0.8, 0.8 )
+texture_normal = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="CookingButton"]
+margin_left = -2.5
+margin_top = 1.25
+margin_right = 67.5
+margin_bottom = 30.25
+custom_fonts/font = SubResource( 44 )
+text = "COOK"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Tween" type="Tween" parent="CookingButton"]
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="CookingTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="CookingProgress" type="TextureProgress" parent="."]
+visible = false
+margin_left = -45.0
+margin_top = -6.0
+margin_right = 104.0
+margin_bottom = 34.0
+rect_scale = Vector2( 0.7, 0.7 )
+max_value = 1.0
+step = 0.001
+value = 1.0
+texture_under = ExtResource( 25 )
+texture_progress = ExtResource( 26 )
+texture_progress_offset = Vector2( 1, 1 )
+tint_progress = Color( 1, 0.94902, 0.705882, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CookingProgressLabel" type="Label" parent="CookingProgress"]
+margin_left = 10.0
+margin_top = 1.0
+margin_right = 140.0
+margin_bottom = 15.0
+custom_fonts/font = SubResource( 55 )
+text = "100/100"
+align = 1
+valign = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

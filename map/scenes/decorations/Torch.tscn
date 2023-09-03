@@ -1,0 +1,310 @@
+[gd_scene load_steps=13 format=2]
+
+[ext_resource path="res://map/textures/objects/decors/torch.png" type="Texture" id=1]
+[ext_resource path="res://map/scenes/decorations/torch.gd" type="Script" id=2]
+[ext_resource path="res://efx/resources/spotlight_1.png" type="Texture" id=3]
+[ext_resource path="res://fonts/m5x7.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://ui/textures/buttons/btn_no.png" type="Texture" id=5]
+[ext_resource path="res://areas/detect_right_click_area.gd" type="Script" id=6]
+
+[sub_resource type="CanvasItemMaterial" id=6]
+blend_mode = 1
+
+[sub_resource type="Animation" id=5]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 1 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite/YellowLight:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.745098, 0.533333, 0.12549, 0.392157 ) ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite/GreenLight:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.12549, 0.745098, 0.14902, 0.392157 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite/BlueLight:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.211765, 0.447059, 0.72549, 0.705882 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite/PinkLight:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.72549, 0.211765, 0.427451, 0.588235 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Sprite/PurpleLight:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ Color( 0.407843, 0.211765, 0.72549, 0.588235 ) ]
+}
+
+[sub_resource type="Animation" id=4]
+resource_name = "torch_fire"
+length = 0.7
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("Sprite:hframes")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 8 ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("Sprite:vframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 1 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("Sprite:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 0, 1, 2, 3, 4, 5, 6, 7 ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("Sprite/YellowLight:modulate")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 0.3, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.745098, 0.501961, 0.12549, 0.705882 ), Color( 0.745098, 0.501961, 0.12549, 0.588235 ), Color( 0.745098, 0.501961, 0.12549, 0.698039 ) ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("Sprite/GreenLight:modulate")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 0.3, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.211765, 0.72549, 0.435294, 0.705882 ), Color( 0.211765, 0.72549, 0.435294, 0.588235 ), Color( 0.211765, 0.72549, 0.435294, 0.705882 ) ]
+}
+tracks/5/type = "value"
+tracks/5/path = NodePath("Sprite/BlueLight:modulate")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/keys = {
+"times": PoolRealArray( 0, 0.3, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.211765, 0.447059, 0.72549, 0.705882 ), Color( 0.211765, 0.447059, 0.72549, 0.588235 ), Color( 0.211765, 0.447059, 0.72549, 0.705882 ) ]
+}
+tracks/6/type = "value"
+tracks/6/path = NodePath("Sprite/PinkLight:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/keys = {
+"times": PoolRealArray( 0, 0.3, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.72549, 0.211765, 0.427451, 0.705882 ), Color( 0.72549, 0.211765, 0.427451, 0.588235 ), Color( 0.72549, 0.211765, 0.427451, 0.705882 ) ]
+}
+tracks/7/type = "value"
+tracks/7/path = NodePath("Sprite/PurpleLight:modulate")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/keys = {
+"times": PoolRealArray( 0, 0.3, 0.7 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 0.490196, 0.278431, 0.831373, 0.705882 ), Color( 0.490196, 0.278431, 0.831373, 0.588235 ), Color( 0.490196, 0.278431, 0.831373, 0.705882 ) ]
+}
+
+[sub_resource type="DynamicFont" id=1]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+
+[sub_resource type="Animation" id=3]
+resource_name = "button_fade"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.498039 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="Torch" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -19 )
+texture = ExtResource( 1 )
+hframes = 8
+frame = 1
+
+[node name="Area2D" type="Area2D" parent="Sprite"]
+script = ExtResource( 6 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite/Area2D"]
+polygon = PoolVector2Array( -13, -24, -13, 24, 14, 24, 14, -24 )
+
+[node name="YellowLight" type="Sprite" parent="Sprite"]
+visible = false
+modulate = Color( 0.745098, 0.533333, 0.12549, 0.392157 )
+material = SubResource( 6 )
+position = Vector2( -3.05176e-05, -14 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 3 )
+
+[node name="GreenLight" type="Sprite" parent="Sprite"]
+visible = false
+modulate = Color( 0.12549, 0.745098, 0.14902, 0.392157 )
+material = SubResource( 6 )
+position = Vector2( -3.05176e-05, -14 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 3 )
+
+[node name="BlueLight" type="Sprite" parent="Sprite"]
+visible = false
+modulate = Color( 0.211765, 0.447059, 0.72549, 0.705882 )
+material = SubResource( 6 )
+position = Vector2( -3.05176e-05, -14 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 3 )
+
+[node name="PinkLight" type="Sprite" parent="Sprite"]
+visible = false
+modulate = Color( 0.72549, 0.211765, 0.427451, 0.588235 )
+material = SubResource( 6 )
+position = Vector2( -3.05176e-05, -14 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 3 )
+
+[node name="PurpleLight" type="Sprite" parent="Sprite"]
+visible = false
+modulate = Color( 0.407843, 0.211765, 0.72549, 0.588235 )
+material = SubResource( 6 )
+position = Vector2( -3.05176e-05, -14 )
+scale = Vector2( 0.6, 0.6 )
+texture = ExtResource( 3 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "torch_fire"
+anims/RESET = SubResource( 5 )
+anims/torch_fire = SubResource( 4 )
+
+[node name="GroupButtonRemove" type="Node2D" parent="."]
+position = Vector2( 0, -32 )
+z_index = 10
+
+[node name="ButtonRemove" type="TextureButton" parent="GroupButtonRemove"]
+visible = false
+margin_left = -28.0
+margin_top = -46.0
+margin_right = 36.0
+margin_bottom = -14.0
+rect_scale = Vector2( 0.85, 0.85 )
+texture_normal = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="GroupButtonRemove/ButtonRemove"]
+margin_right = 64.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 1 )
+text = "Remove"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GroupButtonRemove/ButtonRemove"]
+autoplay = "button_fade"
+anims/RESET = SubResource( 2 )
+anims/button_fade = SubResource( 3 )
+
+[connection signal="body_entered" from="Sprite/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Sprite/Area2D" to="." method="_on_Area2D_body_exited"]

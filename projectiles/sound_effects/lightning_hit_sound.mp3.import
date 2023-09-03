@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/lightning_hit_sound.mp3-739767b63e087a033f65556687c9919a.mp3str"
+
+[deps]
+
+source_file="res://projectiles/sound_effects/lightning_hit_sound.mp3"
+dest_files=[ "res://.import/lightning_hit_sound.mp3-739767b63e087a033f65556687c9919a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/basic_attack.mp3-5649566c38eacc73d51943aba19eff36.mp3str"
+
+[deps]
+
+source_file="res://sfx/sounds/basic_attack.mp3"
+dest_files=[ "res://.import/basic_attack.mp3-5649566c38eacc73d51943aba19eff36.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

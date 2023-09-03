@@ -1,0 +1,374 @@
+[gd_scene load_steps=29 format=2]
+
+[ext_resource path="res://enemies/monster_texture/boss_wolf/boss_wolf_run.png" type="Texture" id=1]
+[ext_resource path="res://enemies/states/casting.gd" type="Script" id=2]
+[ext_resource path="res://enemies/monster_texture/boss_wolf/boss_wolf_idle.png" type="Texture" id=3]
+[ext_resource path="res://characters/textures/shadow.png" type="Texture" id=4]
+[ext_resource path="res://enemies/monster_texture/boss_wolf/boss_wolf_basic_melee_attack.png" type="Texture" id=5]
+[ext_resource path="res://characters/stats/fighter_stats_manager.tscn" type="PackedScene" id=6]
+[ext_resource path="res://enemies/scenes/enemy.gd" type="Script" id=7]
+[ext_resource path="res://enemies/states/seek.gd" type="Script" id=8]
+[ext_resource path="res://common/state_machine.gd" type="Script" id=9]
+[ext_resource path="res://areas/hurtbox.tscn" type="PackedScene" id=13]
+[ext_resource path="res://areas/stuck_detector.tscn" type="PackedScene" id=15]
+[ext_resource path="res://enemies/states/idle.gd" type="Script" id=29]
+[ext_resource path="res://areas/attack_range.tscn" type="PackedScene" id=30]
+[ext_resource path="res://enemies/states/basic_melee_attack.gd" type="Script" id=31]
+[ext_resource path="res://enemies/states/attack_target_seek.gd" type="Script" id=32]
+[ext_resource path="res://timers/enemy_moving_timer.tscn" type="PackedScene" id=33]
+[ext_resource path="res://ui/floating_text_manager.tscn" type="PackedScene" id=34]
+[ext_resource path="res://enemies/states/die.gd" type="Script" id=35]
+
+[sub_resource type="Animation" id=25]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/path = NodePath("BodyParts/Body:frame")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 0,
+"values": [ 107 ]
+}
+
+[sub_resource type="Animation" id=27]
+resource_name = "basic_melee_attack"
+length = 0.95
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("BodyParts/Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BodyParts/Body:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 27 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BodyParts/Body:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100 ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("States/basic_melee_attack")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.5 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "_attack_hit"
+} ]
+}
+
+[sub_resource type="Animation" id=34]
+resource_name = "casting"
+length = 0.95
+step = 0.05
+tracks/0/type = "value"
+tracks/0/path = NodePath("BodyParts/Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 5 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BodyParts/Body:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 27 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BodyParts/Body:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2, 0.25, 0.3, 0.35, 0.4, 0.45, 0.5, 0.55, 0.6, 0.65, 0.7, 0.75, 0.8, 0.85, 0.9, 0.95 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 81, 82, 83, 84, 85, 86, 87, 88, 89, 90, 91, 92, 93, 94, 95, 96, 97, 98, 99, 100 ]
+}
+tracks/3/type = "method"
+tracks/3/path = NodePath("States/casting")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0.352081 ),
+"transitions": PoolRealArray( 1 ),
+"values": [ {
+"args": [  ],
+"method": "spawn_proj"
+} ]
+}
+
+[sub_resource type="Animation" id=33]
+resource_name = "die"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.05, 0.1, 0.15, 0.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.756863 ), Color( 1, 1, 1, 0.486275 ), Color( 1, 1, 1, 0.278431 ), Color( 1, 1, 1, 0.0470588 ) ]
+}
+
+[sub_resource type="Animation" id=28]
+resource_name = "idle"
+length = 0.9
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("BodyParts/Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 3 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BodyParts/Body:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 27 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BodyParts/Body:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 81, 82, 83, 84, 85, 86, 87, 88, 89, 90 ]
+}
+
+[sub_resource type="Animation" id=29]
+resource_name = "run"
+length = 0.9
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("BodyParts/Body:texture")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ ExtResource( 1 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("BodyParts/Body:hframes")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ 27 ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("BodyParts/Body:frame")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ 81, 82, 83, 84, 85, 86, 87, 88, 89, 90 ]
+}
+
+[sub_resource type="CapsuleShape2D" id=23]
+radius = 12.0
+height = 34.0
+
+[sub_resource type="CircleShape2D" id=24]
+radius = 117.546
+
+[sub_resource type="CircleShape2D" id=30]
+radius = 12.0
+
+[sub_resource type="CapsuleShape2D" id=35]
+radius = 6.0412
+height = 8.01925
+
+[node name="GoblinIce" type="KinematicBody2D"]
+script = ExtResource( 7 )
+faction = 3
+monster_name = "goblin_ice"
+
+[node name="BodyParts" type="Node2D" parent="."]
+
+[node name="Shadow" type="Sprite" parent="BodyParts"]
+texture = ExtResource( 4 )
+
+[node name="Body" type="Sprite" parent="BodyParts"]
+position = Vector2( 0, -33 )
+scale = Vector2( 0.4, 0.4 )
+texture = ExtResource( 5 )
+hframes = 27
+vframes = 5
+frame = 107
+
+[node name="BaseAnimationPlayer" type="AnimationPlayer" parent="."]
+anims/RESET = SubResource( 25 )
+anims/basic_melee_attack = SubResource( 27 )
+anims/casting = SubResource( 34 )
+anims/die = SubResource( 33 )
+anims/idle = SubResource( 28 )
+anims/run = SubResource( 29 )
+
+[node name="StateLabel" type="Label" parent="."]
+visible = false
+margin_left = -20.0
+margin_top = 4.0
+margin_right = 20.0
+margin_bottom = 18.0
+text = "idle"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StatsManager" parent="." instance=ExtResource( 6 )]
+owner_type = "enemy"
+owner_class_list = [ "goblin_ice" ]
+
+[node name="States" type="Node" parent="."]
+script = ExtResource( 9 )
+initial_state = NodePath("idle")
+
+[node name="idle" type="Node" parent="States"]
+script = ExtResource( 29 )
+
+[node name="die" type="Node" parent="States"]
+script = ExtResource( 35 )
+
+[node name="attack_target_seek" type="Node" parent="States"]
+script = ExtResource( 32 )
+
+[node name="seek" type="Node" parent="States"]
+script = ExtResource( 8 )
+
+[node name="basic_melee_attack" type="Node" parent="States"]
+script = ExtResource( 31 )
+
+[node name="casting" type="Node" parent="States"]
+script = ExtResource( 2 )
+
+[node name="Hurtbox" parent="." instance=ExtResource( 13 )]
+
+[node name="CollisionShape2D" parent="Hurtbox" index="0"]
+position = Vector2( 0, -23 )
+shape = SubResource( 23 )
+
+[node name="AttackRange" parent="." instance=ExtResource( 30 )]
+visible = false
+
+[node name="CollisionShape2D" parent="AttackRange" index="0"]
+position = Vector2( 2, -20 )
+shape = SubResource( 24 )
+
+[node name="MovingTimer" parent="." instance=ExtResource( 33 )]
+wait_time = 4.0
+
+[node name="WeaponLabel" type="Label" parent="."]
+visible = false
+margin_left = -19.0
+margin_top = -69.0
+margin_right = 21.0
+margin_bottom = -55.0
+text = "idle"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="StuckDetector" parent="." instance=ExtResource( 15 )]
+visible = false
+
+[node name="CollisionShape2D" parent="StuckDetector" index="0"]
+shape = SubResource( 30 )
+
+[node name="Timer" parent="StuckDetector" index="1"]
+wait_time = 0.1
+
+[node name="FloatingTextManager" parent="." instance=ExtResource( 34 )]
+position = Vector2( 1, -53 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
+attenuation = 12.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+rotation = 1.56041
+shape = SubResource( 35 )
+
+[editable path="Hurtbox"]
+[editable path="AttackRange"]
+[editable path="StuckDetector"]

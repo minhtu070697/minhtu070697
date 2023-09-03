@@ -1,0 +1,262 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://fonts/m5x7.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://young_plants/ui/script/young_plant_tooltip.gd" type="Script" id=2]
+[ext_resource path="res://young_plants/ui/texture/young_plant-fertilizer-icon.png" type="Texture" id=3]
+[ext_resource path="res://young_plants/ui/texture/young_plant-fertilizer_in_plot-icon.png" type="Texture" id=4]
+[ext_resource path="res://young_plants/ui/texture/young_plant-fertilizer-bar.png" type="Texture" id=5]
+[ext_resource path="res://young_plants/ui/texture/young_plant-lvl-up-icon.png" type="Texture" id=6]
+[ext_resource path="res://young_plants/ui/texture/young_plant-empty-bar.png" type="Texture" id=7]
+[ext_resource path="res://young_plants/ui/texture/young_plant-grow-bar.png" type="Texture" id=8]
+[ext_resource path="res://young_plants/ui/texture/young_plant-water-icon.png" type="Texture" id=9]
+[ext_resource path="res://young_plants/ui/texture/young_plant-heart-icon.png" type="Texture" id=10]
+[ext_resource path="res://young_plants/ui/texture/young_plant-water-bar.png" type="Texture" id=11]
+[ext_resource path="res://young_plants/ui/texture/young_plant-hp-bar.png" type="Texture" id=12]
+
+[sub_resource type="StyleBoxFlat" id=2]
+content_margin_left = 5.0
+content_margin_right = 5.0
+content_margin_top = 5.0
+content_margin_bottom = 5.0
+bg_color = Color( 0.6, 0.6, 0.6, 0.2 )
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+
+[sub_resource type="DynamicFont" id=1]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 1 )
+
+[node name="YoungPlantTooltip" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="PanelContainer" type="PanelContainer" parent="."]
+margin_right = 14.0
+margin_bottom = 14.0
+rect_scale = Vector2( 0.7, 0.7 )
+custom_styles/panel = SubResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TooltipContainer" type="VBoxContainer" parent="PanelContainer"]
+margin_left = 5.0
+margin_top = 5.0
+margin_right = 124.0
+margin_bottom = 113.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YoungPlantName" type="Label" parent="PanelContainer/TooltipContainer"]
+margin_right = 119.0
+margin_bottom = 13.0
+size_flags_vertical = 1
+custom_colors/font_color = Color( 1, 0.968627, 0.803922, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Carrot"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WaterMeter" type="HBoxContainer" parent="PanelContainer/TooltipContainer"]
+margin_top = 17.0
+margin_right = 119.0
+margin_bottom = 32.0
+
+[node name="WaterMeterIcon" type="TextureRect" parent="PanelContainer/TooltipContainer/WaterMeter"]
+margin_right = 12.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 12, 15 )
+texture = ExtResource( 9 )
+expand = true
+
+[node name="WaterMeterName" type="Label" parent="PanelContainer/TooltipContainer/WaterMeter"]
+margin_left = 16.0
+margin_right = 55.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_colors/font_color = Color( 1, 0.968627, 0.803922, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Water"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WaterMeterBar" type="TextureProgress" parent="PanelContainer/TooltipContainer/WaterMeter"]
+margin_left = 59.0
+margin_right = 119.0
+margin_bottom = 15.0
+value = 100.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 11 )
+
+[node name="HealthMeter" type="HBoxContainer" parent="PanelContainer/TooltipContainer"]
+margin_top = 36.0
+margin_right = 119.0
+margin_bottom = 51.0
+
+[node name="HealthMeterIcon" type="TextureRect" parent="PanelContainer/TooltipContainer/HealthMeter"]
+margin_right = 12.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 12, 15 )
+texture = ExtResource( 10 )
+expand = true
+stretch_mode = 6
+
+[node name="HealthMeterName" type="Label" parent="PanelContainer/TooltipContainer/HealthMeter"]
+margin_left = 16.0
+margin_right = 55.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_colors/font_color = Color( 1, 0.968627, 0.803922, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "HP"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HealthMeterBar" type="TextureProgress" parent="PanelContainer/TooltipContainer/HealthMeter"]
+margin_left = 59.0
+margin_right = 119.0
+margin_bottom = 15.0
+value = 100.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 12 )
+
+[node name="GrowMeter" type="HBoxContainer" parent="PanelContainer/TooltipContainer"]
+margin_top = 55.0
+margin_right = 119.0
+margin_bottom = 70.0
+
+[node name="GrowMeterIcon" type="TextureRect" parent="PanelContainer/TooltipContainer/GrowMeter"]
+margin_right = 12.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 12, 15 )
+texture = ExtResource( 6 )
+expand = true
+stretch_mode = 6
+
+[node name="GrowMeterName" type="Label" parent="PanelContainer/TooltipContainer/GrowMeter"]
+margin_left = 16.0
+margin_right = 55.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_colors/font_color = Color( 1, 0.968627, 0.803922, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Grow in"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="GrowMeterBar" type="TextureProgress" parent="PanelContainer/TooltipContainer/GrowMeter"]
+margin_left = 59.0
+margin_right = 119.0
+margin_bottom = 15.0
+value = 100.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 8 )
+
+[node name="GrowMeterTimeLeft" type="Label" parent="PanelContainer/TooltipContainer/GrowMeter/GrowMeterBar"]
+margin_left = -8.0
+margin_right = 72.0
+margin_bottom = 14.0
+custom_fonts/font = SubResource( 3 )
+text = "100/100"
+align = 1
+valign = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FertilizerMeter" type="HBoxContainer" parent="PanelContainer/TooltipContainer"]
+margin_top = 74.0
+margin_right = 119.0
+margin_bottom = 89.0
+
+[node name="FertilizerMeterIcon" type="TextureRect" parent="PanelContainer/TooltipContainer/FertilizerMeter"]
+margin_right = 12.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 12, 15 )
+texture = ExtResource( 3 )
+expand = true
+stretch_mode = 6
+
+[node name="FertilizerMeterName" type="Label" parent="PanelContainer/TooltipContainer/FertilizerMeter"]
+margin_left = 16.0
+margin_right = 55.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_colors/font_color = Color( 1, 0.968627, 0.803922, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Fert"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FertilizerMeterBar" type="TextureProgress" parent="PanelContainer/TooltipContainer/FertilizerMeter"]
+margin_left = 59.0
+margin_right = 119.0
+margin_bottom = 15.0
+value = 100.0
+texture_under = ExtResource( 7 )
+texture_progress = ExtResource( 5 )
+
+[node name="FertilizerInPlot" type="HBoxContainer" parent="PanelContainer/TooltipContainer"]
+margin_top = 93.0
+margin_right = 119.0
+margin_bottom = 108.0
+alignment = 1
+
+[node name="FertilizerInPlotIcon" type="TextureRect" parent="PanelContainer/TooltipContainer/FertilizerInPlot"]
+margin_right = 12.0
+margin_bottom = 15.0
+rect_min_size = Vector2( 12, 15 )
+texture = ExtResource( 4 )
+expand = true
+stretch_mode = 6
+
+[node name="FertilizerInPlotName" type="Label" parent="PanelContainer/TooltipContainer/FertilizerInPlot"]
+margin_left = 16.0
+margin_right = 77.0
+margin_bottom = 15.0
+size_flags_horizontal = 3
+size_flags_vertical = 1
+custom_colors/font_color = Color( 1, 0.968627, 0.803922, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Fert in plot"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="FertilizerInPlotLeft" type="Label" parent="PanelContainer/TooltipContainer/FertilizerInPlot"]
+margin_left = 81.0
+margin_top = 1.0
+margin_right = 119.0
+margin_bottom = 14.0
+size_flags_horizontal = 3
+custom_fonts/font = SubResource( 3 )
+text = "200g"
+align = 1
+valign = 1
+clip_text = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

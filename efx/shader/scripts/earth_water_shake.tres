@@ -1,0 +1,38 @@
+[gd_resource type="Shader" format=2]
+
+[resource]
+code = "shader_type canvas_item;
+
+uniform sampler2D shader_mask;
+uniform sampler2D noise_map;
+uniform float distord_amount = 0.05;
+uniform bool pause = false;
+
+const float SHEET_W = 6.0;
+const float SHEET_H = 6.0;
+
+
+float uv_to_local_x(float uv_pos) {
+    return uv_pos - floor(uv_pos / (1.0 / SHEET_W)) * (1.0 / SHEET_W);
+}
+
+float uv_to_local_y(float uv_pos) {
+    return uv_pos - floor(uv_pos / (1.0 / SHEET_H)) * (1.0 / SHEET_H);
+}
+
+void fragment() {
+	if (!pause){
+		vec4 this_texture = texture(TEXTURE, UV); 
+	    vec4 mask_texture = texture(shader_mask, UV);
+	    vec4 noise_texture = texture(noise_map, UV + vec2(-1, 0.5) * TIME * 0.07);
+	    
+	    if (mask_texture.a > 0.0) {
+	        vec2 distorted_UV = (UV + ((noise_texture.r - 0.5) * distord_amount)) * (1.0 + (0.006 - 0.015 * abs(sin(TIME*0.5)) * max(0.0, (1.0 - uv_to_local_y(UV.y) * 1.8))));
+	        vec4 distorted_texture = texture(TEXTURE, distorted_UV);
+	        COLOR = distorted_texture
+	    }
+	    else {
+	        COLOR = this_texture
+	    }
+	}
+}"

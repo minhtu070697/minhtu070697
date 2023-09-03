@@ -1,0 +1,1035 @@
+{
+  "bare_hands": {
+    "item_id" : 1,
+    "item_name" : "Bare_Hands",
+    "item_class" : 1,
+    "weapon_class" : 1,
+    "item_rarity" : 1,
+    "dmg_percent" : 0.0,
+    "physical_percent" : 0.5,
+    "max_dmg_diff" : 1.0,
+    "atk_range" : 1,
+    "atk_speed" : 1.2,
+    "durability": 999999999,
+    "item_sprite" : ""
+  },
+  "bow": {
+    "item_id" : 4,
+    "item_name" : "Wood Bow",
+    "item_class" : 1,
+    "weapon_class" : 4,
+    "item_rarity" : 1,
+    "dmg_percent" : 1.0,
+    "physical_percent" : 0.75,
+    "max_dmg_diff" : 1.0,
+    "atk_range" : 6,
+    "hit_range": 0,
+    "hit_arc": 0,
+    "atk_speed" : 1.0,
+    "max_combo": 2,
+    "attacks": {
+      "light": {
+        "weapon_dmg": 0.5,
+        "proj_info": {
+          "proj_range": 400,
+          "proj_arc": 60,
+          "proj_name": "ice_bolt",
+          "proj_num": 1
+        },
+        "atk_speed": 1.0
+      },
+      "heavy": {
+        "weapon_dmg": 0.3,
+        "hit_range": 70,
+        "hit_arc": 40,
+        "atk_animation": "heavy_smash"
+      }
+    },
+    "combos": {
+      "hh": {
+        "weapon_dmg": 0.5,
+        "hit_range": 70,
+        "knockback": 60000,
+        "hit_arc": 100,
+        "atk_animation": "basic_melee_attack"
+      },
+      "lh": {
+        "weapon_dmg": 0.5,
+        "atk_speed" : 1.0,
+        "proj_info": {
+          "proj_name": "ice_bolt",
+          "proj_num": 1,
+          "proj_range": 500,
+          "proj_speed": 1000,
+          "proj_arc": 60,
+          "proj_fxs": {
+            "hit": {
+              "knockback": 50000
+            },
+            "flying": {
+              
+            },
+            "death": {
+  
+            },
+            "appear": {
+  
+            }
+          }
+        }
+      }
+    },
+    "durability": 1000,
+    "atk_animation": "basic_melee_attack",
+    "item_sprite" : ""
+  },
+  "axe": {
+    "item_id" : 2,
+    "item_name" : "Farmer Axe",
+    "item_class" : 1,
+    "weapon_class" : 3,
+    "item_rarity" : 0,
+    "dmg_percent" : 1.0,
+    "physical_percent" : 0.0,
+    "max_dmg_diff" : 1.0,
+    "atk_range" : 1,
+    "atk_speed" : 1.0,
+    "hit_range": 60,
+    "hit_arc": 90,
+    "max_combo": 1,
+    "attacks": {
+      "light": {
+        "dmg_percent": 1.0
+      },
+      "heavy": {
+        "dmg_percent": 1.5
+      }
+    },
+    "durability": 25,
+    "atk_animation": "basic_action",
+    "item_sprite" : ""
+  },
+  "pick": {
+    "item_id" : 2,
+    "item_name" : "Farmer Axe",
+    "item_class" : 1,
+    "weapon_class" : 3,
+    "item_rarity" : 0,
+    "dmg_percent" : 1.0,
+    "physical_percent" : 0.0,
+    "max_dmg_diff" : 1.0,
+    "atk_range" : 1,
+    "atk_speed" : 1.0,
+    "hit_range": 40,
+    "hit_arc": 30,
+    "max_combo": 1,
+    "attacks": {
+      "light": {
+        "dmg_percent": 1.0
+      },
+      "heavy": {
+        "dmg_percent": 1.5
+      }
+    },
+    "durability": 25,
+    "atk_animation": "basic_action",
+    "item_sprite" : ""
+  },
+  "hoe": {
+    "item_id" : 2,
+    "item_name" : "Farmer Axe",
+    "item_class" : 1,
+    "weapon_class" : 3,
+    "item_rarity" : 0,
+    "dmg_percent" : 1.0,
+    "physical_percent" : 0.0,
+    "max_dmg_diff" : 1.0,
+    "atk_range" : 1,
+    "atk_speed" : 1.0,
+    "hit_range": 40,
+    "hit_arc": 30,
+    "max_combo": 1,
+    "attacks": {
+      "light": {
+        "dmg_percent": 1.0
+      },
+      "heavy": {
+        "dmg_percent": 1.5
+      }
+    },
+    "durability": 25,
+    "atk_animation": "basic_action",
+    "item_sprite" : ""
+  },
+  "fishing_rod": {
+    "item_id" : 2,
+    "item_name" : "Farmer Axe",
+    "item_class" : 1,
+    "weapon_class" : 3,
+    "item_rarity" : 0,
+    "dmg_percent" : 1.0,
+    "physical_percent" : 0.0,
+    "max_dmg_diff" : 1.0,
+    "atk_range" : 1,
+    "atk_speed" : 1.0,
+    "durability": 12,
+    "item_sprite" : ""
+  },
+  "leather_coat": {
+    "item_id" : 100,
+    "item_name" : "Leather Coat",
+    "item_class" : 2,
+    "armor_class" : 1,
+    "item_rarity" : 0,
+    "physical_percent" : 0.0,
+    "item_sprite" : ""
+  },
+  "leather_hat": {
+    "item_id" : 101,
+    "item_name" : "Leather Hat",
+    "item_class" : 2,
+    "armor_class" : 2,
+    "item_rarity" : 0,
+    "physical_percent" : 0.0,
+    "item_sprite" : ""
+  },
+  "leather_pants": {
+    "item_id" : 102,
+    "item_name" : "Leather Pants",
+    "item_class" : 2,
+    "armor_class" : 3,
+    "item_rarity" : 0,
+    "physical_percent" : 0.0,
+    "item_sprite" : ""
+  },
+  "null_item": {
+    "item_id" : -1,
+    "item_name" : "Empty Item",
+    "item_class" : 6,
+    "weapon_class" : 0,
+    "armor_class" : 0,
+    "consumable_class" : 0,
+    "item_rarity" : 0,
+    "dmg_percent" : 0.0,
+    "physical_percent" : 0.0,
+    "max_dmg_diff" : 0.0,
+    "atk_range" : 0,
+    "atk_speed" : 0.0,
+    "item_sprite" : ""
+  },
+  "iron_sword": {
+    "item_id" : 3,
+    "item_name" : "Sword",
+    "item_class" : 1,
+    "weapon_class" : 2,
+    "item_rarity" : 0,
+    "dmg_percent" : 1.0,
+    "physical_percent" : 0.75,
+    "max_dmg_diff" : 0.8,
+    "atk_range" : 1,
+    "atk_speed" : 1.3,
+    "hit_range": 70,
+    "hit_arc": 120,
+    "max_combo": 3,
+    "attacks": {
+      "light": {
+        "weapon_dmg": 1.0,
+        "knockback": 10000
+      },
+      "heavy": {
+        "weapon_dmg": 1.5,
+        "knockback": 20000,
+        "atk_animation": "heavy_attack",
+        "atk_speed" : 0.65
+      }
+    },
+    "combos": {
+      "lll": {
+        "weapon_dmg": 1.3,
+        "knockback": 20000,
+        "hit_arc": 240
+      },
+      "llh": {
+        "weapon_dmg": 2.0,
+        "knockback": 20000,
+        "hit_arc": 360,
+        "hit_range": 100,
+        "atk_animation": "360_attack"
+      },
+      "lhl": {
+        "weapon_dmg": 1.3,
+        "knockback": 10000,
+        "proj_info": {
+          "proj_name": "chain_lightning",
+          "proj_num": 1,
+          "proj_range": 400,
+          "proj_arc": 60,
+          "proj_dmg": {
+            "lightning_dmg": 50
+          }
+        },
+        "atk_animation": "basic_melee_attack",
+        "atk_speed" : 1.3
+      },
+      "hhh": {
+        "weapon_dmg": 6.0,
+        "knockback": 0,
+        "atk_animation": "heavy_smash",
+        "atk_speed" : 1.0,
+        "hit_arc": 50,
+        "hit_range": 60
+      },
+      "hh": {
+        "weapon_dmg": 3.0,
+        "knockback": 20000,
+        "atk_animation": "basic_melee_attack",
+        "atk_speed" : 0.65
+      },
+      "lhh": {
+        "weapon_dmg": 1.0,
+        "knockback": 0,
+        "proj_info": {
+          "proj_name": "ice_bolt",
+          "proj_num": 3,
+          "proj_range": 400,
+          "proj_arc": 60,
+          "proj_dmg": {
+            "cold_dmg": 50,
+            "freeze_length": 3,
+            "freeze_strength": 0.6
+          }
+        },
+        "atk_animation": "heavy_attack",
+        "atk_speed" : 1.3
+      },
+      "hll": {
+        "weapon_dmg": 1.0,
+        "knockback": 20000,
+        "proj_info": {
+          "proj_name": "fire_ball",
+          "proj_num": 1,
+          "proj_range": 400,
+          "proj_arc": 60
+        },
+        "atk_animation": "basic_melee_attack",
+        "atk_speed" : 0.65
+      },
+      "hlh": {
+        "weapon_dmg": 1.0,
+        "knockback": 0,
+        "proj_info": {
+          "proj_name": "ice_nova",
+          "proj_num": 1,
+          "proj_dmg": {
+            "cold_dmg": 10,
+            "freeze_length": 5,
+            "freeze_strength": 0.8
+          }
+        },
+        "atk_animation": "basic_melee_attack",
+        "atk_speed" : 1
+      },
+      "hhl": {
+        "weapon_dmg": 2.0,
+        "knockback": 50000,
+        "atk_animation": "heavy_attack",
+        "atk_speed" : 1.0,
+        "proj_info": {
+          "proj_name": "tornado",
+          "proj_num": 1,
+          "proj_fxs": {
+            "hit": {
+              
+            },
+            "flying": {
+              "cyclone": {
+                "strength": 6000,
+                "cyclone_r": 180,
+                "cyclone_left": true
+              },
+              "shake_camera": {
+                "duration": 0.2,
+                "freq": 15.0,
+                "amp": 7.0
+              }
+            },
+            "death": {
+  
+            },
+            "appear": {
+  
+            }
+          }
+        }
+      }
+    },
+    "durability": 1000,
+    "atk_animation": "basic_melee_attack",
+    "item_sprite" : ""
+  },
+  "basic_hp_potion": {
+    "item_id" : 1000,
+    "item_name" : "Basic HP Potion",
+    "item_class" : 3,
+    "consumable_class" : 1,
+    "item_rarity" : 1,
+    "buffs" : "basic_potion_buff",
+    "consume_effects" : "basic_hp_potion",
+    "item_sprite" : ""
+  },
+  "basic_wood_piece": {
+    "item_id" : 6000,
+    "item_name" : "Basic Wood Piece",
+    "item_desc": "Basic wood piece, use for crafting",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "basic_rock": {
+    "item_id" : 6001,
+    "item_name" : "Basic Rock",
+    "item_desc": "Basic rock, use for crafting",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "basic_rope": {
+    "item_id" : 6002,
+    "item_name" : "Basic Rope",
+    "item_desc": "Basic rope, use for crafting",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "gold_piece": {
+    "item_id" : 6003,
+    "item_name" : "Gold Piece",
+    "item_desc": "Gold piece, use for crafting",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "basic_fish": {
+    "item_id" : 6004,
+    "item_name" : "Basic Fish",
+    "item_desc": "Basic fish, use for crafting",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "hc_grilled_fish": {
+    "item_id" : 1005,
+    "item_name" : "Half-cooked Grilled Fish",
+    "item_desc": "Half-cooked grilled fish, eat with caution.",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "buffs" : "basic_potion_buff",
+    "consume_effects" : "basic_hp_potion",
+    "item_sprite" : ""
+  },
+  "grilled_fish": {
+    "item_id" : 1006,
+    "item_name" : "Grilled Fish",
+    "item_desc": "Yummy grilled fish.",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "buffs" : "basic_potion_buff",
+    "consume_effects" : "basic_hp_potion",
+    "item_sprite" : ""
+  },
+  "oc_grilled_fish": {
+    "item_id" : 1007,
+    "item_name" : "Over-cooked Grilled Fish",
+    "item_desc": "Still yummy.",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "buffs" : "basic_potion_buff",
+    "consume_effects" : "basic_hp_potion",
+    "item_sprite" : ""
+  },
+  "black_hole_fish": {
+    "item_id" : 1008,
+    "item_name" : "Black Hole Fish",
+    "item_desc": "??? What is this thing",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "hc_fish_tomato": {
+    "item_id" : 1009,
+    "item_name" : "Half-cooked Fish with Tomato",
+    "item_desc": "The fish is still alive",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "fish_tomato": {
+    "item_id" : 1010,
+    "item_name" : "Perfect Fish with Tomato",
+    "item_desc": "It's good",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "oc_fish_tomato": {
+    "item_id" : 1011,
+    "item_name" : "Over-cooked Fish with Tomato",
+    "item_desc": "Really difficult to eat",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "black_tomato_fish": {
+    "item_id" : 1012,
+    "item_name" : "Blackest Tomato Fish",
+    "item_desc": "It's embed with a hyper-dimension curse",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "blob": {
+    "item_id" : 1013,
+    "item_name" : "Blob",
+    "item_desc": "A randomly mixed foods",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "carrot_seed": {
+    "item_id" : 5000,
+    "item_name" : "Carrot Seed",
+    "item_class" : 5,
+    "item_rarity" : 1,
+    "young_tree_name" : "carrot",
+    "item_sprite" : ""
+  },
+  "chilly_seed": {
+    "item_id" : 5001,
+    "item_name" : "Chilly Seed",
+    "item_class" : 5,
+    "item_rarity" : 1,
+    "young_tree_name" : "chilly",
+    "item_sprite" : ""
+  },
+  "peach_seed": {
+    "item_id" : 5002,
+    "item_name" : "Peach Seed",
+    "item_class" : 5,
+    "item_rarity" : 1,
+    "young_tree_name" : "peach",
+    "item_sprite" : ""
+  },
+  "beef": {
+    "item_id" : 1001,
+    "item_name" : "Sliced Beef",
+    "item_class" : 3,
+    "consumable_class" : 1,
+    "item_rarity" : 1,
+    "buffs" : "basic_potion_buff",
+    "consume_effects" : "basic_hp_potion",
+    "item_sprite" : ""
+  },
+  "carrot": {
+    "item_id" : 1002,
+    "item_name" : "Carrot",
+    "item_class" : 3,
+    "consumable_class" : 1,
+    "item_rarity" : 1,
+    "buffs" : "basic_potion_buff",
+    "consume_effects" : "basic_hp_potion",
+    "item_sprite" : ""
+  },
+  "chilly": {
+    "item_id" : 1003,
+    "item_name" : "Chilly",
+    "item_class" : 3,
+    "consumable_class" : 1,
+    "item_rarity" : 1,
+    "buffs" : "basic_potion_buff",
+    "consume_effects" : "basic_hp_potion",
+    "item_sprite" : ""
+  },
+  "peach": {
+    "item_id" : 1004,
+    "item_name" : "Peach",
+    "item_class" : 3,
+    "consumable_class" : 1,
+    "item_rarity" : 1,
+    "buffs" : "basic_potion_buff",
+    "consume_effects" : "basic_hp_potion",
+    "item_sprite" : ""
+  },
+  "diamond": {
+    "item_id" : 6005,
+    "item_name" : "Diamond",
+    "item_desc": "Diamond, very rare item",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "sapphire": {
+    "item_id" : 6006,
+    "item_name" : "Sapphire",
+    "item_desc": "Sapphire, very rare item",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "quartz": {
+    "item_id" : 6007,
+    "item_name" : "Quartz",
+    "item_desc": "Quartz, very rare item",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "emerald": {
+    "item_id" : 6008,
+    "item_name" : "Emerald",
+    "item_desc": "Emerald, very rare item",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "ruby": {
+    "item_id" : 6009,
+    "item_name" : "Ruby",
+    "item_desc": "Ruby, very rare item",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "amber": {
+    "item_id" : 6010,
+    "item_name" : "Amber",
+    "item_desc": "Amber, very rare item",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "amethyst": {
+    "item_id" : 6011,
+    "item_name" : "Amethyst",
+    "item_desc": "Amethyst, very rare item",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "gas": {
+    "item_id" : 6012,
+    "item_name" : "Gas Potion",
+    "item_desc": "Use for cooking",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "lettuce": {
+    "item_id" : 6013,
+    "item_name" : "Lettuce",
+    "item_desc": "Use for cooking",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "daisy": {
+    "item_id" : 6014,
+    "item_name" : "Daisy",
+    "item_desc": "Use for cooking",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "rice": {
+    "item_id" : 6015,
+    "item_name" : "Rice",
+    "item_desc": "Use for cooking",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "cooked_rice": {
+    "item_id" : 6016,
+    "item_name" : "Cooked Rice",
+    "item_desc": "Use for cooking",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "tea_leaf": {
+    "item_id" : 6017,
+    "item_name" : "Tea Leaf",
+    "item_desc": "Use for cooking",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "salad": {
+    "item_id" : 1014,
+    "item_name" : "Salad",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "coffee_bean": {
+    "item_id" : 6018,
+    "item_name" : "Coffe Bean",
+    "item_desc": "Use for cooking",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "steak_n_egg": {
+    "item_id" : 1015,
+    "item_name" : "Steak with Egg",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "hc_steak_n_egg": {
+    "item_id" : 1028,
+    "item_name" : "Half-cooked Steak with Egg",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "oc_steak_n_egg": {
+    "item_id" : 1029,
+    "item_name" : "Over-cooked Steak with Egg",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "green_tea": {
+    "item_id" : 1016,
+    "item_name" : "Green Tea",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "hc_green_tea": {
+    "item_id" : 1030,
+    "item_name" : "Half-cooked Green Tea",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "oc_green_tea": {
+    "item_id" : 1031,
+    "item_name" : "Over-cooked Green Tea",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "daisy_tea": {
+    "item_id" : 1017,
+    "item_name" : "Daisy Tea",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "hc_daisy_tea": {
+    "item_id" : 1032,
+    "item_name" : "Half-cooked Daisy Tea",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "oc_daisy_tea": {
+    "item_id" : 1033,
+    "item_name" : "Over-cooked Daisy Tea",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "fried_fish": {
+    "item_id" : 1018,
+    "item_name" : "Fried Fish",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "hc_fried_fish": {
+    "item_id" : 1034,
+    "item_name" : "Half-cooked Fried Fish",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "oc_fried_fish": {
+    "item_id" : 1035,
+    "item_name" : "Over-cooked Fried Fish",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "cake": {
+    "item_id" : 1019,
+    "item_name" : "Cake",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "hc_cake": {
+    "item_id" : 1036,
+    "item_name" : "Half-cooked Cake",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "oc_cake": {
+    "item_id" : 1037,
+    "item_name" : "Over-cooked Cake",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "egg_fried_rice": {
+    "item_id" : 1020,
+    "item_name" : "Egg Fried Rice",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "hc_egg_fried_rice": {
+    "item_id" : 1038,
+    "item_name" : "Half-cooked Egg Fried Rice",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "oc_egg_fried_rice": {
+    "item_id" : 1039,
+    "item_name" : "Over-cooked Egg Fried Rice",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+
+  "choco_cake": {
+    "item_id" : 1040,
+    "item_name" : "Choco Cake",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "tomato_soup": {
+    "item_id" : 1021,
+    "item_name" : "Tomato Soup",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "hc_tomato_soup": {
+    "item_id" : 1043,
+    "item_name" : "Half-cooked Tomato Soup",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "oc_tomato_soup": {
+    "item_id" : 1044,
+    "item_name" : "Over-cooked Tomato Soup",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "cheese": {
+    "item_id" : 1022,
+    "item_name" : "Cheese",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "curdled_milk": {
+    "item_id" : 1045,
+    "item_name" : "Curdled Milk",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "old_cheese": {
+    "item_id" : 1046,
+    "item_name" : "Old Cheese",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "blue_cheese": {
+    "item_id" : 1051,
+    "item_name" : "Blue Cheese",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "cookies": {
+    "item_id" : 1023,
+    "item_name" : "Cookies",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "hc_cookies": {
+    "item_id" : 1047,
+    "item_name" : "Half-cooked Cookies",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "oc_cookies": {
+    "item_id" : 1048,
+    "item_name" : "Over-cooked Cookies",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "chocolate": {
+    "item_id" : 1024,
+    "item_name" : "Chocolate",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "vinegar": {
+    "item_id" : 6019,
+    "item_name" : "Vinegar",
+    "item_desc": "Use for cooking",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "sugar": {
+    "item_id" : 6020,
+    "item_name" : "Sugar",
+    "item_desc": "Use for cooking",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "salt": {
+    "item_id" : 6021,
+    "item_name" : "Salt",
+    "item_desc": "Use for cooking",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "fried_egg": {
+    "item_id" : 1025,
+    "item_name" : "Fried Egg",
+    "item_desc": "Really good",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "hc_fried_egg": {
+    "item_id" : 1049,
+    "item_name" : "Half Fried Egg",
+    "item_desc": "Perfect!",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "oc_fried_egg": {
+    "item_id" : 1050,
+    "item_name" : "Over Hard Fried Egg",
+    "item_desc": "A game dev doesn't like it",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "milk": {
+    "item_id" : 1053,
+    "item_name" : "Milk",
+    "item_desc": "Good taste!",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "coffee": {
+    "item_id" : 1054,
+    "item_name" : "Coffee",
+    "item_desc": "Good taste!",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "butter": {
+    "item_id" : 1026,
+    "item_name" : "Butter",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "bread": {
+    "item_id" : 1027,
+    "item_name" : "Bread",
+    "item_desc": "Use for cooking",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "banh_mi": {
+    "item_id" : 1052,
+    "item_name" : "Banh Mi Vietnam",
+    "item_desc": "Vietnamese famous street food",
+    "item_class" : 3,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "egg": {
+    "item_id" : 6022,
+    "item_name" : "Egg",
+    "item_desc": "Use for cooking",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "flour": {
+    "item_id" : 6023,
+    "item_name" : "Flour",
+    "item_desc": "Use for cooking",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  },
+  "burnt_food": {
+    "item_id" : 6024,
+    "item_name" : "Burnt Food",
+    "item_desc": "Use it to feed recycle bin",
+    "item_class" : 6,
+    "item_rarity" : 1,
+    "item_sprite" : ""
+  }
+}

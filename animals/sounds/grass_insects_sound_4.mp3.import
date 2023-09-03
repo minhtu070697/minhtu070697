@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/grass_insects_sound_4.mp3-3d44b73a2299e4c957ff650420e034e7.mp3str"
+
+[deps]
+
+source_file="res://animals/sounds/grass_insects_sound_4.mp3"
+dest_files=[ "res://.import/grass_insects_sound_4.mp3-3d44b73a2299e4c957ff650420e034e7.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

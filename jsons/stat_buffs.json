@@ -1,0 +1,45 @@
+{
+  "warrior_spirit": {
+    "buff_name" : "warrior_spirit",
+    "base_buff_length" : 5.0,
+    "buff_length_lvl_up" : 0.3,
+    "base_hp_buff" : 0.03,
+    "hp_buff_lvl_up" : 0.01,
+    "base_strength_add" : 3,
+    "strength_add_lvl_up" : 1
+  },
+  "passive_buff": {
+    "buff_name" : "passive_buff",
+    "base_buff_length" : 999999999.0,
+    "buff_length_lvl_up" : 0.0,
+    "base_hp_buff" : 6,
+    "hp_buff_lvl_up" : 1,
+    "base_mana_buff" : 6,
+    "mana_buff_lvl_up" : 1,
+    "base_strength_add" : 5,
+    "strength_add_lvl_up" : 3,
+    "base_fire_dmg" : 50,
+    "fire_dmg_lvl_up" : 150
+  },
+  "basic_potion_buff": {
+    "buff_name" : "basic_potion_buff",
+    "base_buff_length" : 30.0,
+    "buff_length_lvl_up" : 0.0,
+    "base_hp_buff" : 0.3,
+    "hp_buff_lvl_up" : 0.0,
+    "base_mana_buff" : 2,
+    "mana_buff_lvl_up" : 0.0,
+    "base_strength_add" : 12,
+    "strength_add_lvl_up" : 0.0,
+    "base_walk_speed_add" : 0.0,
+    "walk_speed_add_lvl_up" : 0.01,
+    "base_atk_speed_add" : 0.2,
+    "atk_speed_add_lvl_up" : 0.0,
+    "base_speed_buff" : 0.2,
+    "speed_buff_lvl_up" : 0.0,
+    "base_fire_dmg_buff" : 1,
+    "fire_dmg_buff_lvl_up" : 0.05,
+    "base_cold_dmg_buff" : 0.5,
+    "cold_dmg_buff_lvl_up" : 0.07
+  }
+}

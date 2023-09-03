@@ -1,0 +1,1413 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=4
+
+_global_script_classes=[ {
+"base": "BaseDecorations",
+"class": "AboveDecorations",
+"language": "GDScript",
+"path": "res://map/scripts/above_decorations.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Actor",
+"language": "GDScript",
+"path": "res://common/actor.gd"
+}, {
+"base": "Node",
+"class": "ActorSkillManager",
+"language": "GDScript",
+"path": "res://characters/stats/skill_manager.gd"
+}, {
+"base": "State",
+"class": "ActorState",
+"language": "GDScript",
+"path": "res://common/actor_state.gd"
+}, {
+"base": "Stats",
+"class": "ActorStats",
+"language": "GDScript",
+"path": "res://characters/stats/character_stats.gd"
+}, {
+"base": "Node2D",
+"class": "ActorVisibility",
+"language": "GDScript",
+"path": "res://areas/actor_visibility.gd"
+}, {
+"base": "Actor",
+"class": "Animals",
+"language": "GDScript",
+"path": "res://common/animals.gd"
+}, {
+"base": "AnimalsState",
+"class": "AnimalsIdle",
+"language": "GDScript",
+"path": "res://animals/states/idle.gd"
+}, {
+"base": "AnimalsState",
+"class": "AnimalsLieDown",
+"language": "GDScript",
+"path": "res://animals/states/lie_down.gd"
+}, {
+"base": "AnimalsState",
+"class": "AnimalsSeek",
+"language": "GDScript",
+"path": "res://animals/states/seek.gd"
+}, {
+"base": "AnimalsState",
+"class": "AnimalsSleep",
+"language": "GDScript",
+"path": "res://animals/states/sleep.gd"
+}, {
+"base": "ActorState",
+"class": "AnimalsState",
+"language": "GDScript",
+"path": "res://animals/states/animals_state.gd"
+}, {
+"base": "HealthState",
+"class": "Antidoting",
+"language": "GDScript",
+"path": "res://characters/states/health_states/antidoting.gd"
+}, {
+"base": "ItemStats",
+"class": "ArmorStats",
+"language": "GDScript",
+"path": "res://items/stats/armor_stats.gd"
+}, {
+"base": "Node",
+"class": "AttackLibrary",
+"language": "GDScript",
+"path": "res://battle/attack_library.gd"
+}, {
+"base": "Panel",
+"class": "BarnInventorySlot",
+"language": "GDScript",
+"path": "res://ui/scenes/barn_inventory_slot.gd"
+}, {
+"base": "Decorations",
+"class": "BaseDecorations",
+"language": "GDScript",
+"path": "res://map/scripts/base_decorations.gd"
+}, {
+"base": "Node",
+"class": "BaseGenerator",
+"language": "GDScript",
+"path": "res://map/scenes/base/base_generator.gd"
+}, {
+"base": "Navigation2D",
+"class": "BaseManager",
+"language": "GDScript",
+"path": "res://map/scenes/base/base_manager.gd"
+}, {
+"base": "Node",
+"class": "BaseUpgradeGenerator",
+"language": "GDScript",
+"path": "res://map/scenes/base/base_upgrade_generator.gd"
+}, {
+"base": "Navigation2D",
+"class": "BaseUpgradeManager",
+"language": "GDScript",
+"path": "res://map/scenes/base/base_upgrade_manager.gd"
+}, {
+"base": "Character",
+"class": "BattleFieldCharacter",
+"language": "GDScript",
+"path": "res://characters/scenes/battle_field_characters.gd"
+}, {
+"base": "BaseDecorations",
+"class": "BelowDecorations",
+"language": "GDScript",
+"path": "res://map/scripts/below_decorations.gd"
+}, {
+"base": "Node",
+"class": "BuffManager",
+"language": "GDScript",
+"path": "res://characters/stats/buff_manager.gd"
+}, {
+"base": "Node",
+"class": "BuildCondition",
+"language": "GDScript",
+"path": "res://game/build_condition.gd"
+}, {
+"base": "Node",
+"class": "BuildManager",
+"language": "GDScript",
+"path": "res://game/build_manager.gd"
+}, {
+"base": "HealthState",
+"class": "Burning",
+"language": "GDScript",
+"path": "res://characters/states/health_states/burning.gd"
+}, {
+"base": "FighterActor",
+"class": "Character",
+"language": "GDScript",
+"path": "res://characters/scenes/character.gd"
+}, {
+"base": "Node",
+"class": "CharacterExperienceManager",
+"language": "GDScript",
+"path": "res://characters/stats/experience_manager.gd"
+}, {
+"base": "Node",
+"class": "CharacterSave",
+"language": "GDScript",
+"path": "res://save/character_save.gd"
+}, {
+"base": "TextureButton",
+"class": "CharacterSkillTabSkillIcon",
+"language": "GDScript",
+"path": "res://ui/scenes/character_skill_tab_skill_icon.gd"
+}, {
+"base": "ActorState",
+"class": "CharacterState",
+"language": "GDScript",
+"path": "res://characters/states/character_state.gd"
+}, {
+"base": "Node2D",
+"class": "CharacterStatsTab",
+"language": "GDScript",
+"path": "res://ui/scenes/character_stats_tab.gd"
+}, {
+"base": "Resource",
+"class": "ClassResources",
+"language": "GDScript",
+"path": "res://characters/stats/class_resources.gd"
+}, {
+"base": "StaticResources",
+"class": "CollectResources",
+"language": "GDScript",
+"path": "res://map/scripts/collect_resources.gd"
+}, {
+"base": "ItemStats",
+"class": "ConsumableStats",
+"language": "GDScript",
+"path": "res://items/stats/consumable_stats.gd"
+}, {
+"base": "Node",
+"class": "CookingController",
+"language": "GDScript",
+"path": "res://ui/scripts/cooking.gd"
+}, {
+"base": "Node2D",
+"class": "CookingTab",
+"language": "GDScript",
+"path": "res://ui/scenes/cooking_tab.gd"
+}, {
+"base": "Node",
+"class": "CoroutineManager",
+"language": "GDScript",
+"path": "res://game/coroutine_manager.gd"
+}, {
+"base": "Node",
+"class": "CursorManager",
+"language": "GDScript",
+"path": "res://game/cursor_manager.gd"
+}, {
+"base": "Node",
+"class": "DamageCalculator",
+"language": "GDScript",
+"path": "res://battle/dmg_calculator.gd"
+}, {
+"base": "Node",
+"class": "DamageDealer",
+"language": "GDScript",
+"path": "res://battle/dmg_dealer.gd"
+}, {
+"base": "Node",
+"class": "DamagePacked",
+"language": "GDScript",
+"path": "res://battle/dmg_packed.gd"
+}, {
+"base": "Node",
+"class": "DamageReceiveManager",
+"language": "GDScript",
+"path": "res://characters/stats/dmg_receive_manager.gd"
+}, {
+"base": "Node",
+"class": "DayTimeManager",
+"language": "GDScript",
+"path": "res://game/daytime_manager.gd"
+}, {
+"base": "StaticObjects",
+"class": "Decorations",
+"language": "GDScript",
+"path": "res://map/scripts/decorations.gd"
+}, {
+"base": "Node",
+"class": "EmailUtils",
+"language": "GDScript",
+"path": "res://common/email_utils.gd"
+}, {
+"base": "ExploitResources",
+"class": "EmptyPlot",
+"language": "GDScript",
+"path": "res://map/scenes/resources/empty_plot.gd"
+}, {
+"base": "Node",
+"class": "EmptyPlotController",
+"language": "GDScript",
+"path": "res://map/scenes/resources/empty_plot_controller.gd"
+}, {
+"base": "FighterActor",
+"class": "Enemy",
+"language": "GDScript",
+"path": "res://enemies/scenes/enemy.gd"
+}, {
+"base": "Node",
+"class": "EnemyGenerator",
+"language": "GDScript",
+"path": "res://map/scripts/enemy_generator.gd"
+}, {
+"base": "Node",
+"class": "EnemyInfo",
+"language": "GDScript",
+"path": "res://map/scripts/enemy_info.gd"
+}, {
+"base": "Reference",
+"class": "EnemyInfoItem",
+"language": "GDScript",
+"path": "res://map/scripts/enemy_info_item.gd"
+}, {
+"base": "Node",
+"class": "EnemyManager",
+"language": "GDScript",
+"path": "res://map/scripts/enemy_manager.gd"
+}, {
+"base": "ActorState",
+"class": "EnemyState",
+"language": "GDScript",
+"path": "res://enemies/states/character_state.gd"
+}, {
+"base": "Node",
+"class": "EnvironmentEventManager",
+"language": "GDScript",
+"path": "res://game/environment_event_manager.gd"
+}, {
+"base": "Node",
+"class": "EnvironmentManager",
+"language": "GDScript",
+"path": "res://game/environment_manager.gd"
+}, {
+"base": "Node",
+"class": "EnvironmentSoundManager",
+"language": "GDScript",
+"path": "res://autoload/autoload_scenes/environment_sound_manager.gd"
+}, {
+"base": "Node",
+"class": "EquipmentManager",
+"language": "GDScript",
+"path": "res://items/stats/equipment_manager.gd"
+}, {
+"base": "Node",
+"class": "ExperienceRewardManager",
+"language": "GDScript",
+"path": "res://game/experience_reward_manager.gd"
+}, {
+"base": "StaticResources",
+"class": "ExploitResources",
+"language": "GDScript",
+"path": "res://map/scripts/exploit_resources.gd"
+}, {
+"base": "Decorations",
+"class": "FarmDecorations",
+"language": "GDScript",
+"path": "res://map/scripts/farm_decorations.gd"
+}, {
+"base": "FarmPet",
+"class": "FarmDogs",
+"language": "GDScript",
+"path": "res://animals/pets/farm_pets/scripts/farm_dogs.gd"
+}, {
+"base": "Animals",
+"class": "FarmPet",
+"language": "GDScript",
+"path": "res://animals/pets/farm_pets/scripts/farm_pet.gd"
+}, {
+"base": "AnimalsIdle",
+"class": "FarmPetIdle",
+"language": "GDScript",
+"path": "res://animals/pets/farm_pets/states/farm_pet_idle.gd"
+}, {
+"base": "AnimalsSeek",
+"class": "FarmPetSeek",
+"language": "GDScript",
+"path": "res://animals/pets/farm_pets/states/farm_pet_seek.gd"
+}, {
+"base": "ActorStats",
+"class": "FarmerStats",
+"language": "GDScript",
+"path": "res://characters/stats/farmer_stats.gd"
+}, {
+"base": "Actor",
+"class": "FighterActor",
+"language": "GDScript",
+"path": "res://common/fighter_actor.gd"
+}, {
+"base": "ActorStats",
+"class": "FighterStats",
+"language": "GDScript",
+"path": "res://characters/stats/fighter_stats.gd"
+}, {
+"base": "StatsManager",
+"class": "FighterStatsManager",
+"language": "GDScript",
+"path": "res://characters/stats/fighter_stats_manager.gd"
+}, {
+"base": "CharacterStatsTab",
+"class": "FighterStatsTab",
+"language": "GDScript",
+"path": "res://ui/scenes/fighter_stats_tab.gd"
+}, {
+"base": "Reference",
+"class": "FighterUtils",
+"language": "GDScript",
+"path": "res://common/fighter_utils.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "FireFlies",
+"language": "GDScript",
+"path": "res://map/scenes/decorations/fire_flies.gd"
+}, {
+"base": "Projectile",
+"class": "FlyingProjectile",
+"language": "GDScript",
+"path": "res://projectiles/flying_projectile.gd"
+}, {
+"base": "Node2D",
+"class": "FlyingProjectileInfo",
+"language": "GDScript",
+"path": "res://projectiles/flying_projectile_info.gd"
+}, {
+"base": "FlyingProjectile",
+"class": "FlyingStraightProjectile",
+"language": "GDScript",
+"path": "res://projectiles/flying_straight_projectile.gd"
+}, {
+"base": "HealthState",
+"class": "Freezing",
+"language": "GDScript",
+"path": "res://characters/states/health_states/freezing.gd"
+}, {
+"base": "State",
+"class": "GameState",
+"language": "GDScript",
+"path": "res://game/states/game_state.gd"
+}, {
+"base": "CollectResources",
+"class": "GrownPlant",
+"language": "GDScript",
+"path": "res://plants/scripts/plant.gd"
+}, {
+"base": "GrownPlant",
+"class": "GrownPlantRoot",
+"language": "GDScript",
+"path": "res://plants/scripts/plant_root.gd"
+}, {
+"base": "GrownPlant",
+"class": "GrownPlantTree",
+"language": "GDScript",
+"path": "res://plants/scripts/plant_tree.gd"
+}, {
+"base": "Node",
+"class": "HealthState",
+"language": "GDScript",
+"path": "res://characters/states/health_states/health_states.gd"
+}, {
+"base": "Node2D",
+"class": "InventoryItem",
+"language": "GDScript",
+"path": "res://ui/scenes/item.gd"
+}, {
+"base": "Node2D",
+"class": "InventorySlotController",
+"language": "GDScript",
+"path": "res://ui/scenes/inventory_slot_controller.gd"
+}, {
+"base": "Node2D",
+"class": "Item",
+"language": "GDScript",
+"path": "res://items/scene/item.gd"
+}, {
+"base": "Node2D",
+"class": "ItemInfo",
+"language": "GDScript",
+"path": "res://items/scripts/item_info.gd"
+}, {
+"base": "Resource",
+"class": "ItemOldResources",
+"language": "GDScript",
+"path": "res://items/stats/item_stats_resources.gd"
+}, {
+"base": "Node2D",
+"class": "ItemRandomStatsGenerator",
+"language": "GDScript",
+"path": "res://items/stats/item_random_stats_generator.gd"
+}, {
+"base": "Resource",
+"class": "ItemResources",
+"language": "GDScript",
+"path": "res://items/scripts/item_resources.gd"
+}, {
+"base": "Panel",
+"class": "ItemSlot",
+"language": "GDScript",
+"path": "res://ui/scenes/slot.gd"
+}, {
+"base": "Stats",
+"class": "ItemStats",
+"language": "GDScript",
+"path": "res://items/stats/item_stats.gd"
+}, {
+"base": "Resource",
+"class": "ItemStatsResources",
+"language": "GDScript",
+"path": "res://items/stats/item_stats_added_resource.gd"
+}, {
+"base": "Reference",
+"class": "JSONBeautifier",
+"language": "GDScript",
+"path": "res://static scripts/json_beautifier.gd"
+}, {
+"base": "HealthState",
+"class": "LightningShocking",
+"language": "GDScript",
+"path": "res://characters/states/health_states/lightning_shocking.gd"
+}, {
+"base": "FarmDecorations",
+"class": "LivestockBarn",
+"language": "GDScript",
+"path": "res://animals/livestocks/buildings/scripts/livestock_barn.gd"
+}, {
+"base": "Node2D",
+"class": "LivestockBarnController",
+"language": "GDScript",
+"path": "res://animals/livestocks/buildings/scripts/livestock_barn_controller.gd"
+}, {
+"base": "Node2D",
+"class": "LivestockBarnInventory",
+"language": "GDScript",
+"path": "res://ui/scenes/livestock_barn_inventory.gd"
+}, {
+"base": "Animals",
+"class": "Livestocks",
+"language": "GDScript",
+"path": "res://animals/livestocks/scripts/livestocks.gd"
+}, {
+"base": "AnimalsIdle",
+"class": "LivestocksIdle",
+"language": "GDScript",
+"path": "res://animals/livestocks/states/livestocks_idle.gd"
+}, {
+"base": "AnimalsSeek",
+"class": "LivestocksSeek",
+"language": "GDScript",
+"path": "res://animals/livestocks/states/livestocks_seek.gd"
+}, {
+"base": "Node",
+"class": "LoginRegister",
+"language": "GDScript",
+"path": "res://game/scenes/login_register.gd"
+}, {
+"base": "Node",
+"class": "MapEnemyObject",
+"language": "GDScript",
+"path": "res://map/scripts/map_enemy_object.gd"
+}, {
+"base": "Node",
+"class": "MapGenerator",
+"language": "GDScript",
+"path": "res://map/scripts/map_generator.gd"
+}, {
+"base": "Node",
+"class": "MapInfo",
+"language": "GDScript",
+"path": "res://map/scripts/map_info.gd"
+}, {
+"base": "Reference",
+"class": "MapInfoItem",
+"language": "GDScript",
+"path": "res://map/scripts/map_info_item.gd"
+}, {
+"base": "Navigation2D",
+"class": "MapManager",
+"language": "GDScript",
+"path": "res://map/scenes/map_manager.gd"
+}, {
+"base": "Node",
+"class": "MapManagerUtils",
+"language": "GDScript",
+"path": "res://autoload/map_manager_utils.gd"
+}, {
+"base": "AStar2D",
+"class": "MapNavigator",
+"language": "GDScript",
+"path": "res://map/scripts/map_navigator.gd"
+}, {
+"base": "Node",
+"class": "MapNavigatorManager",
+"language": "GDScript",
+"path": "res://map/scripts/map_navigator_manager.gd"
+}, {
+"base": "Node",
+"class": "MapObject",
+"language": "GDScript",
+"path": "res://map/scripts/map_object.gd"
+}, {
+"base": "Node",
+"class": "MapVFXManager",
+"language": "GDScript",
+"path": "res://map/scripts/map_vfx_manager.gd"
+}, {
+"base": "Projectile",
+"class": "Meteor",
+"language": "GDScript",
+"path": "res://projectiles/meteor.gd"
+}, {
+"base": "Node",
+"class": "MiningCaveGenerator",
+"language": "GDScript",
+"path": "res://map/scenes/cave/mining_cave_generator.gd"
+}, {
+"base": "Navigation2D",
+"class": "MiningCaveManager",
+"language": "GDScript",
+"path": "res://map/scenes/cave/mining_cave_manager.gd"
+}, {
+"base": "Node2D",
+"class": "MonsterGenerator",
+"language": "GDScript",
+"path": "res://enemies/script/monster_info.gd"
+}, {
+"base": "Resource",
+"class": "MonsterResources",
+"language": "GDScript",
+"path": "res://enemies/script/monster_resources.gd"
+}, {
+"base": "Node2D",
+"class": "MultipleLandsManager",
+"language": "GDScript",
+"path": "res://map/scripts/multiple_lands_manager.gd"
+}, {
+"base": "Reference",
+"class": "NakamaAPI",
+"language": "GDScript",
+"path": "res://addons/com.heroiclabs.nakama/api/NakamaAPI.gd"
+}, {
+"base": "Reference",
+"class": "NakamaAsyncResult",
+"language": "GDScript",
+"path": "res://addons/com.heroiclabs.nakama/utils/NakamaAsyncResult.gd"
+}, {
+"base": "Reference",
+"class": "NakamaClient",
+"language": "GDScript",
+"path": "res://addons/com.heroiclabs.nakama/client/NakamaClient.gd"
+}, {
+"base": "Reference",
+"class": "NakamaException",
+"language": "GDScript",
+"path": "res://addons/com.heroiclabs.nakama/utils/NakamaException.gd"
+}, {
+"base": "Node",
+"class": "NakamaHTTPAdapter",
+"language": "GDScript",
+"path": "res://addons/com.heroiclabs.nakama/client/NakamaHTTPAdapter.gd"
+}, {
+"base": "Reference",
+"class": "NakamaLogger",
+"language": "GDScript",
+"path": "res://addons/com.heroiclabs.nakama/utils/NakamaLogger.gd"
+}, {
+"base": "NakamaAsyncResult",
+"class": "NakamaRTAPI",
+"language": "GDScript",
+"path": "res://addons/com.heroiclabs.nakama/api/NakamaRTAPI.gd"
+}, {
+"base": "Reference",
+"class": "NakamaRTMessage",
+"language": "GDScript",
+"path": "res://addons/com.heroiclabs.nakama/api/NakamaRTMessage.gd"
+}, {
+"base": "Reference",
+"class": "NakamaSerializer",
+"language": "GDScript",
+"path": "res://addons/com.heroiclabs.nakama/utils/NakamaSerializer.gd"
+}, {
+"base": "NakamaAsyncResult",
+"class": "NakamaSession",
+"language": "GDScript",
+"path": "res://addons/com.heroiclabs.nakama/api/NakamaSession.gd"
+}, {
+"base": "Reference",
+"class": "NakamaSocket",
+"language": "GDScript",
+"path": "res://addons/com.heroiclabs.nakama/socket/NakamaSocket.gd"
+}, {
+"base": "Node",
+"class": "NakamaSocketAdapter",
+"language": "GDScript",
+"path": "res://addons/com.heroiclabs.nakama/socket/NakamaSocketAdapter.gd"
+}, {
+"base": "Reference",
+"class": "NakamaStorageObjectId",
+"language": "GDScript",
+"path": "res://addons/com.heroiclabs.nakama/api/NakamaStorageObjectId.gd"
+}, {
+"base": "Reference",
+"class": "NakamaWriteStorageObject",
+"language": "GDScript",
+"path": "res://addons/com.heroiclabs.nakama/api/NakamaWriteStorageObject.gd"
+}, {
+"base": "YSort",
+"class": "NogiasYSort",
+"language": "GDScript",
+"path": "res://map/scenes/nogias_ysort.gd"
+}, {
+"base": "Node",
+"class": "Noise",
+"language": "GDScript",
+"path": "res://common/noise.gd"
+}, {
+"base": "Node",
+"class": "ObjectHoverManager",
+"language": "GDScript",
+"path": "res://game/object_hover_manager.gd"
+}, {
+"base": "ItemStats",
+"class": "OtherItemStats",
+"language": "GDScript",
+"path": "res://items/stats/other_item_stats.gd"
+}, {
+"base": "AnimalsSeek",
+"class": "PlayAroundSeek",
+"language": "GDScript",
+"path": "res://animals/pets/farm_pets/states/play_around_seek.gd"
+}, {
+"base": "Node2D",
+"class": "PointerTopArrow",
+"language": "GDScript",
+"path": "res://ui/scenes/pointer_top_arrow.gd"
+}, {
+"base": "HealthState",
+"class": "Poisoning",
+"language": "GDScript",
+"path": "res://characters/states/health_states/poisoning.gd"
+}, {
+"base": "KinematicBody2D",
+"class": "Projectile",
+"language": "GDScript",
+"path": "res://projectiles/projectile.gd"
+}, {
+"base": "Resource",
+"class": "ProjectileResources",
+"language": "GDScript",
+"path": "res://projectiles/flying_projectile_resources.gd"
+}, {
+"base": "Node",
+"class": "RandomEventWithChance",
+"language": "GDScript",
+"path": "res://autoload/autoload_child_class/random_event_with_chance.gd"
+}, {
+"base": "Node",
+"class": "ReforgeItemController",
+"language": "GDScript",
+"path": "res://ui/scripts/reforge_item.gd"
+}, {
+"base": "Node",
+"class": "RegenerateManager",
+"language": "GDScript",
+"path": "res://characters/stats/regenerate_manager.gd"
+}, {
+"base": "Node2D",
+"class": "ResourceItem",
+"language": "GDScript",
+"path": "res://map/scripts/resource_item.gd"
+}, {
+"base": "Node",
+"class": "ResourceItemCalculator",
+"language": "GDScript",
+"path": "res://map/scripts/resource_item_calculator.gd"
+}, {
+"base": "Node",
+"class": "ResourceItemInfo",
+"language": "GDScript",
+"path": "res://map/scripts/resource_item_info.gd"
+}, {
+"base": "Node",
+"class": "ResourceItemManager",
+"language": "GDScript",
+"path": "res://map/scripts/resource_item_manager.gd"
+}, {
+"base": "Node",
+"class": "SaveLoadManager",
+"language": "GDScript",
+"path": "res://game/save_load_manager.gd"
+}, {
+"base": "Node",
+"class": "SaveModels",
+"language": "GDScript",
+"path": "res://save/save_model.gd"
+}, {
+"base": "Node2D",
+"class": "SeedInventory",
+"language": "GDScript",
+"path": "res://ui/scenes/seed_inventory.gd"
+}, {
+"base": "ItemStats",
+"class": "SeedStats",
+"language": "GDScript",
+"path": "res://items/stats/seed_stats.gd"
+}, {
+"base": "Node",
+"class": "Skill",
+"language": "GDScript",
+"path": "res://skills/script/skill.gd"
+}, {
+"base": "Control",
+"class": "SkillItem",
+"language": "GDScript",
+"path": "res://ui/scenes/skill_item.gd"
+}, {
+"base": "Resource",
+"class": "SkillResources",
+"language": "GDScript",
+"path": "res://skills/script/skill_resources.gd"
+}, {
+"base": "Button",
+"class": "SkillSlot",
+"language": "GDScript",
+"path": "res://ui/scenes/skill_slot.gd"
+}, {
+"base": "Enemy",
+"class": "Slime",
+"language": "GDScript",
+"path": "res://enemies/scenes/slime.gd"
+}, {
+"base": "Node",
+"class": "StatBuff",
+"language": "GDScript",
+"path": "res://characters/stats/stat_buff.gd"
+}, {
+"base": "Node",
+"class": "State",
+"language": "GDScript",
+"path": "res://common/state.gd"
+}, {
+"base": "Node",
+"class": "StateMachine",
+"language": "GDScript",
+"path": "res://common/state_machine.gd"
+}, {
+"base": "Node2D",
+"class": "StaticObjects",
+"language": "GDScript",
+"path": "res://map/scripts/static_objects.gd"
+}, {
+"base": "StaticObjects",
+"class": "StaticResources",
+"language": "GDScript",
+"path": "res://map/scripts/static_resources.gd"
+}, {
+"base": "Node2D",
+"class": "Stats",
+"language": "GDScript",
+"path": "res://characters/stats/stats.gd"
+}, {
+"base": "Node",
+"class": "StatsManager",
+"language": "GDScript",
+"path": "res://common/stats_manager.gd"
+}, {
+"base": "Node",
+"class": "TargetInfo",
+"language": "GDScript",
+"path": "res://ui/scenes/target_info.gd"
+}, {
+"base": "Reference",
+"class": "TileManager",
+"language": "GDScript",
+"path": "res://map/scripts/tile_manager.gd"
+}, {
+"base": "Node",
+"class": "TweenManager",
+"language": "GDScript",
+"path": "res://game/tween_manager.gd"
+}, {
+"base": "Node",
+"class": "UIManager",
+"language": "GDScript",
+"path": "res://ui/scripts/ui_manager.gd"
+}, {
+"base": "HealthState",
+"class": "Unfreezing",
+"language": "GDScript",
+"path": "res://characters/states/health_states/unfreezing.gd"
+}, {
+"base": "ItemStats",
+"class": "WeaponStats",
+"language": "GDScript",
+"path": "res://items/stats/weapon_stats.gd"
+}, {
+"base": "Node",
+"class": "YieldItemManager",
+"language": "GDScript",
+"path": "res://autoload/yield_item_manager.gd"
+}, {
+"base": "StaticObjects",
+"class": "YoungPlant",
+"language": "GDScript",
+"path": "res://young_plants/script/young_plant.gd"
+} ]
+_global_script_class_icons={
+"AboveDecorations": "",
+"Actor": "",
+"ActorSkillManager": "",
+"ActorState": "",
+"ActorStats": "",
+"ActorVisibility": "",
+"Animals": "",
+"AnimalsIdle": "",
+"AnimalsLieDown": "",
+"AnimalsSeek": "",
+"AnimalsSleep": "",
+"AnimalsState": "",
+"Antidoting": "",
+"ArmorStats": "",
+"AttackLibrary": "",
+"BarnInventorySlot": "",
+"BaseDecorations": "",
+"BaseGenerator": "",
+"BaseManager": "",
+"BaseUpgradeGenerator": "",
+"BaseUpgradeManager": "",
+"BattleFieldCharacter": "",
+"BelowDecorations": "",
+"BuffManager": "",
+"BuildCondition": "",
+"BuildManager": "",
+"Burning": "",
+"Character": "",
+"CharacterExperienceManager": "",
+"CharacterSave": "",
+"CharacterSkillTabSkillIcon": "",
+"CharacterState": "",
+"CharacterStatsTab": "",
+"ClassResources": "",
+"CollectResources": "",
+"ConsumableStats": "",
+"CookingController": "",
+"CookingTab": "",
+"CoroutineManager": "",
+"CursorManager": "",
+"DamageCalculator": "",
+"DamageDealer": "",
+"DamagePacked": "",
+"DamageReceiveManager": "",
+"DayTimeManager": "",
+"Decorations": "",
+"EmailUtils": "",
+"EmptyPlot": "",
+"EmptyPlotController": "",
+"Enemy": "",
+"EnemyGenerator": "",
+"EnemyInfo": "",
+"EnemyInfoItem": "",
+"EnemyManager": "",
+"EnemyState": "",
+"EnvironmentEventManager": "",
+"EnvironmentManager": "",
+"EnvironmentSoundManager": "",
+"EquipmentManager": "",
+"ExperienceRewardManager": "",
+"ExploitResources": "",
+"FarmDecorations": "",
+"FarmDogs": "",
+"FarmPet": "",
+"FarmPetIdle": "",
+"FarmPetSeek": "",
+"FarmerStats": "",
+"FighterActor": "",
+"FighterStats": "",
+"FighterStatsManager": "",
+"FighterStatsTab": "",
+"FighterUtils": "",
+"FireFlies": "",
+"FlyingProjectile": "",
+"FlyingProjectileInfo": "",
+"FlyingStraightProjectile": "",
+"Freezing": "",
+"GameState": "",
+"GrownPlant": "",
+"GrownPlantRoot": "",
+"GrownPlantTree": "",
+"HealthState": "",
+"InventoryItem": "",
+"InventorySlotController": "",
+"Item": "",
+"ItemInfo": "",
+"ItemOldResources": "",
+"ItemRandomStatsGenerator": "",
+"ItemResources": "",
+"ItemSlot": "",
+"ItemStats": "",
+"ItemStatsResources": "",
+"JSONBeautifier": "",
+"LightningShocking": "",
+"LivestockBarn": "",
+"LivestockBarnController": "",
+"LivestockBarnInventory": "",
+"Livestocks": "",
+"LivestocksIdle": "",
+"LivestocksSeek": "",
+"LoginRegister": "",
+"MapEnemyObject": "",
+"MapGenerator": "",
+"MapInfo": "",
+"MapInfoItem": "",
+"MapManager": "",
+"MapManagerUtils": "",
+"MapNavigator": "",
+"MapNavigatorManager": "",
+"MapObject": "",
+"MapVFXManager": "",
+"Meteor": "",
+"MiningCaveGenerator": "",
+"MiningCaveManager": "",
+"MonsterGenerator": "",
+"MonsterResources": "",
+"MultipleLandsManager": "",
+"NakamaAPI": "",
+"NakamaAsyncResult": "",
+"NakamaClient": "",
+"NakamaException": "",
+"NakamaHTTPAdapter": "",
+"NakamaLogger": "",
+"NakamaRTAPI": "",
+"NakamaRTMessage": "",
+"NakamaSerializer": "",
+"NakamaSession": "",
+"NakamaSocket": "",
+"NakamaSocketAdapter": "",
+"NakamaStorageObjectId": "",
+"NakamaWriteStorageObject": "",
+"NogiasYSort": "",
+"Noise": "",
+"ObjectHoverManager": "",
+"OtherItemStats": "",
+"PlayAroundSeek": "",
+"PointerTopArrow": "",
+"Poisoning": "",
+"Projectile": "",
+"ProjectileResources": "",
+"RandomEventWithChance": "",
+"ReforgeItemController": "",
+"RegenerateManager": "",
+"ResourceItem": "",
+"ResourceItemCalculator": "",
+"ResourceItemInfo": "",
+"ResourceItemManager": "",
+"SaveLoadManager": "",
+"SaveModels": "",
+"SeedInventory": "",
+"SeedStats": "",
+"Skill": "",
+"SkillItem": "",
+"SkillResources": "",
+"SkillSlot": "",
+"Slime": "",
+"StatBuff": "",
+"State": "",
+"StateMachine": "",
+"StaticObjects": "",
+"StaticResources": "",
+"Stats": "",
+"StatsManager": "",
+"TargetInfo": "",
+"TileManager": "",
+"TweenManager": "",
+"UIManager": "",
+"Unfreezing": "",
+"WeaponStats": "",
+"YieldItemManager": "",
+"YoungPlant": ""
+}
+
+[application]
+
+config/name="Nogias"
+run/main_scene="res://ui/scenes/LoadingScene.tscn"
+config/icon="res://icon.png"
+
+[autoload]
+
+GameSdk="*res://game/game_sdk.gd"
+Steering="*res://autoload/steering.gd"
+Constants="*res://autoload/constants.gd"
+Utils="*res://autoload/utils.gd"
+Physics="*res://autoload/physics.gd"
+TileDescriptions="*res://map/scripts/tile_descriptions.gd"
+SignalManager="*res://autoload/signal_manager.gd"
+JsonData="*res://ui/scripts/JSONData.gd"
+AudioLibrary="*res://autoload/audio_library.gd"
+Nakama="*res://addons/com.heroiclabs.nakama/Nakama.gd"
+PlayerInventory="*res://ui/scripts/player_inventory.gd"
+GameResourcesLibrary="*res://autoload/game_resources_library.gd"
+GameManager="*res://game/GameManager.tscn"
+
+[debug]
+
+gdscript/warnings/shadowed_variable=false
+gdscript/warnings/narrowing_conversion=false
+gdscript/warnings/unused_signal=false
+gdscript/warnings/return_value_discarded=false
+
+[display]
+
+window/size/width=1536
+window/size/height=900
+window/size/resizable=false
+
+[editor_plugins]
+
+enabled=PoolStringArray( "res://addons/empty_save_file/plugin.cfg" )
+
+[global]
+
+window=false
+warning=false
+render=false
+asset=false
+run=false
+
+[importer_defaults]
+
+texture={
+"compress/bptc_ldr": 0,
+"compress/hdr_mode": 0,
+"compress/lossy_quality": 0.7,
+"compress/mode": 0,
+"compress/normal_map": 0,
+"detect_3d": false,
+"flags/anisotropic": false,
+"flags/filter": false,
+"flags/mipmaps": false,
+"flags/repeat": 0,
+"flags/srgb": 2,
+"process/HDR_as_SRGB": false,
+"process/fix_alpha_border": true,
+"process/invert_color": false,
+"process/normal_map_invert_y": false,
+"process/premult_alpha": false,
+"size_limit": 0,
+"stream": false,
+"svg/scale": 1.0
+}
+
+[input]
+
+ui_accept={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777221,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777222,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":32,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":0,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+ui_focus_next={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_focus_prev={
+"deadzone": 0.5,
+"events": [  ]
+}
+ui_left={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":65,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":14,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+ui_right={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":68,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":15,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+ui_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":87,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":12,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+ui_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":83,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+, Object(InputEventJoypadButton,"resource_local_to_scene":false,"resource_name":"","device":0,"button_index":13,"pressure":0.0,"pressed":false,"script":null)
+ ]
+}
+scroll_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":5,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+scroll_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":4,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+skill1={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":85,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+skill2={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":73,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+skill3={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":79,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+skill4={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":52,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+skill5={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":53,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+skill6={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":54,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+skill7={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":55,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+skill8={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":56,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+skill9={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":57,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+skill0={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":48,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+rotate_object={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":82,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+build_cancel={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":16777217,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+day_changing={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":50,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+night_changing={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":52,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+character={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":67,"unicode":0,"echo":false,"script":null)
+ ]
+}
+inventory={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":66,"unicode":0,"echo":false,"script":null)
+ ]
+}
+crafting={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":70,"unicode":0,"echo":false,"script":null)
+ ]
+}
+building={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":90,"unicode":0,"echo":false,"script":null)
+ ]
+}
+farming={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":88,"unicode":0,"echo":false,"script":null)
+ ]
+}
+reforging={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":71,"unicode":0,"echo":false,"script":null)
+ ]
+}
+door_interact={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":69,"unicode":0,"echo":false,"script":null)
+ ]
+}
+open_map={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":77,"unicode":0,"echo":false,"script":null)
+ ]
+}
+"unlock_map_(0, 0)"={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":true,"meta":false,"command":false,"pressed":false,"scancode":49,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+"unlock_map_(1, 0)"={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":true,"meta":false,"command":false,"pressed":false,"scancode":50,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+"unlock_map_(2, 0)"={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":true,"meta":false,"command":false,"pressed":false,"scancode":51,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+"unlock_map_(0, 1)"={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":true,"meta":false,"command":false,"pressed":false,"scancode":52,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+"unlock_map_(2, 1)"={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":true,"meta":false,"command":false,"pressed":false,"scancode":53,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+"unlock_map_(0, 2)"={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":true,"meta":false,"command":false,"pressed":false,"scancode":54,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+"unlock_map_(1, 2)"={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":true,"meta":false,"command":false,"pressed":false,"scancode":55,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+"unlock_map_(2, 2)"={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":true,"meta":false,"command":false,"pressed":false,"scancode":56,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+basic_attack={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":74,"unicode":0,"echo":false,"script":null)
+ ]
+}
+heavy_attack={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":75,"unicode":0,"echo":false,"script":null)
+ ]
+}
+cooking={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":72,"unicode":0,"echo":false,"script":null)
+ ]
+}
+dawn_changing={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":49,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+sunset_changing={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":51,"physical_scancode":0,"unicode":0,"echo":false,"script":null)
+ ]
+}
+show_input_tutorial={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":16777218,"unicode":0,"echo":false,"script":null)
+ ]
+}
+go_up_stairs={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":85,"unicode":0,"echo":false,"script":null)
+ ]
+}
+go_down_stairs={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":73,"unicode":0,"echo":false,"script":null)
+ ]
+}
+prev_target={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":81,"unicode":0,"echo":false,"script":null)
+ ]
+}
+remove_object_mode={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":96,"unicode":0,"echo":false,"script":null)
+ ]
+}
+build_object={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":74,"unicode":0,"echo":false,"script":null)
+ ]
+}
+remove_object={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":74,"unicode":0,"echo":false,"script":null)
+ ]
+}
+change_build_move_type={
+"deadzone": 0.5,
+"events": [ Object(InputEventKey,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"pressed":false,"scancode":0,"physical_scancode":32,"unicode":0,"echo":false,"script":null)
+ ]
+}
+next_target={
+"deadzone": 0.5,
+"events": [  ]
+}
+
+[layer_names]
+
+2d_physics/layer_1="map_objects"
+2d_physics/layer_2="resources"
+2d_physics/layer_3="actors"
+2d_physics/layer_4="animals"
+2d_physics/layer_5="local_ui"
+2d_physics/layer_10="map_tiles"
+scroll_up={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":4,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+scroll_down={
+"deadzone": 0.5,
+"events": [ Object(InputEventMouseButton,"resource_local_to_scene":false,"resource_name":"","device":0,"alt":false,"shift":false,"control":false,"meta":false,"command":false,"button_mask":0,"position":Vector2( 0, 0 ),"global_position":Vector2( 0, 0 ),"factor":1.0,"button_index":5,"pressed":false,"doubleclick":false,"script":null)
+ ]
+}
+
+[physics]
+
+common/enable_pause_aware_picking=true
+
+[rendering]
+
+2d/options/use_nvidia_rect_flicker_workaround=true
+2d/snapping/use_gpu_pixel_snap=true
+quality/shadows/filter_mode=0
+quality/depth/hdr=false
+environment/default_environment="res://default_env.tres"

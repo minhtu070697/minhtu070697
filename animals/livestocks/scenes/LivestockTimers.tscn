@@ -1,0 +1,11 @@
+[gd_scene format=2]
+
+[node name="LivestockTimers" type="Node"]
+
+[node name="ScareTimer" type="Timer" parent="."]
+one_shot = true
+
+[node name="LifeTimer" type="Timer" parent="."]
+
+[node name="InsideBarnTimer" type="Timer" parent="."]
+one_shot = true

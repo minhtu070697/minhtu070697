@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/farm_bell.mp3-2aafe875a40cd7098a580aa5827d4aa4.mp3str"
+
+[deps]
+
+source_file="res://animals/livestocks/buildings/sounds/farm_bell.mp3"
+dest_files=[ "res://.import/farm_bell.mp3-2aafe875a40cd7098a580aa5827d4aa4.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

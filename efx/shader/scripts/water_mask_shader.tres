@@ -1,0 +1,26 @@
+[gd_resource type="Shader" format=2]
+
+[resource]
+code = "shader_type canvas_item;
+
+uniform sampler2D water_mask;
+uniform bool enable_water_mask = false;
+uniform vec4 water_color = vec4(0.42, 0.64, 0.46, 0.45);
+uniform vec2 water_color_shift = vec2(0.0, 0.0);
+
+
+float averageBlend(float a, float b, float e){
+	return a + (b - a) * (1.0 - e);
+}
+
+void fragment() {
+	vec4 color = texture(TEXTURE, UV);
+	vec4 texture_color = texture(water_mask, UV + water_color_shift);
+	if (enable_water_mask){
+		color.r = averageBlend(color.r, water_color.r, texture_color.r);
+		color.b = averageBlend(color.b, water_color.b, texture_color.b);
+		color.g = averageBlend(color.g, water_color.g, texture_color.g);
+	}
+	COLOR = color;
+}
+"

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/small_animals_swim_sound.mp3-b1e539f7fff42fc41cb15955cb2ce3f2.mp3str"
+
+[deps]
+
+source_file="res://animals/sounds/small_animals_swim_sound.mp3"
+dest_files=[ "res://.import/small_animals_swim_sound.mp3-b1e539f7fff42fc41cb15955cb2ce3f2.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

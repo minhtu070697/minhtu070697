@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/boss_wolf_cry_sound.mp3-0f7166ed11347f0235575109351e957a.mp3str"
+
+[deps]
+
+source_file="res://enemies/sound_effects/boss_wolf_cry_sound.mp3"
+dest_files=[ "res://.import/boss_wolf_cry_sound.mp3-0f7166ed11347f0235575109351e957a.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

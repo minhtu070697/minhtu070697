@@ -1,0 +1,87 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://fonts/m5x7.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://map/textures/objects/house/medium_house.png" type="Texture" id=2]
+[ext_resource path="res://ui/scenes/loading_scene.gd" type="Script" id=3]
+[ext_resource path="res://ui/textures/background/1.png" type="Texture" id=4]
+[ext_resource path="res://ui/textures/item_slot_guide.jpg" type="Texture" id=5]
+[ext_resource path="res://efx/shader/scripts/blur.shader" type="Shader" id=6]
+
+[sub_resource type="ShaderMaterial" id=2]
+shader = ExtResource( 6 )
+shader_param/blur_amount = 3.0
+
+[sub_resource type="DynamicFont" id=1]
+outline_size = 3
+outline_color = Color( 0.192157, 0.192157, 0.192157, 1 )
+font_data = ExtResource( 1 )
+
+[node name="LoadingScene" type="CanvasLayer"]
+scale = Vector2( 3, 3 )
+transform = Transform2D( 3, 0, 0, 3, 0, 0 )
+script = ExtResource( 3 )
+
+[node name="Background" type="TextureRect" parent="."]
+modulate = Color( 0.501961, 0.501961, 0.501961, 1 )
+margin_left = -47.0
+margin_top = -51.6667
+margin_right = 553.0
+margin_bottom = 348.333
+texture = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="BlurLayer" type="Sprite" parent="."]
+material = SubResource( 2 )
+position = Vector2( 0.333333, 1.33333 )
+scale = Vector2( 1000, 1000 )
+texture = ExtResource( 5 )
+
+[node name="Title" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -760.667
+margin_top = -430.0
+margin_right = -260.667
+margin_bottom = -369.0
+custom_fonts/font = SubResource( 1 )
+text = "WELCOME TO NOGIAS"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Description" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -582.0
+margin_top = -224.667
+margin_right = -382.0
+margin_bottom = -163.667
+rect_scale = Vector2( 0.75, 0.75 )
+custom_fonts/font = SubResource( 1 )
+text = "LOADING..."
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Symbol" type="TextureRect" parent="."]
+modulate = Color( 1, 1, 1, 0.862745 )
+margin_left = 180.0
+margin_top = 75.0
+margin_right = 330.0
+margin_bottom = 225.0
+texture = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}

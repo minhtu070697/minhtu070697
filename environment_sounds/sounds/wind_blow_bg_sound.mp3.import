@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/wind_blow_bg_sound.mp3-372e6a8899e92018785f2a6f51087a89.mp3str"
+
+[deps]
+
+source_file="res://environment_sounds/sounds/wind_blow_bg_sound.mp3"
+dest_files=[ "res://.import/wind_blow_bg_sound.mp3-372e6a8899e92018785f2a6f51087a89.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

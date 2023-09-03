@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/character_spawn.mp3-cddb4e8e00f0e2a84cf7d08e3cf7d77b.mp3str"
+
+[deps]
+
+source_file="res://sfx/sounds/character_spawn.mp3"
+dest_files=[ "res://.import/character_spawn.mp3-cddb4e8e00f0e2a84cf7d08e3cf7d77b.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

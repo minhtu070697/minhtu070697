@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/cutting_tree.mp3-b63a11691a238b821ba78711329d7ac2.mp3str"
+
+[deps]
+
+source_file="res://sfx/sounds/cutting_tree.mp3"
+dest_files=[ "res://.import/cutting_tree.mp3-b63a11691a238b821ba78711329d7ac2.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/fishing_waiting.mp3-49360ee71aa997aa1bcfd5816d03781d.mp3str"
+
+[deps]
+
+source_file="res://sfx/sounds/fishing_waiting.mp3"
+dest_files=[ "res://.import/fishing_waiting.mp3-49360ee71aa997aa1bcfd5816d03781d.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://experimental/terrain/terrain_manager.gd" type="Script" id=1]
+
+[sub_resource type="Curve" id=1]
+_data = [ Vector2( 0, 0.309091 ), 0.0, 0.0, 0, 0, Vector2( 0.301624, 0.309091 ), 0.0, 0.0, 0, 0, Vector2( 1, 1 ), 0.0, 0.0, 0, 0 ]
+
+[node name="MapTerrain" type="Node2D"]
+script = ExtResource( 1 )
+world_size = 128
+curve = SubResource( 1 )
+fill_bottoms = false
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 0, 538 )
+current = true
+
+[node name="MapLayers" type="Node" parent="."]

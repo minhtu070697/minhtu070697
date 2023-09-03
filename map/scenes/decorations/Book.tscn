@@ -1,0 +1,135 @@
+[gd_scene load_steps=14 format=2]
+
+[ext_resource path="res://map/scenes/decorations/book.gd" type="Script" id=2]
+[ext_resource path="res://map/textures/objects/decors/book.png" type="Texture" id=3]
+[ext_resource path="res://ui/textures/buttons/btn_no.png" type="Texture" id=4]
+[ext_resource path="res://fonts/m5x7.ttf" type="DynamicFontData" id=5]
+[ext_resource path="res://efx/resources/floaty_64.png" type="Texture" id=6]
+[ext_resource path="res://areas/detect_right_click_area.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 5 )
+
+[sub_resource type="Animation" id=2]
+length = 0.001
+
+[sub_resource type="Animation" id=3]
+resource_name = "button_fade"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.498039 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[sub_resource type="CanvasItemMaterial" id=38]
+blend_mode = 1
+particles_animation = true
+particles_anim_h_frames = 7
+particles_anim_v_frames = 7
+particles_anim_loop = false
+
+[sub_resource type="Gradient" id=39]
+offsets = PoolRealArray( 0, 0.364621, 0.685921, 1 )
+colors = PoolColorArray( 0, 0.162079, 0.441406, 1, 0, 0.355347, 0.640625, 1, 0.195313, 1, 0.98114, 1, 0.863281, 1, 0.996796, 1 )
+
+[sub_resource type="GradientTexture" id=37]
+gradient = SubResource( 39 )
+
+[sub_resource type="ParticlesMaterial" id=40]
+emission_shape = 1
+emission_sphere_radius = 12.0
+flag_disable_z = true
+spread = 180.0
+gravity = Vector3( 0, -100, 0 )
+initial_velocity = 50.0
+angular_velocity = 100.0
+angular_velocity_random = 1.0
+orbit_velocity = 0.0
+orbit_velocity_random = 0.0
+damping = 50.0
+angle = 360.0
+angle_random = 1.0
+scale_random = 0.2
+color_ramp = SubResource( 37 )
+hue_variation = 0.01
+hue_variation_random = 1.0
+anim_speed = 1.0
+
+[node name="Book" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( 0, -30 )
+texture = ExtResource( 3 )
+
+[node name="Area2D" type="Area2D" parent="Sprite"]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite/Area2D"]
+polygon = PoolVector2Array( -22, 12, -22, -12, 1, -24, 21, -10, 21, 46, 0, 63, -22, 48 )
+
+[node name="Area2D_Click" type="Area2D" parent="Sprite"]
+script = ExtResource( 7 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite/Area2D_Click"]
+polygon = PoolVector2Array( -12, -8, 0, -14, 11, -9, 11, 10, -2, 15, -12, 9 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="GroupButtonRemove" type="Node2D" parent="."]
+position = Vector2( 0, -57 )
+z_index = 10
+
+[node name="ButtonRemove" type="TextureButton" parent="GroupButtonRemove"]
+visible = false
+margin_left = -28.0
+margin_top = -14.0
+margin_right = 36.0
+margin_bottom = 18.0
+rect_scale = Vector2( 0.85, 0.85 )
+texture_normal = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="GroupButtonRemove/ButtonRemove"]
+margin_right = 64.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 1 )
+text = "Remove"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GroupButtonRemove/ButtonRemove"]
+autoplay = "button_fade"
+anims/RESET = SubResource( 2 )
+anims/button_fade = SubResource( 3 )
+
+[node name="Particles2D" type="Particles2D" parent="."]
+material = SubResource( 38 )
+position = Vector2( 0, -25 )
+scale = Vector2( 0.5, 0.5 )
+emitting = false
+amount = 3
+lifetime = 1.5
+explosiveness = 1.0
+fixed_fps = 20
+process_material = SubResource( 40 )
+texture = ExtResource( 6 )
+
+[connection signal="body_entered" from="Sprite/Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Sprite/Area2D" to="." method="_on_Area2D_body_exited"]

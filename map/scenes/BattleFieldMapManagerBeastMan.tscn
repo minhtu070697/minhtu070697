@@ -1,0 +1,836 @@
+[gd_scene load_steps=27 format=2]
+
+[ext_resource path="res://map/tres/battle/water.tres" type="TileSet" id=1]
+[ext_resource path="res://map/tres/battle/earth.tres" type="TileSet" id=2]
+[ext_resource path="res://map/tres/battle/dark_grass.tres" type="TileSet" id=3]
+[ext_resource path="res://map/tres/farm/ground.tres" type="TileSet" id=4]
+[ext_resource path="res://map/tres/farm/stone.tres" type="TileSet" id=5]
+[ext_resource path="res://sfx/scripts/audio_manager.gd" type="Script" id=6]
+[ext_resource path="res://map/textures/background/bg.png" type="Texture" id=7]
+[ext_resource path="res://map/textures/background/moon.png" type="Texture" id=8]
+[ext_resource path="res://map/scenes/map_manager.gd" type="Script" id=9]
+[ext_resource path="res://map/textures/tiles/fog_tile.png" type="Texture" id=10]
+[ext_resource path="res://map/textures/tiles/highlight.png" type="Texture" id=11]
+[ext_resource path="res://efx/resources/spotlight_1.png" type="Texture" id=12]
+[ext_resource path="res://ui/scenes/target_highlight.tscn" type="PackedScene" id=14]
+[ext_resource path="res://map/textures/background/sun.png" type="Texture" id=16]
+[ext_resource path="res://map/textures/background/parallax-01.png" type="Texture" id=17]
+[ext_resource path="res://map/textures/background/parallax-02.png" type="Texture" id=18]
+[ext_resource path="res://map/textures/background/parallax-03.png" type="Texture" id=19]
+[ext_resource path="res://map/textures/background/cloud_background.gd" type="Script" id=20]
+[ext_resource path="res://fonts/m5x7.ttf" type="DynamicFontData" id=21]
+
+[sub_resource type="Animation" id=1]
+length = 0.001
+
+[sub_resource type="Animation" id=2]
+resource_name = "fade"
+length = 6.0
+loop = true
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.588235 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.588235 ) ]
+}
+
+[sub_resource type="CanvasItemMaterial" id=3]
+blend_mode = 1
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+
+[sub_resource type="Animation" id=5]
+resource_name = "fade"
+length = 6.0
+loop = true
+step = 1.0
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 3, 6 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 0.588235 ), Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.588235 ) ]
+}
+
+[sub_resource type="TileSet" id=6]
+0/name = "fog_tile.png 0"
+0/texture = ExtResource( 10 )
+0/tex_offset = Vector2( 0, 0 )
+0/modulate = Color( 1, 1, 1, 1 )
+0/region = Rect2( 0, 0, 46, 48 )
+0/tile_mode = 0
+0/occluder_offset = Vector2( 0, 0 )
+0/navigation_offset = Vector2( 0, 0 )
+0/shape_offset = Vector2( 0, 0 )
+0/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+0/shape_one_way = false
+0/shape_one_way_margin = 0.0
+0/shapes = [  ]
+0/z_index = 0
+1/name = "fog_tile.png 1"
+1/texture = ExtResource( 10 )
+1/tex_offset = Vector2( 0, 0 )
+1/modulate = Color( 1, 1, 1, 1 )
+1/region = Rect2( 46, 0, 46, 48 )
+1/tile_mode = 0
+1/occluder_offset = Vector2( 0, 0 )
+1/navigation_offset = Vector2( 0, 0 )
+1/shape_offset = Vector2( 0, 0 )
+1/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+1/shape_one_way = false
+1/shape_one_way_margin = 0.0
+1/shapes = [  ]
+1/z_index = 0
+2/name = "fog_tile.png 2"
+2/texture = ExtResource( 10 )
+2/tex_offset = Vector2( 0, 0 )
+2/modulate = Color( 1, 1, 1, 1 )
+2/region = Rect2( 92, 0, 46, 48 )
+2/tile_mode = 0
+2/occluder_offset = Vector2( 0, 0 )
+2/navigation_offset = Vector2( 0, 0 )
+2/shape_offset = Vector2( 0, 0 )
+2/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+2/shape_one_way = false
+2/shape_one_way_margin = 0.0
+2/shapes = [  ]
+2/z_index = 0
+3/name = "fog_tile.png 3"
+3/texture = ExtResource( 10 )
+3/tex_offset = Vector2( 0, 0 )
+3/modulate = Color( 1, 1, 1, 1 )
+3/region = Rect2( 138, 0, 46, 48 )
+3/tile_mode = 0
+3/occluder_offset = Vector2( 0, 0 )
+3/navigation_offset = Vector2( 0, 0 )
+3/shape_offset = Vector2( 0, 0 )
+3/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+3/shape_one_way = false
+3/shape_one_way_margin = 0.0
+3/shapes = [  ]
+3/z_index = 0
+4/name = "fog_tile.png 4"
+4/texture = ExtResource( 10 )
+4/tex_offset = Vector2( 0, 0 )
+4/modulate = Color( 1, 1, 1, 1 )
+4/region = Rect2( 0, 48, 46, 48 )
+4/tile_mode = 0
+4/occluder_offset = Vector2( 0, 0 )
+4/navigation_offset = Vector2( 0, 0 )
+4/shape_offset = Vector2( 0, 0 )
+4/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+4/shape_one_way = false
+4/shape_one_way_margin = 0.0
+4/shapes = [  ]
+4/z_index = 0
+5/name = "fog_tile.png 5"
+5/texture = ExtResource( 10 )
+5/tex_offset = Vector2( 0, 0 )
+5/modulate = Color( 1, 1, 1, 1 )
+5/region = Rect2( 46, 48, 46, 48 )
+5/tile_mode = 0
+5/occluder_offset = Vector2( 0, 0 )
+5/navigation_offset = Vector2( 0, 0 )
+5/shape_offset = Vector2( 0, 0 )
+5/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+5/shape_one_way = false
+5/shape_one_way_margin = 0.0
+5/shapes = [  ]
+5/z_index = 0
+6/name = "fog_tile.png 6"
+6/texture = ExtResource( 10 )
+6/tex_offset = Vector2( 0, 0 )
+6/modulate = Color( 1, 1, 1, 1 )
+6/region = Rect2( 92, 48, 46, 48 )
+6/tile_mode = 0
+6/occluder_offset = Vector2( 0, 0 )
+6/navigation_offset = Vector2( 0, 0 )
+6/shape_offset = Vector2( 0, 0 )
+6/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+6/shape_one_way = false
+6/shape_one_way_margin = 0.0
+6/shapes = [  ]
+6/z_index = 0
+7/name = "fog_tile.png 7"
+7/texture = ExtResource( 10 )
+7/tex_offset = Vector2( 0, 0 )
+7/modulate = Color( 1, 1, 1, 1 )
+7/region = Rect2( 138, 48, 46, 48 )
+7/tile_mode = 0
+7/occluder_offset = Vector2( 0, 0 )
+7/navigation_offset = Vector2( 0, 0 )
+7/shape_offset = Vector2( 0, 0 )
+7/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+7/shape_one_way = false
+7/shape_one_way_margin = 0.0
+7/shapes = [  ]
+7/z_index = 0
+8/name = "fog_tile.png 8"
+8/texture = ExtResource( 10 )
+8/tex_offset = Vector2( 0, 0 )
+8/modulate = Color( 1, 1, 1, 1 )
+8/region = Rect2( 0, 96, 46, 48 )
+8/tile_mode = 0
+8/occluder_offset = Vector2( 0, 0 )
+8/navigation_offset = Vector2( 0, 0 )
+8/shape_offset = Vector2( 0, 0 )
+8/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+8/shape_one_way = false
+8/shape_one_way_margin = 0.0
+8/shapes = [  ]
+8/z_index = 0
+9/name = "fog_tile.png 9"
+9/texture = ExtResource( 10 )
+9/tex_offset = Vector2( 0, 0 )
+9/modulate = Color( 1, 1, 1, 1 )
+9/region = Rect2( 46, 96, 46, 48 )
+9/tile_mode = 0
+9/occluder_offset = Vector2( 0, 0 )
+9/navigation_offset = Vector2( 0, 0 )
+9/shape_offset = Vector2( 0, 0 )
+9/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+9/shape_one_way = false
+9/shape_one_way_margin = 0.0
+9/shapes = [  ]
+9/z_index = 0
+10/name = "fog_tile.png 10"
+10/texture = ExtResource( 10 )
+10/tex_offset = Vector2( 0, 0 )
+10/modulate = Color( 1, 1, 1, 1 )
+10/region = Rect2( 92, 96, 46, 48 )
+10/tile_mode = 0
+10/occluder_offset = Vector2( 0, 0 )
+10/navigation_offset = Vector2( 0, 0 )
+10/shape_offset = Vector2( 0, 0 )
+10/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+10/shape_one_way = false
+10/shape_one_way_margin = 0.0
+10/shapes = [  ]
+10/z_index = 0
+11/name = "fog_tile.png 11"
+11/texture = ExtResource( 10 )
+11/tex_offset = Vector2( 0, 0 )
+11/modulate = Color( 1, 1, 1, 1 )
+11/region = Rect2( 0, 144, 46, 48 )
+11/tile_mode = 0
+11/occluder_offset = Vector2( 0, 0 )
+11/navigation_offset = Vector2( 0, 0 )
+11/shape_offset = Vector2( 0, 0 )
+11/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+11/shape_one_way = false
+11/shape_one_way_margin = 0.0
+11/shapes = [  ]
+11/z_index = 0
+12/name = "fog_tile.png 12"
+12/texture = ExtResource( 10 )
+12/tex_offset = Vector2( 0, 0 )
+12/modulate = Color( 1, 1, 1, 1 )
+12/region = Rect2( 46, 144, 46, 48 )
+12/tile_mode = 0
+12/occluder_offset = Vector2( 0, 0 )
+12/navigation_offset = Vector2( 0, 0 )
+12/shape_offset = Vector2( 0, 0 )
+12/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+12/shape_one_way = false
+12/shape_one_way_margin = 0.0
+12/shapes = [  ]
+12/z_index = 0
+13/name = "fog_tile.png 13"
+13/texture = ExtResource( 10 )
+13/tex_offset = Vector2( 0, 0 )
+13/modulate = Color( 1, 1, 1, 1 )
+13/region = Rect2( 92, 144, 46, 48 )
+13/tile_mode = 0
+13/occluder_offset = Vector2( 0, 0 )
+13/navigation_offset = Vector2( 0, 0 )
+13/shape_offset = Vector2( 0, 0 )
+13/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+13/shape_one_way = false
+13/shape_one_way_margin = 0.0
+13/shapes = [  ]
+13/z_index = 0
+14/name = "fog_tile.png 14"
+14/texture = ExtResource( 10 )
+14/tex_offset = Vector2( 0, 0 )
+14/modulate = Color( 1, 1, 1, 1 )
+14/region = Rect2( 0, 192, 46, 48 )
+14/tile_mode = 0
+14/occluder_offset = Vector2( 0, 0 )
+14/navigation_offset = Vector2( 0, 0 )
+14/shape_offset = Vector2( 0, 0 )
+14/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+14/shape_one_way = false
+14/shape_one_way_margin = 0.0
+14/shapes = [  ]
+14/z_index = 0
+15/name = "fog_tile.png 15"
+15/texture = ExtResource( 10 )
+15/tex_offset = Vector2( 0, 0 )
+15/modulate = Color( 1, 1, 1, 1 )
+15/region = Rect2( 46, 192, 46, 48 )
+15/tile_mode = 0
+15/occluder_offset = Vector2( 0, 0 )
+15/navigation_offset = Vector2( 0, 0 )
+15/shape_offset = Vector2( 0, 0 )
+15/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+15/shape_one_way = false
+15/shape_one_way_margin = 0.0
+15/shapes = [  ]
+15/z_index = 0
+16/name = "fog_tile.png 16"
+16/texture = ExtResource( 10 )
+16/tex_offset = Vector2( 0, 0 )
+16/modulate = Color( 1, 1, 1, 1 )
+16/region = Rect2( 92, 192, 46, 48 )
+16/tile_mode = 0
+16/occluder_offset = Vector2( 0, 0 )
+16/navigation_offset = Vector2( 0, 0 )
+16/shape_offset = Vector2( 0, 0 )
+16/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+16/shape_one_way = false
+16/shape_one_way_margin = 0.0
+16/shapes = [  ]
+16/z_index = 0
+17/name = "fog_tile.png 17"
+17/texture = ExtResource( 10 )
+17/tex_offset = Vector2( 0, 0 )
+17/modulate = Color( 1, 1, 1, 1 )
+17/region = Rect2( 0, 240, 46, 48 )
+17/tile_mode = 0
+17/occluder_offset = Vector2( 0, 0 )
+17/navigation_offset = Vector2( 0, 0 )
+17/shape_offset = Vector2( 0, 0 )
+17/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+17/shape_one_way = false
+17/shape_one_way_margin = 0.0
+17/shapes = [  ]
+17/z_index = 0
+18/name = "fog_tile.png 18"
+18/texture = ExtResource( 10 )
+18/tex_offset = Vector2( 0, 0 )
+18/modulate = Color( 1, 1, 1, 1 )
+18/region = Rect2( 46, 240, 46, 48 )
+18/tile_mode = 0
+18/occluder_offset = Vector2( 0, 0 )
+18/navigation_offset = Vector2( 0, 0 )
+18/shape_offset = Vector2( 0, 0 )
+18/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+18/shape_one_way = false
+18/shape_one_way_margin = 0.0
+18/shapes = [  ]
+18/z_index = 0
+19/name = "fog_tile.png 19"
+19/texture = ExtResource( 10 )
+19/tex_offset = Vector2( 0, 0 )
+19/modulate = Color( 1, 1, 1, 1 )
+19/region = Rect2( 92, 240, 46, 48 )
+19/tile_mode = 0
+19/occluder_offset = Vector2( 0, 0 )
+19/navigation_offset = Vector2( 0, 0 )
+19/shape_offset = Vector2( 0, 0 )
+19/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+19/shape_one_way = false
+19/shape_one_way_margin = 0.0
+19/shapes = [  ]
+19/z_index = 0
+20/name = "fog_tile.png 20"
+20/texture = ExtResource( 10 )
+20/tex_offset = Vector2( 0, 0 )
+20/modulate = Color( 1, 1, 1, 1 )
+20/region = Rect2( 138, 96, 46, 48 )
+20/tile_mode = 0
+20/occluder_offset = Vector2( 0, 0 )
+20/navigation_offset = Vector2( 0, 0 )
+20/shape_offset = Vector2( 0, 0 )
+20/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+20/shape_one_way = false
+20/shape_one_way_margin = 0.0
+20/shapes = [  ]
+20/z_index = 0
+21/name = "fog_tile.png 21"
+21/texture = ExtResource( 10 )
+21/tex_offset = Vector2( 0, 0 )
+21/modulate = Color( 1, 1, 1, 1 )
+21/region = Rect2( 138, 144, 46, 48 )
+21/tile_mode = 0
+21/occluder_offset = Vector2( 0, 0 )
+21/navigation_offset = Vector2( 0, 0 )
+21/shape_offset = Vector2( 0, 0 )
+21/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+21/shape_one_way = false
+21/shape_one_way_margin = 0.0
+21/shapes = [  ]
+21/z_index = 0
+22/name = "fog_tile.png 22"
+22/texture = ExtResource( 10 )
+22/tex_offset = Vector2( 0, 0 )
+22/modulate = Color( 1, 1, 1, 1 )
+22/region = Rect2( 138, 192, 46, 48 )
+22/tile_mode = 0
+22/occluder_offset = Vector2( 0, 0 )
+22/navigation_offset = Vector2( 0, 0 )
+22/shape_offset = Vector2( 0, 0 )
+22/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+22/shape_one_way = false
+22/shape_one_way_margin = 0.0
+22/shapes = [  ]
+22/z_index = 0
+23/name = "fog_tile.png 23"
+23/texture = ExtResource( 10 )
+23/tex_offset = Vector2( 0, 0 )
+23/modulate = Color( 1, 1, 1, 1 )
+23/region = Rect2( 138, 240, 46, 48 )
+23/tile_mode = 0
+23/occluder_offset = Vector2( 0, 0 )
+23/navigation_offset = Vector2( 0, 0 )
+23/shape_offset = Vector2( 0, 0 )
+23/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+23/shape_one_way = false
+23/shape_one_way_margin = 0.0
+23/shapes = [  ]
+23/z_index = 0
+24/name = "fog_tile.png 24"
+24/texture = ExtResource( 10 )
+24/tex_offset = Vector2( 0, 0 )
+24/modulate = Color( 1, 1, 1, 1 )
+24/region = Rect2( 184, 0, 46, 48 )
+24/tile_mode = 0
+24/occluder_offset = Vector2( 0, 0 )
+24/navigation_offset = Vector2( 0, 0 )
+24/shape_offset = Vector2( 0, 0 )
+24/shape_transform = Transform2D( 1, 0, 0, 1, 0, 0 )
+24/shape_one_way = false
+24/shape_one_way_margin = 0.0
+24/shapes = [  ]
+24/z_index = 0
+
+[sub_resource type="DynamicFont" id=7]
+outline_size = 1
+outline_color = Color( 0.14902, 0.192157, 0, 1 )
+font_data = ExtResource( 21 )
+
+[node name="MapManager" type="Navigation2D"]
+script = ExtResource( 9 )
+__meta__ = {
+"_edit_group_": true
+}
+is_battlefield = true
+
+[node name="GroupBackground" type="Node2D" parent="."]
+z_index = -3
+
+[node name="0" type="Sprite" parent="GroupBackground"]
+modulate = Color( 0.772549, 0.992157, 1, 1 )
+scale = Vector2( 30, 30 )
+z_index = -2
+texture = ExtResource( 7 )
+
+[node name="1" type="Sprite" parent="GroupBackground"]
+modulate = Color( 0.686275, 0.317647, 0.219608, 0.392157 )
+position = Vector2( -3363, 778 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 18 )
+offset = Vector2( 562.167, -115 )
+
+[node name="2" type="Sprite" parent="GroupBackground"]
+modulate = Color( 1, 1, 1, 0.262745 )
+position = Vector2( 10, 872 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 17 )
+script = ExtResource( 20 )
+
+[node name="3" type="Sprite" parent="GroupBackground"]
+modulate = Color( 0.937255, 0.52549, 0.415686, 1 )
+position = Vector2( 10, 864 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 18 )
+
+[node name="4" type="Sprite" parent="GroupBackground"]
+modulate = Color( 0.890196, 0.4, 0.270588, 1 )
+position = Vector2( 10, 872 )
+scale = Vector2( 6, 6 )
+texture = ExtResource( 19 )
+
+[node name="Sun" type="Sprite" parent="GroupBackground"]
+modulate = Color( 1, 1, 1, 0.392157 )
+position = Vector2( -215, -254 )
+z_index = -1
+texture = ExtResource( 16 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GroupBackground/Sun"]
+autoplay = "fade"
+anims/RESET = SubResource( 1 )
+anims/fade = SubResource( 2 )
+
+[node name="Moon" type="Sprite" parent="GroupBackground"]
+modulate = Color( 1, 1, 1, 0.588235 )
+self_modulate = Color( 1, 1, 1, 0.784314 )
+position = Vector2( 784, -265 )
+scale = Vector2( 0.7, 0.7 )
+texture = ExtResource( 8 )
+
+[node name="Light" type="Sprite" parent="GroupBackground/Moon"]
+modulate = Color( 0, 0.647059, 1, 0.627451 )
+material = SubResource( 3 )
+scale = Vector2( 5, 5 )
+texture = ExtResource( 12 )
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GroupBackground/Moon"]
+autoplay = "fade"
+anims/RESET = SubResource( 4 )
+anims/fade = SubResource( 5 )
+
+[node name="DarkBackground" type="CanvasModulate" parent="GroupBackground"]
+position = Vector2( -10, 0 )
+
+[node name="Tween" type="Tween" parent="GroupBackground"]
+
+[node name="FogTileMap" type="Node2D" parent="."]
+
+[node name="FogTileMap1" type="TileMap" parent="FogTileMap"]
+mode = 1
+tile_set = SubResource( 6 )
+cell_size = Vector2( 46, 24 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+
+[node name="FogTileMap2" type="TileMap" parent="FogTileMap"]
+mode = 1
+tile_set = SubResource( 6 )
+cell_size = Vector2( 46, 24 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+
+[node name="FogTileMap3" type="TileMap" parent="FogTileMap"]
+mode = 1
+tile_set = SubResource( 6 )
+cell_size = Vector2( 46, 24 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+
+[node name="FogTileMap4" type="TileMap" parent="FogTileMap"]
+mode = 1
+tile_set = SubResource( 6 )
+cell_size = Vector2( 46, 24 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+
+[node name="FogTileMap5" type="TileMap" parent="FogTileMap"]
+mode = 1
+tile_set = SubResource( 6 )
+cell_size = Vector2( 46, 24 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+
+[node name="FogTileMap6" type="TileMap" parent="FogTileMap"]
+mode = 1
+tile_set = SubResource( 6 )
+cell_size = Vector2( 46, 24 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+
+[node name="FogTileMap7" type="TileMap" parent="FogTileMap"]
+mode = 1
+tile_set = SubResource( 6 )
+cell_size = Vector2( 46, 24 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+
+[node name="FogTileMap8" type="TileMap" parent="FogTileMap"]
+mode = 1
+tile_set = SubResource( 6 )
+cell_size = Vector2( 46, 24 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+
+[node name="Tween" type="Tween" parent="FogTileMap"]
+
+[node name="Line2D" type="Node2D" parent="."]
+
+[node name="Line2D_1" type="Line2D" parent="Line2D"]
+width = 6.0
+default_color = Color( 0.384314, 1, 0, 1 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
+
+[node name="Line2D_2" type="Line2D" parent="Line2D"]
+width = 6.0
+default_color = Color( 0.384314, 1, 0, 1 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
+
+[node name="Line2D_3" type="Line2D" parent="Line2D"]
+width = 6.0
+default_color = Color( 0.384314, 1, 0, 1 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
+
+[node name="Line2D_4" type="Line2D" parent="Line2D"]
+width = 6.0
+default_color = Color( 0.384314, 1, 0, 1 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
+
+[node name="Line2D_5" type="Line2D" parent="Line2D"]
+width = 6.0
+default_color = Color( 0.384314, 1, 0, 1 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
+
+[node name="Line2D_6" type="Line2D" parent="Line2D"]
+width = 6.0
+default_color = Color( 0.384314, 1, 0, 1 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
+
+[node name="Line2D_7" type="Line2D" parent="Line2D"]
+width = 6.0
+default_color = Color( 0.384314, 1, 0, 1 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
+
+[node name="Line2D_8" type="Line2D" parent="Line2D"]
+width = 6.0
+default_color = Color( 0.384314, 1, 0, 1 )
+joint_mode = 2
+begin_cap_mode = 2
+end_cap_mode = 2
+antialiased = true
+
+[node name="LandLabels" type="Node2D" parent="."]
+
+[node name="Land_Label_1" type="Node2D" parent="LandLabels"]
+
+[node name="Label" type="Label" parent="LandLabels/Land_Label_1"]
+modulate = Color( 0.0958012, 0.765625, 0.00897217, 1 )
+margin_left = -164.0
+margin_top = -132.0
+margin_right = -124.0
+margin_bottom = -103.0
+rect_scale = Vector2( 8, 8 )
+custom_fonts/font = SubResource( 7 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Land_Label_2" type="Node2D" parent="LandLabels"]
+
+[node name="Label" type="Label" parent="LandLabels/Land_Label_2"]
+modulate = Color( 0.0823529, 0.717647, 0, 1 )
+margin_left = -164.0
+margin_top = -132.0
+margin_right = -124.0
+margin_bottom = -103.0
+rect_scale = Vector2( 8, 8 )
+custom_fonts/font = SubResource( 7 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Land_Label_3" type="Node2D" parent="LandLabels"]
+
+[node name="Label" type="Label" parent="LandLabels/Land_Label_3"]
+modulate = Color( 0.0823529, 0.717647, 0, 1 )
+margin_left = -164.0
+margin_top = -132.0
+margin_right = -124.0
+margin_bottom = -103.0
+rect_scale = Vector2( 8, 8 )
+custom_fonts/font = SubResource( 7 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Land_Label_4" type="Node2D" parent="LandLabels"]
+
+[node name="Label" type="Label" parent="LandLabels/Land_Label_4"]
+modulate = Color( 0.0823529, 0.717647, 0, 1 )
+margin_left = -164.0
+margin_top = -132.0
+margin_right = -124.0
+margin_bottom = -103.0
+rect_scale = Vector2( 8, 8 )
+custom_fonts/font = SubResource( 7 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Land_Label_5" type="Node2D" parent="LandLabels"]
+
+[node name="Label" type="Label" parent="LandLabels/Land_Label_5"]
+modulate = Color( 0.0823529, 0.717647, 0, 1 )
+margin_left = -164.0
+margin_top = -132.0
+margin_right = -124.0
+margin_bottom = -103.0
+rect_scale = Vector2( 8, 8 )
+custom_fonts/font = SubResource( 7 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Land_Label_6" type="Node2D" parent="LandLabels"]
+
+[node name="Label" type="Label" parent="LandLabels/Land_Label_6"]
+modulate = Color( 0.0823529, 0.717647, 0, 1 )
+margin_left = -164.0
+margin_top = -132.0
+margin_right = -124.0
+margin_bottom = -103.0
+rect_scale = Vector2( 8, 8 )
+custom_fonts/font = SubResource( 7 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Land_Label_7" type="Node2D" parent="LandLabels"]
+
+[node name="Label" type="Label" parent="LandLabels/Land_Label_7"]
+modulate = Color( 0.0823529, 0.717647, 0, 1 )
+margin_left = -164.0
+margin_top = -132.0
+margin_right = -124.0
+margin_bottom = -103.0
+rect_scale = Vector2( 8, 8 )
+custom_fonts/font = SubResource( 7 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Land_Label_8" type="Node2D" parent="LandLabels"]
+
+[node name="Label" type="Label" parent="LandLabels/Land_Label_8"]
+modulate = Color( 0.0823529, 0.717647, 0, 1 )
+margin_left = -164.0
+margin_top = -132.0
+margin_right = -124.0
+margin_bottom = -103.0
+rect_scale = Vector2( 8, 8 )
+custom_fonts/font = SubResource( 7 )
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="WaterTileMap" type="TileMap" parent="."]
+position = Vector2( 0, 1 )
+mode = 1
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 46, 24 )
+format = 1
+
+[node name="EarthTileMap" type="TileMap" parent="."]
+mode = 1
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 46, 24 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+
+[node name="DarkGrassTileMap" type="TileMap" parent="."]
+mode = 1
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 46, 24 )
+format = 1
+
+[node name="GroundTileMap" type="TileMap" parent="."]
+visible = false
+mode = 1
+tile_set = ExtResource( 4 )
+cell_size = Vector2( 46, 24 )
+format = 1
+
+[node name="StonesTileMap" type="TileMap" parent="."]
+visible = false
+mode = 1
+tile_set = ExtResource( 5 )
+cell_size = Vector2( 46, 24 )
+collision_layer = 0
+collision_mask = 0
+format = 1
+
+[node name="TargetHighlight" parent="." instance=ExtResource( 14 )]
+visible = false
+
+[node name="TileHightlight" type="Sprite" parent="."]
+modulate = Color( 1, 1, 1, 0 )
+texture = ExtResource( 11 )
+
+[node name="YSort" type="YSort" parent="."]
+
+[node name="Tween" type="Tween" parent="."]
+repeat = true
+playback/repeat = true
+
+[node name="AudioManager" type="Node" parent="."]
+script = ExtResource( 6 )
+
+[node name="Music" type="AudioStreamPlayer" parent="AudioManager"]
+volume_db = -14.0
+
+[node name="MainSound" type="AudioStreamPlayer" parent="AudioManager"]
+
+[node name="SubSound" type="AudioStreamPlayer" parent="AudioManager"]
+
+[node name="UISound" type="AudioStreamPlayer" parent="AudioManager"]
+
+[node name="Basic_Attack_Sound" type="AudioStreamPlayer2D" parent="AudioManager"]
+volume_db = 7.0
+
+[node name="Skill_1_Sound" type="AudioStreamPlayer2D" parent="AudioManager"]
+
+[node name="Skill_2_Sound" type="AudioStreamPlayer2D" parent="AudioManager"]
+
+[node name="Skill_3_Sound" type="AudioStreamPlayer2D" parent="AudioManager"]
+
+[node name="Skill_4_Sound" type="AudioStreamPlayer2D" parent="AudioManager"]

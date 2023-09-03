@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/shock_wave_init_sound.mp3-b460f0113248f18666c650fa3855c323.mp3str"
+
+[deps]
+
+source_file="res://projectiles/sound_effects/shock_wave_init_sound.mp3"
+dest_files=[ "res://.import/shock_wave_init_sound.mp3-b460f0113248f18666c650fa3855c323.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

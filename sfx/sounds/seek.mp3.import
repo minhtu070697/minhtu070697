@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/seek.mp3-32091a4ef125bfbe3f143ecd933d61ef.mp3str"
+
+[deps]
+
+source_file="res://sfx/sounds/seek.mp3"
+dest_files=[ "res://.import/seek.mp3-32091a4ef125bfbe3f143ecd933d61ef.mp3str" ]
+
+[params]
+
+loop=true
+loop_offset=0

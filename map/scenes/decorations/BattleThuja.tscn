@@ -1,0 +1,24 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://map/textures/battlefield/thuja_3_sh.png" type="Texture" id=1]
+[ext_resource path="res://map/textures/battlefield/thuja_3.png" type="Texture" id=2]
+[ext_resource path="res://map/scenes/decorations/battle_thuja.gd" type="Script" id=3]
+
+[node name="BattleThuja" type="Node2D"]
+script = ExtResource( 3 )
+
+[node name="Shadow" type="Sprite" parent="."]
+texture = ExtResource( 1 )
+
+[node name="Sprite" type="Sprite" parent="."]
+texture = ExtResource( 2 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D"]
+polygon = PoolVector2Array( -7, 60, 10, 60, 28, 48, 27, 4, 23, -32, 14, -79, -14, -79, -34, 34, -29, 46, -21, 54 )
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_Area2D_body_entered"]
+[connection signal="body_exited" from="Area2D" to="." method="_on_Area2D_body_exited"]

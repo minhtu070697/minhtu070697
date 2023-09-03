@@ -1,0 +1,66 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://ui/scenes/skill_slot.gd" type="Script" id=1]
+[ext_resource path="res://ui/skill_button/skill_button.png" type="Texture" id=2]
+[ext_resource path="res://ui/skill_button/skill_number_button.png" type="Texture" id=3]
+
+[sub_resource type="StyleBoxFlat" id=9]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=10]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxFlat" id=19]
+bg_color = Color( 0.6, 0.6, 0.6, 0 )
+
+[sub_resource type="StyleBoxTexture" id=2]
+
+[sub_resource type="DynamicFontData" id=20]
+font_path = "res://fonts/m5x7.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = SubResource( 20 )
+
+[node name="SkillbarSlot4" type="Button"]
+margin_bottom = 14.0
+rect_min_size = Vector2( 14, 14 )
+rect_clip_content = true
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = SubResource( 9 )
+custom_styles/pressed = SubResource( 10 )
+custom_styles/focus = SubResource( 19 )
+custom_styles/normal = SubResource( 2 )
+icon = ExtResource( 2 )
+expand_icon = true
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_left = 8.0
+margin_top = 17.0
+margin_right = 77.0
+margin_bottom = 86.0
+rect_scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="TextureRect"]
+margin_left = 20.0
+margin_top = 5.0
+margin_right = 28.0
+margin_bottom = 18.0
+rect_scale = Vector2( 4, 4 )
+custom_fonts/font = SubResource( 4 )
+text = "3"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}

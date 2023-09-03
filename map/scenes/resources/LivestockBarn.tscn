@@ -1,0 +1,112 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://animals/livestocks/buildings/scripts/livestock_barn.gd" type="Script" id=2]
+[ext_resource path="res://animals/livestocks/buildings/scenes/LivestockBarnController.tscn" type="PackedScene" id=3]
+[ext_resource path="res://fonts/m5x7.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://ui/textures/buttons/btn_no.png" type="Texture" id=5]
+[ext_resource path="res://animals/livestocks/buildings/textures/cow_barn/cow_barn.png" type="Texture" id=7]
+[ext_resource path="res://areas/detect_right_click_area.gd" type="Script" id=8]
+
+[sub_resource type="Animation" id=1]
+length = 0.6
+loop = true
+
+[sub_resource type="Animation" id=2]
+resource_name = "die"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.1, 0.2, 0.3, 0.4, 0.5 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.8 ), Color( 1, 1, 1, 0.6 ), Color( 1, 1, 1, 0.4 ), Color( 1, 1, 1, 0.2 ), Color( 1, 1, 1, 0 ) ]
+}
+
+[sub_resource type="DynamicFont" id=3]
+outline_size = 1
+outline_color = Color( 0, 0, 0, 1 )
+font_data = ExtResource( 4 )
+
+[sub_resource type="Animation" id=4]
+length = 0.001
+
+[sub_resource type="Animation" id=5]
+resource_name = "button_fade"
+length = 0.4
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath(".:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.2, 0.4 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.498039 ), Color( 1, 1, 1, 1 ) ]
+}
+
+[node name="LivestockBarn" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="Sprite" type="Sprite" parent="."]
+position = Vector2( -9, -49 )
+texture = ExtResource( 7 )
+
+[node name="Area2D_LiveStockBarn" type="Area2D" parent="Sprite"]
+collision_mask = 3
+script = ExtResource( 8 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Sprite/Area2D_LiveStockBarn"]
+polygon = PoolVector2Array( -163, 70, -12, 146, 143, 61, 143, -9, 77, -135, 30, -147, -158, -61 )
+
+[node name="Tween" type="Tween" parent="."]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+autoplay = "RESET"
+anims/RESET = SubResource( 1 )
+anims/die = SubResource( 2 )
+
+[node name="GroupButtonRemove" type="Node2D" parent="."]
+position = Vector2( -36, -24 )
+z_index = 10
+
+[node name="ButtonRemove" type="TextureButton" parent="GroupButtonRemove"]
+visible = false
+margin_left = -28.0
+margin_top = -17.0
+margin_right = 36.0
+margin_bottom = 15.0
+rect_scale = Vector2( 0.85, 0.85 )
+texture_normal = ExtResource( 5 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="GroupButtonRemove/ButtonRemove"]
+margin_right = 64.0
+margin_bottom = 32.0
+custom_fonts/font = SubResource( 3 )
+text = "Remove"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="GroupButtonRemove/ButtonRemove"]
+autoplay = "button_fade"
+anims/RESET = SubResource( 4 )
+anims/button_fade = SubResource( 5 )
+
+[node name="LivestockBarnController" parent="." instance=ExtResource( 3 )]
+
+[connection signal="body_entered" from="Sprite/Area2D_LiveStockBarn" to="." method="_on_Area2D_LiveStockBarn_body_entered"]
+[connection signal="body_exited" from="Sprite/Area2D_LiveStockBarn" to="." method="_on_Area2D_LiveStockBarn_body_exited"]

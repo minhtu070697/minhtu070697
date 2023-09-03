@@ -1,0 +1,808 @@
+{
+  "chain_lightning": {
+    "skill_name" : "chain_lightning",
+    "desc" : "Create a lightning",
+    "icon_image" : "res://skills/skill_icon/skill_icon_chain_lightning.png",
+    "lvl" : 1,
+    "skill_type" : 0,
+    "is_target" : true,
+    "base_cooldown" : 1.5,
+    "cooldown_lvl_up" : 0.0,
+    "base_hp_req" : 0,
+    "hp_req_lvl_up" : 0,
+    "base_mana_req" : 8,
+    "mana_req_lvl_up" : 6,
+    "base_range_of_skill" : 7,
+    "range_of_skill_lvl_up" : 0.2,
+    "base_p_dmg" : 0.0,
+    "p_dmg_lvl_up" : 0.0,
+    "p_dmg_diff" : 0.0,
+    "base_m_dmg" : 0.0,
+    "m_dmg_lvl_up" : 0.0,
+    "m_dmg_diff" : 0.0,
+    "base_weapon_dmg" : 0.2,
+    "weapon_dmg_lvl_up" : 0.0,
+    "weapon_dmg_diff" : 0.0,
+    "base_fire_dmg" : 0.0,
+    "fire_dmg_lvl_up" : 0.0,
+    "fire_dmg_diff" : 0.0,
+    "base_cold_dmg" : 0.0,
+    "cold_dmg_lvl_up" : 0.0,
+    "cold_dmg_diff" : 0.0,
+    "base_freeze_strength" : 0.0,
+    "freeze_strength_lvl_up" : 0.0,
+    "base_freeze_length" : 0.0,
+    "freeze_length_lvl_up" : 0.0,
+    "base_lightning_dmg" : 25.0,
+    "lightning_dmg_lvl_up" : 10.0,
+    "lightning_dmg_diff" : 0.0,
+    "base_poison_dmg" : 0.0,
+    "poison_dmg_lvl_up" : 0.0,
+    "poison_dmg_diff" : 0.0,
+    "base_poison_length" : 0.0,
+    "poison_length_lvl_up" : 0.0,
+    "projectile_name" : "chain_lightning",
+    "number_of_projectiles" : 1,
+    "attack_name" : 1,
+    "skill_sound" : "ice_skill",
+    "require_lvl" : 4
+  },
+  "dash_attack": {
+    "skill_name" : "dash_attack",
+    "desc" : "Dash toward target and attack",
+    "icon_image" : "res://skills/skill_icon/skill_icon_fire_ball.png",
+    "lvl" : 1,
+    "skill_type" : 0,
+    "is_target" : true,
+
+    "base_cooldown" : 3.0,
+    "cooldown_lvl_up" : 0.0,
+    "base_hp_req" : 0,
+    "hp_req_lvl_up" : 0,
+    "base_mana_req" : 10,
+    "mana_req_lvl_up" : 5,
+    "base_range_of_skill" : 4,
+    "range_of_skill_lvl_up" : 0.2,
+
+    "base_p_dmg" : 0.0,
+    "p_dmg_lvl_up" : 0.0,
+    "p_dmg_diff" : 0.0,
+
+    "base_m_dmg" : 0.0,
+    "m_dmg_lvl_up" : 0.0,
+    "m_dmg_diff" : 0.0,
+
+    "base_weapon_dmg" : 0.9,
+    "weapon_dmg_lvl_up" : 0.05,
+    "weapon_dmg_diff" : 0.3,
+
+    "base_fire_dmg" : 0.0,
+    "fire_dmg_lvl_up" : 0.0,
+    "fire_dmg_diff" : 0.0,
+
+    "base_cold_dmg" : 0.0,
+    "cold_dmg_lvl_up" : 0.0,
+    "cold_dmg_diff" : 0.0,
+
+    "base_freeze_strength" : 0.0,
+    "freeze_strength_lvl_up" : 0.0,
+    "base_freeze_length" : 0.0,
+    "freeze_length_lvl_up" : 0.0,
+
+    "base_lightning_dmg" : 200.0,
+    "lightning_dmg_lvl_up" : 10.0,
+    "lightning_dmg_diff" : 0.0,
+
+    "base_poison_dmg" : 0.0,
+    "poison_dmg_lvl_up" : 0.0,
+    "poison_dmg_diff" : 0.0,
+    "base_poison_length" : 0.0,
+    "poison_length_lvl_up" : 0.0,
+
+    "projectile_name" : "",
+    "number_of_projectiles" : 0,
+    "attack_name" : 4,
+    "skill_sound" : ""
+  },
+  "fire_ball": {
+    "skill_name" : "fire_ball",
+    "desc" : "Create a fire ball flying toward target",
+    "icon_image" : "res://skills/skill_icon/skill_icon_fire_ball.png",
+    "lvl" : 1,
+    "skill_type" : 0,
+    "is_target" : true,
+    
+    "base_cooldown" : 1.5,
+    "cooldown_lvl_up" : 0.0,
+    "base_hp_req" : 0,
+    "hp_req_lvl_up" : 0,
+    "base_mana_req" : 10,
+    "mana_req_lvl_up" : 5,
+    "base_range_of_skill" : 9,
+    "range_of_skill_lvl_up" : 0.2,
+
+    "base_p_dmg" : 0.0,
+    "p_dmg_lvl_up" : 0.0,
+    "p_dmg_diff" : 0.0,
+
+    "base_m_dmg" : 0.0,
+    "m_dmg_lvl_up" : 0.0,
+    "m_dmg_diff" : 0.0,
+
+    "base_weapon_dmg" : 0.0,
+    "weapon_dmg_lvl_up" : 0.01,
+    "weapon_dmg_diff" : 0.0,
+
+    "base_fire_dmg" : 8.0,
+    "fire_dmg_lvl_up" : 3.5,
+    "fire_dmg_diff" : 0.0,
+
+    "base_cold_dmg" : 0.0,
+    "cold_dmg_lvl_up" : 0.0,
+    "cold_dmg_diff" : 0.0,
+
+    "base_freeze_strength" : 0.0,
+    "freeze_strength_lvl_up" : 0.0,
+    "base_freeze_length" : 0.0,
+    "freeze_length_lvl_up" : 0.0,
+
+    "base_lightning_dmg" : 0.0,
+    "lightning_dmg_lvl_up" : 0.0,
+    "lightning_dmg_diff" : 0.0,
+
+    "base_poison_dmg" : 0.0,
+    "poison_dmg_lvl_up" : 0.0,
+    "poison_dmg_diff" : 0.0,
+    "base_poison_length" : 0.0,
+    "poison_length_lvl_up" : 0.0,
+
+    "projectile_name" : "fire_ball",
+    "number_of_projectiles" : 3,
+    "attack_name" : 1,
+    "skill_sound" : "fire_skill"
+  },
+  "fire_meteor": {
+    "skill_name" : "fire_meteor",
+    "desc" : "Create a fire meteor ahead of your target",
+    "icon_image" : "res://skills/skill_icon/skill_icon_fire_meteor.png",
+    "lvl" : 1,
+    "skill_type" : 0,
+    "is_target" : true,
+    
+    "base_cooldown" : 3.0,
+    "cooldown_lvl_up" : 0.0,
+    "base_hp_req" : 0,
+    "hp_req_lvl_up" : 0,
+    "base_mana_req" : 10,
+    "mana_req_lvl_up" : 7,
+    "base_range_of_skill" : 5,
+    "range_of_skill_lvl_up" : 0.3,
+
+    "base_p_dmg" : 0.0,
+    "p_dmg_lvl_up" : 0.0,
+    "p_dmg_diff" : 0.0,
+
+    "base_m_dmg" : 0.0,
+    "m_dmg_lvl_up" : 0.0,
+    "m_dmg_diff" : 0.0,
+
+    "base_weapon_dmg" : 0.2,
+    "weapon_dmg_lvl_up" : 0.01,
+    "weapon_dmg_diff" : 0.0,
+
+    "base_fire_dmg" : 100.0,
+    "fire_dmg_lvl_up" : 25.0,
+    "fire_dmg_diff" : 0.2,
+
+    "base_cold_dmg" : 0.0,
+    "cold_dmg_lvl_up" : 0.0,
+    "cold_dmg_diff" : 0.0,
+
+    "base_freeze_strength" : 0.0,
+    "freeze_strength_lvl_up" : 0.0,
+    "base_freeze_length" : 0.0,
+    "freeze_length_lvl_up" : 0.0,
+
+    "base_lightning_dmg" : 0.0,
+    "lightning_dmg_lvl_up" : 0.0,
+    "lightning_dmg_diff" : 0.0,
+
+    "base_poison_dmg" : 0.0,
+    "poison_dmg_lvl_up" : 0.0,
+    "poison_dmg_diff" : 0.0,
+    "base_poison_length" : 0.0,
+    "poison_length_lvl_up" : 0.0,
+
+    "projectile_name" : "fire_meteor",
+    "number_of_projectiles" : 1,
+    "attack_name" : 1,
+    "prerequisite_skills" : ["fire_ball"],
+    "skill_sound" : "fire_meteor",
+    "require_lvl" : 10
+  },
+  "goblin_fire_ball": {
+    "skill_name" : "goblin_fire_ball",
+    "desc" : "Create a fire ball flying toward target",
+    "icon_image" : "res://skills/skill_icon/skill_icon_fire_ball.png",
+    "lvl" : 1,
+    "skill_type" : 0,
+    "is_target" : true,
+    
+    "base_cooldown" : 3.0,
+    "cooldown_lvl_up" : 0.0,
+    "base_hp_req" : 0,
+    "hp_req_lvl_up" : 0,
+    "base_mana_req" : 10,
+    "mana_req_lvl_up" : 5,
+    "base_range_of_skill" : 5,
+    "range_of_skill_lvl_up" : 0.0,
+
+    "base_p_dmg" : 0.0,
+    "p_dmg_lvl_up" : 0.0,
+    "p_dmg_diff" : 0.0,
+
+    "base_m_dmg" : 0.0,
+    "m_dmg_lvl_up" : 0.0,
+    "m_dmg_diff" : 0.0,
+
+    "base_weapon_dmg" : 0.0,
+    "weapon_dmg_lvl_up" : 0.02,
+    "weapon_dmg_diff" : 0.0,
+
+    "base_fire_dmg" : 70.0,
+    "fire_dmg_lvl_up" : 7.0,
+    "fire_dmg_diff" : 0.2,
+
+    "base_cold_dmg" : 0.0,
+    "cold_dmg_lvl_up" : 0.0,
+    "cold_dmg_diff" : 0.0,
+
+    "base_freeze_strength" : 0.0,
+    "freeze_strength_lvl_up" : 0.0,
+    "base_freeze_length" : 0.0,
+    "freeze_length_lvl_up" : 0.0,
+
+    "base_lightning_dmg" : 0.0,
+    "lightning_dmg_lvl_up" : 0.0,
+    "lightning_dmg_diff" : 0.0,
+
+    "base_poison_dmg" : 0.0,
+    "poison_dmg_lvl_up" : 0.0,
+    "poison_dmg_diff" : 0.0,
+    "base_poison_length" : 0.0,
+    "poison_length_lvl_up" : 0.0,
+
+    "projectile_name" : "goblin_fire_ball",
+    "number_of_projectiles" : 1,
+    "attack_name" : 1,
+    "skill_sound" : "goblin_fire_ball"
+  },
+  "ice_bolt": {
+    "skill_name" : "ice_bolt",
+    "desc" : "Create an ice bolt flying toward target",
+    "icon_image" : "res://skills/skill_icon/skill_icon_ice_bolt.png",
+    "lvl" : 1,
+    "skill_type" : 0,
+    "is_target" : true,
+    
+    "base_cooldown" : 1.0,
+    "cooldown_lvl_up" : 0.0,
+    "base_hp_req" : 0,
+    "hp_req_lvl_up" : 0,
+    "base_mana_req" : 8,
+    "mana_req_lvl_up" : 3,
+    "base_range_of_skill" : 5,
+    "range_of_skill_lvl_up" : 0.2,
+
+    "base_p_dmg" : 0.0,
+    "p_dmg_lvl_up" : 0.0,
+    "p_dmg_diff" : 0.0,
+
+    "base_m_dmg" : 0.0,
+    "m_dmg_lvl_up" : 0.0,
+    "m_dmg_diff" : 0.0,
+
+    "base_weapon_dmg" : 0.0,
+    "weapon_dmg_lvl_up" : 0.0,
+    "weapon_dmg_diff" : 0.0,
+
+    "base_fire_dmg" : 0.0,
+    "fire_dmg_lvl_up" : 0.0,
+    "fire_dmg_diff" : 0.0,
+
+    "base_cold_dmg" : 40.0,
+    "cold_dmg_lvl_up" : 15.0,
+    "cold_dmg_diff" : 0.0,
+
+    "base_freeze_strength" : 0.5,
+    "freeze_strength_lvl_up" : 0.01,
+    "base_freeze_length" : 3.0,
+    "freeze_length_lvl_up" : 0.1,
+
+    "base_lightning_dmg" : 0.0,
+    "lightning_dmg_lvl_up" : 0.0,
+    "lightning_dmg_diff" : 0.0,
+
+    "base_poison_dmg" : 0.0,
+    "poison_dmg_lvl_up" : 0.0,
+    "poison_dmg_diff" : 0.0,
+    "base_poison_length" : 0.0,
+    "poison_length_lvl_up" : 0.0,
+
+    "projectile_name" : "ice_bolt",
+    "number_of_projectiles" : 1,
+    "attack_name" : 1,
+    "skill_sound" : "ice_bolt"
+  },
+  "ice_nova": {
+    "skill_name" : "ice_nova",
+    "desc" : "Create an ice nova",
+    "icon_image" : "res://skills/skill_icon/skill_icon_ice_nova.png",
+    "lvl" : 1,
+    "skill_type" : 0,
+    "is_target" : false,
+    
+    "base_cooldown" : 3.0,
+    "cooldown_lvl_up" : 0.0,
+    "base_hp_req" : 0,
+    "hp_req_lvl_up" : 0,
+    "base_mana_req" : 15,
+    "mana_req_lvl_up" : 10,
+    "base_range_of_skill" : 5,
+    "range_of_skill_lvl_up" : 0.2,
+
+    "base_p_dmg" : 0.0,
+    "p_dmg_lvl_up" : 0.0,
+    "p_dmg_diff" : 0.0,
+
+    "base_m_dmg" : 0.0,
+    "m_dmg_lvl_up" : 0.0,
+    "m_dmg_diff" : 0.0,
+
+    "base_weapon_dmg" : 0.1,
+    "weapon_dmg_lvl_up" : 0.01,
+    "weapon_dmg_diff" : 0.0,
+
+    "base_fire_dmg" : 0.0,
+    "fire_dmg_lvl_up" : 0.0,
+    "fire_dmg_diff" : 0.0,
+
+    "base_cold_dmg" : 30.0,
+    "cold_dmg_lvl_up" : 12.0,
+    "cold_dmg_diff" : 0.0,
+
+    "base_freeze_strength" : 0.9,
+    "freeze_strength_lvl_up" : 0.01,
+    "base_freeze_length" : 3.0,
+    "freeze_length_lvl_up" : 0.2,
+
+    "base_lightning_dmg" : 0.0,
+    "lightning_dmg_lvl_up" : 0.0,
+    "lightning_dmg_diff" : 0.0,
+
+    "base_poison_dmg" : 0.0,
+    "poison_dmg_lvl_up" : 0.0,
+    "poison_dmg_diff" : 0.0,
+    "base_poison_length" : 0.0,
+    "poison_length_lvl_up" : 0.0,
+
+    "projectile_name" : "ice_nova",
+    "number_of_projectiles" : 1,
+    "attack_name" : 1,
+    "prerequisite_skills" : ["ice_bolt"],
+    "skill_sound" : "charge_skill",
+    "require_lvl" : 15
+  },
+  "jump_attack": {
+    "skill_name" : "jump_attack",
+    "desc" : "Jump toward target and attack",
+    "icon_image" : "res://skills/skill_icon/skill_icon_fire_ball.png",
+    "lvl" : 1,
+    "skill_type" : 0,
+    "is_target" : true,
+    
+    "base_cooldown" : 3.0,
+    "cooldown_lvl_up" : 0.0,
+    "base_hp_req" : 0,
+    "hp_req_lvl_up" : 0,
+    "base_mana_req" : 10,
+    "mana_req_lvl_up" : 5,
+    "base_range_of_skill" : 4,
+    "range_of_skill_lvl_up" : 0.2,
+
+    "base_p_dmg" : 0.0,
+    "p_dmg_lvl_up" : 0.0,
+    "p_dmg_diff" : 0.0,
+
+    "base_m_dmg" : 0.0,
+    "m_dmg_lvl_up" : 0.0,
+    "m_dmg_diff" : 0.0,
+
+    "base_weapon_dmg" : 0.9,
+    "weapon_dmg_lvl_up" : 0.05,
+    "weapon_dmg_diff" : 0.3,
+
+    "base_fire_dmg" : 0.0,
+    "fire_dmg_lvl_up" : 0.0,
+    "fire_dmg_diff" : 0.0,
+
+    "base_cold_dmg" : 0.0,
+    "cold_dmg_lvl_up" : 0.0,
+    "cold_dmg_diff" : 0.0,
+
+    "base_freeze_strength" : 0.0,
+    "freeze_strength_lvl_up" : 0.0,
+    "base_freeze_length" : 0.0,
+    "freeze_length_lvl_up" : 0.0,
+
+    "base_lightning_dmg" : 0.0,
+    "lightning_dmg_lvl_up" : 0.0,
+    "lightning_dmg_diff" : 0.0,
+
+    "base_poison_dmg" : 0.0,
+    "poison_dmg_lvl_up" : 0.0,
+    "poison_dmg_diff" : 0.0,
+    "base_poison_length" : 0.0,
+    "poison_length_lvl_up" : 0.0,
+
+    "projectile_name" : "",
+    "number_of_projectiles" : 0,
+    "attack_name" : 3,
+    "skill_sound" : ""
+  },
+  "shock_wave": {
+    "skill_name" : "shock_wave",
+    "desc" : "Create a shockwave",
+    "icon_image" : "res://skills/skill_icon/skill_icon_dust.png",
+    "lvl" : 1,
+    "skill_type" : 0,
+    "is_target" : true,
+    
+    "base_cooldown" : 1.5,
+    "cooldown_lvl_up" : 0.0,
+    "base_hp_req" : 0,
+    "hp_req_lvl_up" : 0,
+    "base_mana_req" : 10,
+    "mana_req_lvl_up" : 5,
+    "base_range_of_skill" : 5,
+    "range_of_skill_lvl_up" : 0.2,
+
+    "base_p_dmg" : 20.0,
+    "p_dmg_lvl_up" : 7.0,
+    "p_dmg_diff" : 0.3,
+
+    "base_m_dmg" : 0.0,
+    "m_dmg_lvl_up" : 0.0,
+    "m_dmg_diff" : 0.0,
+
+    "base_weapon_dmg" : 0.9,
+    "weapon_dmg_lvl_up" : 0.05,
+    "weapon_dmg_diff" : 0.0,
+
+    "base_fire_dmg" : 0.0,
+    "fire_dmg_lvl_up" : 0.0,
+    "fire_dmg_diff" : 0.0,
+
+    "base_cold_dmg" : 0.0,
+    "cold_dmg_lvl_up" : 0.0,
+    "cold_dmg_diff" : 0.0,
+
+    "base_freeze_strength" : 0.0,
+    "freeze_strength_lvl_up" : 0.0,
+    "base_freeze_length" : 0.0,
+    "freeze_length_lvl_up" : 0.0,
+
+    "base_lightning_dmg" : 0.0,
+    "lightning_dmg_lvl_up" : 0.0,
+    "lightning_dmg_diff" : 0.0,
+
+    "base_poison_dmg" : 0.0,
+    "poison_dmg_lvl_up" : 0.0,
+    "poison_dmg_diff" : 0.0,
+    "base_poison_length" : 0.0,
+    "poison_length_lvl_up" : 0.0,
+
+    "projectile_name" : "shock_wave",
+    "number_of_projectiles" : 1,
+    "attack_name" : 1,
+    "skill_sound" : "sand_skill",
+    "prerequisite_skills" : [],
+    "require_lvl" : 1
+  },
+  "spread_lightning": {
+    "skill_name" : "spread_lightning",
+    "desc" : "Create a lightning",
+    "icon_image" : "res://skills/skill_icon/skill_icon_spread_lightning.png",
+    "lvl" : 1,
+    "skill_type" : 0,
+    "is_target" : true,
+    
+    "base_cooldown" : 1.5,
+    "cooldown_lvl_up" : 0.0,
+    "base_hp_req" : 0,
+    "hp_req_lvl_up" : 0,
+    "base_mana_req" : 8,
+    "mana_req_lvl_up" : 4,
+    "base_range_of_skill" : 7,
+    "range_of_skill_lvl_up" : 0.2,
+
+    "base_p_dmg" : 0.0,
+    "p_dmg_lvl_up" : 0.0,
+    "p_dmg_diff" : 0.0,
+
+    "base_m_dmg" : 0.0,
+    "m_dmg_lvl_up" : 0.0,
+    "m_dmg_diff" : 0.0,
+
+    "base_weapon_dmg" : 0.0,
+    "weapon_dmg_lvl_up" : 0.0,
+    "weapon_dmg_diff" : 0.0,
+
+    "base_fire_dmg" : 0.0,
+    "fire_dmg_lvl_up" : 0.0,
+    "fire_dmg_diff" : 0.0,
+
+    "base_cold_dmg" : 0.0,
+    "cold_dmg_lvl_up" : 0.0,
+    "cold_dmg_diff" : 0.0,
+
+    "base_freeze_strength" : 0.0,
+    "freeze_strength_lvl_up" : 0.0,
+    "base_freeze_length" : 0.0,
+    "freeze_length_lvl_up" : 0.0,
+
+    "base_lightning_dmg" : 50.0,
+    "lightning_dmg_lvl_up" : 15.0,
+    "lightning_dmg_diff" : 0.7,
+
+    "base_poison_dmg" : 0.0,
+    "poison_dmg_lvl_up" : 0.0,
+    "poison_dmg_diff" : 0.0,
+    "base_poison_length" : 0.0,
+    "poison_length_lvl_up" : 0.0,
+
+    "projectile_name" : "spread_lightning",
+    "number_of_projectiles" : 1,
+    "attack_name" : 1,
+    "skill_sound" : "ice_skill",
+    "require_lvl" : 7
+  },
+  "teleport": {
+    "skill_name" : "teleport",
+    "desc" : "teleport",
+    "icon_image" : "res://skills/skill_icon/skill_icon_teleport.png",
+    "lvl" : 1,
+    "skill_type" : 0,
+    "is_target" : false,
+    
+    "base_cooldown" : 10.0,
+    "cooldown_lvl_up" : -0.35,
+    "base_hp_req" : 0,
+    "hp_req_lvl_up" : 0,
+    "base_mana_req" : 20,
+    "mana_req_lvl_up" : 3,
+    "base_range_of_skill" : 5,
+    "range_of_skill_lvl_up" : 0.0,
+
+    "base_p_dmg" : 0.0,
+    "p_dmg_lvl_up" : 0.0,
+    "p_dmg_diff" : 0.0,
+
+    "base_m_dmg" : 0.0,
+    "m_dmg_lvl_up" : 0.0,
+    "m_dmg_diff" : 0.0,
+
+    "base_weapon_dmg" : 0.0,
+    "weapon_dmg_lvl_up" : 0.0,
+    "weapon_dmg_diff" : 0.0,
+
+    "base_fire_dmg" : 0.0,
+    "fire_dmg_lvl_up" : 0.0,
+    "fire_dmg_diff" : 0.0,
+
+    "base_cold_dmg" : 0.0,
+    "cold_dmg_lvl_up" : 0.0,
+    "cold_dmg_diff" : 0.0,
+
+    "base_freeze_strength" : 0.0,
+    "freeze_strength_lvl_up" : 0.0,
+    "base_freeze_length" : 0.0,
+    "freeze_length_lvl_up" : 0.0,
+
+    "base_lightning_dmg" : 0.0,
+    "lightning_dmg_lvl_up" : 0.0,
+    "lightning_dmg_diff" : 0.0,
+
+    "base_poison_dmg" : 0.0,
+    "poison_dmg_lvl_up" : 0.0,
+    "poison_dmg_diff" : 0.0,
+    "base_poison_length" : 0.0,
+    "poison_length_lvl_up" : 0.0,
+
+    "projectile_name" : "",
+    "number_of_projectiles" : 0,
+    "attack_name" : 2,
+    "skill_sound" : "flash_skill",
+    "prerequisite_skills" : [],
+    "require_lvl" : 20
+  },
+  "tornado": {
+    "skill_name" : "tornado",
+    "desc" : "Create a tornado flying toward target",
+    "icon_image" : "res://skills/skill_icon/skill_icon_tornado.png",
+    "lvl" : 1,
+    "skill_type" : 0,
+    "is_target" : true,
+    
+    "base_cooldown" : 2.5,
+    "cooldown_lvl_up" : 0.0,
+    "base_hp_req" : 0,
+    "hp_req_lvl_up" : 0,
+    "base_mana_req" : 20,
+    "mana_req_lvl_up" : 5,
+    "base_range_of_skill" : 5,
+    "range_of_skill_lvl_up" : 0.2,
+
+    "base_p_dmg" : 40.0,
+    "p_dmg_lvl_up" : 12.0,
+    "p_dmg_diff" : 0.4,
+
+    "base_m_dmg" : 8.0,
+    "m_dmg_lvl_up" : 3.0,
+    "m_dmg_diff" : 0.3,
+
+    "base_weapon_dmg" : 0.55,
+    "weapon_dmg_lvl_up" : 0.05,
+    "weapon_dmg_diff" : 0.25,
+
+    "base_fire_dmg" : 0.0,
+    "fire_dmg_lvl_up" : 0.0,
+    "fire_dmg_diff" : 0.0,
+
+    "base_cold_dmg" : 0.0,
+    "cold_dmg_lvl_up" : 0.0,
+    "cold_dmg_diff" : 0.0,
+
+    "base_freeze_strength" : 0.0,
+    "freeze_strength_lvl_up" : 0.0,
+    "base_freeze_length" : 0.0,
+    "freeze_length_lvl_up" : 0.0,
+
+    "base_lightning_dmg" : 0.0,
+    "lightning_dmg_lvl_up" : 0.0,
+    "lightning_dmg_diff" : 0.0,
+
+    "base_poison_dmg" : 0.0,
+    "poison_dmg_lvl_up" : 0.0,
+    "poison_dmg_diff" : 0.0,
+    "base_poison_length" : 0.0,
+    "poison_length_lvl_up" : 0.0,
+
+    "projectile_name" : "tornado",
+    "number_of_projectiles" : 1,
+    "attack_name" : 1,
+    "skill_sound" : "fire_skill",
+    "buffs" : "warrior_spirit",
+    "prerequisite_skills" : [],
+    "require_lvl" : 12
+  },
+  "bwolf_tornado": {
+    "skill_name" : "bwolf_tornado",
+    "desc" : "Create a tornado flying toward target",
+    "icon_image" : "res://skills/skill_icon/skill_icon_tornado.png",
+    "lvl" : 1,
+    "skill_type" : 0,
+    "is_target" : true,
+    
+    "base_cooldown" : 2.5,
+    "cooldown_lvl_up" : 0.0,
+    "base_hp_req" : 0,
+    "hp_req_lvl_up" : 0,
+    "base_mana_req" : 20,
+    "mana_req_lvl_up" : 5,
+    "base_range_of_skill" : 5,
+    "range_of_skill_lvl_up" : 0.2,
+
+    "base_p_dmg" : 40.0,
+    "p_dmg_lvl_up" : 12.0,
+    "p_dmg_diff" : 0.4,
+
+    "base_m_dmg" : 8.0,
+    "m_dmg_lvl_up" : 3.0,
+    "m_dmg_diff" : 0.3,
+
+    "base_weapon_dmg" : 1.2,
+    "weapon_dmg_lvl_up" : 0.05,
+    "weapon_dmg_diff" : 0.25,
+
+    "base_fire_dmg" : 0.0,
+    "fire_dmg_lvl_up" : 0.0,
+    "fire_dmg_diff" : 0.0,
+
+    "base_cold_dmg" : 0.0,
+    "cold_dmg_lvl_up" : 0.0,
+    "cold_dmg_diff" : 0.0,
+
+    "base_freeze_strength" : 0.0,
+    "freeze_strength_lvl_up" : 0.0,
+    "base_freeze_length" : 0.0,
+    "freeze_length_lvl_up" : 0.0,
+
+    "base_lightning_dmg" : 0.0,
+    "lightning_dmg_lvl_up" : 0.0,
+    "lightning_dmg_diff" : 0.0,
+
+    "base_poison_dmg" : 0.0,
+    "poison_dmg_lvl_up" : 0.0,
+    "poison_dmg_diff" : 0.0,
+    "base_poison_length" : 0.0,
+    "poison_length_lvl_up" : 0.0,
+
+    "projectile_name" : "bwolf_tornado",
+    "number_of_projectiles" : 1,
+    "attack_name" : 1,
+    "skill_sound" : "fire_skill",
+    "buffs" : "warrior_spirit",
+    "prerequisite_skills" : []
+  },
+  "warrior_spirit": {
+    "skill_name" : "warrior_spirit",
+    "desc" : "oalla",
+    "icon_image" : "res://skills/skill_icon/skill_icon_tornado.png",
+    "lvl" : 1,
+    "skill_type" : 1,
+    "is_target" : false,
+    
+    "base_cooldown" : 0.0,
+    "cooldown_lvl_up" : 0.0,
+    "base_hp_req" : 0,
+    "hp_req_lvl_up" : 0,
+    "base_mana_req" : 0,
+    "mana_req_lvl_up" : 0,
+    "base_range_of_skill" : 0,
+    "range_of_skill_lvl_up" : 0.0,
+
+    "base_p_dmg" : 0.0,
+    "p_dmg_lvl_up" : 0.0,
+    "p_dmg_diff" : 0.0,
+
+    "base_m_dmg" : 0.0,
+    "m_dmg_lvl_up" : 0.0,
+    "m_dmg_diff" : 0.0,
+
+    "base_weapon_dmg" : 0.0,
+    "weapon_dmg_lvl_up" : 0.0,
+    "weapon_dmg_diff" : 0.0,
+
+    "base_fire_dmg" : 0.0,
+    "fire_dmg_lvl_up" : 0.0,
+    "fire_dmg_diff" : 0.0,
+
+    "base_cold_dmg" : 0.0,
+    "cold_dmg_lvl_up" : 0.0,
+    "cold_dmg_diff" : 0.0,
+
+    "base_freeze_strength" : 0.0,
+    "freeze_strength_lvl_up" : 0.0,
+    "base_freeze_length" : 0.0,
+    "freeze_length_lvl_up" : 0.0,
+
+    "base_lightning_dmg" : 0.0,
+    "lightning_dmg_lvl_up" : 0.0,
+    "lightning_dmg_diff" : 0.0,
+
+    "base_poison_dmg" : 0.0,
+    "poison_dmg_lvl_up" : 0.0,
+    "poison_dmg_diff" : 0.0,
+    "base_poison_length" : 0.0,
+    "poison_length_lvl_up" : 0.0,
+
+    "projectile_name" : "",
+    "number_of_projectiles" : 0,
+    "attack_name" : 1,
+    "skill_sound" : "fire_skill",
+    "buffs" : "passive_buff",
+    "prerequisite_skills" : ["tornado", "teleport"],
+    "require_lvl" : 30
+  }
+}

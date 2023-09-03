@@ -1,0 +1,15 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+path="res://.import/magnet.mp3-4db36fcc3ed004fb6944a76fa8a339eb.mp3str"
+
+[deps]
+
+source_file="res://sfx/sounds/magnet.mp3"
+dest_files=[ "res://.import/magnet.mp3-4db36fcc3ed004fb6944a76fa8a339eb.mp3str" ]
+
+[params]
+
+loop=false
+loop_offset=0

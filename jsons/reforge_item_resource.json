@@ -1,0 +1,30 @@
+{
+  "basic_fish": {
+    "accuracy_rate_add": {
+      "name" : "accuracy_rate_add",
+      "chance" : 0.25,
+      "min_value" : 0.05,
+      "max_value" : 0.15,
+      "is_use_min_max_value" : false,
+      "level_multiplier" : 0.5
+    }
+  }, 
+  "gold_piece": {
+    "p_armor_rating_add": {
+      "name" : "p_armor_rating_add",
+      "chance" : 0.5,
+      "min_value" : 0.05,
+      "max_value" : 0.15,
+      "is_use_min_max_value" : false,
+      "level_multiplier" : 5
+    },
+    "m_armor_rating_add": {
+      "name" : "m_armor_rating_add",
+      "chance" : 0.5,
+      "min_value" : 0.05,
+      "max_value" : 0.15,
+      "is_use_min_max_value" : false,
+      "level_multiplier" : 5
+    }
+  }
+}

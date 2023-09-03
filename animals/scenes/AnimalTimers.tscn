@@ -1,0 +1,15 @@
+[gd_scene format=2]
+
+[node name="AnimalTimers" type="Node"]
+
+[node name="IdleTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="WetTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="StateTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
